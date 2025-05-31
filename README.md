@@ -73,7 +73,7 @@ Distribuído sob licença MIT. Veja LICENSE para mais informações.
 ---
 
 ### Desenvolvido por: 
-- cavalcante-dev 
+- [cavalcante-dev](https://github.com/cavalcante-dev)
 - 
 - 
 - 
