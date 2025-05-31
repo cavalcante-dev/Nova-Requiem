@@ -30,6 +30,9 @@ Como detetive encarregado de investigar um misterioso assassinato, suas escolhas
 ## ⚙️ Tecnologias Utilizadas
 - **Java 24**: Linguagem principal
 - **IntelliJ**: IDE de desenvolvimento
+- **Visual Studio Code**: Editor de código com suporte a Java  
+- **Java Extension Pack**: Extensão para desenvolvimento Java no VS Code  
+
 
 ## 🗺️ Estrutura do Projeto
 
@@ -78,14 +81,14 @@ Distribuído sob licença MIT. Veja LICENSE para mais informações.
 
 ### 📧 Contato:
 - leandrocavalcante2504@gmail.com 
-- 
+- alchaarcs@gmail.com
 - 
 - 
 - 
 
 ### 🔗 LinkedIn: 
 - [Leandro Cavalcante](https://www.linkedin.com/in/leandro-cavalcante-lnkin/)
-- 
+- [Miguel Alchaar](https://www.linkedin.com/in/miguelalchaar)
 - 
 - 
 - 
