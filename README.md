@@ -74,7 +74,7 @@ Distribuído sob licença MIT. Veja LICENSE para mais informações.
 
 ### Desenvolvido por: 
 - [cavalcante-dev](https://github.com/cavalcante-dev)
-- 
+- [miguelalchaar](https://github.com/miguelalchaar)
 - 
 - 
 - 
