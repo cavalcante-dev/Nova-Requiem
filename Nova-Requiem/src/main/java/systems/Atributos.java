@@ -4,14 +4,31 @@ import java.util.Random;
 
 public class Atributos {
 
-    private int mente;
+    private int intelecto;
     private int fisico;
     private int coracao;
 
-    public Atributos(int mente, int fisico, int coracao) {
-        this.mente = mente;
-        this.fisico = fisico;
-        this.coracao = coracao;
+    public Atributos() {
+        this.intelecto = 0;
+        this.fisico = 0;
+        this.coracao = 0;
+    }
+
+    public void definirArquetipo(int arquetipo) {
+        if (arquetipo == 1) {
+            this.intelecto = 0;
+            this.fisico = 2;
+            this.coracao = 1;
+        } else if (arquetipo == 2) {
+            this.intelecto = 2;
+            this.fisico = 0;
+            this.coracao = 1;
+        } else if (arquetipo == 3) {
+            this.intelecto = 0;
+            this.fisico = 1;
+            this.coracao = 2;
+        }
+
     }
 
     public boolean rolarAtributo(int atributo, int dt){
@@ -37,12 +54,12 @@ public class Atributos {
 
     }
 
-    public int getMente() {
-        return mente;
+    public int getintelecto() {
+        return intelecto;
     }
 
-    public void setMente(int mente) {
-        this.mente = mente;
+    public void setIntelecto(int intelecto) {
+        this.intelecto = intelecto;
     }
 
     public int getFisico() {
