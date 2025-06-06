@@ -1,4 +1,4 @@
-package entities;
+package main.java.entities;
 
 public class Personagem {
     private String nome;
@@ -18,14 +18,12 @@ public class Personagem {
 
     /* 
     
-    if (status) { 
-
+    if (status) {
         System.out.println(personagem.getNome() + " está vivo e pode agir!");
-        
     } else {
         System.out.println(personagem.getNome() + " está morto. Nada será feito.");
-    } 
-        
+    }
+
     */
 
     public String getNome() {
