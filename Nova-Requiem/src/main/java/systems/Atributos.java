@@ -15,14 +15,26 @@ public class Atributos {
     }
 
     public boolean rolarAtributo(int atributo, int dt){
+
+        //DT = Dificuldade do TESTE
+
         boolean resultado = false;
         Random random = new Random();
 
         int dado1 = random.nextInt(6) + 1;
         int dado2 = random.nextInt(6) + 1;
-        int resul = dado1 + dado2 + atributo;
+        int result = dado1 + dado2 + atributo;
+
+        if (result >= dt) {
+            System.out.println("[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")");
+            resultado = true;
+        } else if (result < dt) {
+            System.out.println("[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")");
+            resultado = false;
+        }
 
         return resultado;
+
     }
 
     public int getMente() {
