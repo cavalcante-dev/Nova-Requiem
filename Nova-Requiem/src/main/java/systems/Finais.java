@@ -6,6 +6,4 @@ public class Finais extends Texto {
         super(turno, capitulo, finalBom, finalRuim);
     }
 
-    
-
 }

@@ -6,12 +6,14 @@ public class Texto {
     protected int capitulo;
     private int finalBom;
     private int finalRuim;
+    private int finalSecreto;
 
     public Texto(int turno, int capitulo) {
         this.turno = turno;
         this.capitulo = capitulo;
         this.finalBom = 0;
         this.finalRuim = 0;
+        this.finalSecreto = 0;
     }
 
     public void tutorial() {
@@ -129,6 +131,14 @@ public class Texto {
 
     public int getFinalRuim() {
         return finalRuim;
+    }
+
+    public void setfinalSecreto(int finalSecreto) {
+        this.finalSecreto = finalSecreto;
+    }
+
+    public int getfinalSecreto() {
+        return finalSecreto;
     }
 
 
