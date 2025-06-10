@@ -4,10 +4,14 @@ public class Texto {
 
     protected int turno;
     protected int capitulo;
+    private int finalBom;
+    private int finalRuim;
 
     public Texto(int turno, int capitulo) {
         this.turno = turno;
         this.capitulo = capitulo;
+        this.finalBom = 0;
+        this.finalRuim = 0;
     }
 
     public void tutorial() {
@@ -110,5 +114,22 @@ public class Texto {
     public void setCapitulo(int capitulo) {
         this.capitulo = capitulo;
     }
+
+    public void setFinalBom(int finalBom) {
+        this.finalBom = finalBom;
+    }
+
+    public int getFinalBom() {
+        return finalBom;
+    }
+
+    public void setFinalRuim(int finalRuim) {
+        this.finalRuim = finalRuim;
+    }
+
+    public int getFinalRuim() {
+        return finalRuim;
+    }
+
 
 }

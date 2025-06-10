@@ -7,7 +7,7 @@ public class Escolhas extends Texto {
     private Jogador jogador;
 
     public Escolhas(int turno, int capitulo, Jogador jogador) {
-        super(turno, capitulo);
+        super(turno, capitulo, finalBom, finalRuim);
         this.jogador = jogador;
     }
 
@@ -39,16 +39,9 @@ public class Escolhas extends Texto {
 
             if (turno == 1) {
 
-            }
-
-        } else if (capitulo == 4) {
-
-            if (turno == 1) {
-
-            }
-
         }
 
     }
 
 }
+

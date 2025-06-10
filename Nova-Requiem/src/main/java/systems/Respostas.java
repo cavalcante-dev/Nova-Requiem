@@ -26,6 +26,7 @@ public class Respostas extends Texto{
                     System.out.println("Teste 1");
                 } else if (resposta == 2) {
                     System.out.println("Teste 2");
+                   // Texto.setFinalBom(Texto.getFinalBom() + 1);
                 } else if (resposta == 3) {
                     System.out.println("""
                             \nO ventilador de teto velho faz seu máximo para manter o ambiente agradável, o relógio
