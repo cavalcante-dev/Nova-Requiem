@@ -19,7 +19,7 @@ public class Main {
         Texto texto = new Texto(1, 1);
         Jogador jogador = new Jogador();
         Escolhas escolhas = new Escolhas(1, 1, jogador);
-        Respostas respostas = new Respostas(1, 1, jogador);
+        Respostas respostas = new Respostas(1, 1, jogador, escolhas);
 
         texto.tutorial();
 
@@ -32,11 +32,13 @@ public class Main {
 
         System.out.println("\n" + jogador.getNome() + " ... esse é seu nome. Pelo menos disso você se lembra.");
 
+        escolhas.definirOpcoes();
         do {
             escolhas.alternativas();
             resposta = sc.nextInt();
             respostas.responder(resposta);
         } while (!(resposta == 1 || resposta == 2));
+        escolhas.limparOpcoes();
 
         texto.setTurno(turno++);
 
