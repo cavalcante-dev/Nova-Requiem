@@ -34,9 +34,13 @@ public class Main {
 
         escolhas.definirOpcoes();
         do {
+
             escolhas.alternativas();
             resposta = sc.nextInt();
             respostas.responder(resposta);
+
+            // verificar possibilidade de variavel resposta => array para evitar repetição do processo (Try - Catch).
+
         } while (!(resposta == 1 || resposta == 2));
         escolhas.limparOpcoes();
 
@@ -45,6 +49,22 @@ public class Main {
         System.out.println("FIM DO CAPITULO 1");
 
         texto.setCapitulo(capitulo++);
+
+        /*
+
+        Array [1, 2, 3, 4]
+        > escolha 1
+
+        try
+        if (resposta == array [0]) {
+            Bla bla bla bla
+            array [0] = 0;
+        }
+        catch () {
+            "Opção indisponivel"
+        }
+
+         */
 
     }
 }

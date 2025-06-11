@@ -52,12 +52,20 @@ public class Escolhas extends Texto {
         for (int i = 0; i < opcoes.size(); i++) {
             opcoes.remove(i);
         }
+        /*
+        array [0] = 1
+        array [1] = 2
+        ...
+        ...
+         */
     }
 
     public void removerOpcao(int resposta) {
         for (int i = 0; i < opcoes.size(); i++) {
             if (resposta == (i+1)) {
                 opcoes.remove(i);
+            } else if (opcoes.size() == 3 && resposta == 4) {
+                opcoes.remove(2);
             }
         }
     }
