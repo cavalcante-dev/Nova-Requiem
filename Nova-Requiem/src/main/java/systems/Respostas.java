@@ -39,7 +39,7 @@ public class Respostas extends Texto{
                             \nO ventilador de teto velho faz seu máximo para manter o ambiente agradável, o relógio
                             na parede marca 10:40AM. São as únicas coisas que parecem estar no lugar, o sofá velho
                             onde você está fede a mofo, as roupas de ontem estão em locais fora do seu campo de visão
-                            e a televisão velha do outro lado da sala continua queimada. """);
+                            e a televisão velha do outro lado da sala continua queimada.""");
 
                     escolhas.removerOpcao(resposta);
 
@@ -50,10 +50,13 @@ public class Respostas extends Texto{
                         System.out.println("Você falhou.");
                     } else if (resultado == true) {
                         System.out.println("Você conseguiu!");
+                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
                     }
 
                     escolhas.removerOpcao(resposta);
 
+                } else {
+                    System.out.println("> Opção Indisponivel");
                 }
 
             }
