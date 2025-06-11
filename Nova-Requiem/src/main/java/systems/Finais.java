@@ -1,6 +1,6 @@
 package main.java.systems;
 
-public class Finais extends Texto {
+public class Finais {
 
     private int finalBom;
     private int finalRuim;
@@ -8,7 +8,6 @@ public class Finais extends Texto {
 
 
     public Finais(int turno, int capitulo) {
-        super(turno, capitulo);
         this.finalBom = 0;
         this.finalRuim = 0;
         this.finalSecreto = 0;

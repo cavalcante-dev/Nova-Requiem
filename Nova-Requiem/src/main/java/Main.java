@@ -1,10 +1,13 @@
 package main.java;
 
 import main.java.entities.Jogador;
+import main.java.systems.Capitulos;
 import main.java.systems.Escolhas;
 import main.java.systems.Respostas;
 import main.java.systems.Texto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -14,8 +17,8 @@ public class Main {
 
         int arquetipo = 0;
         int resposta = 0;
-        Texto texto = new Texto(1);
-        List<Capitulos> capitulos = new ArrayList<>()
+        Texto texto = new Texto();
+        List<Capitulos> capitulos = new ArrayList<>();
         Jogador jogador = new Jogador();
         Escolhas escolhas = new Escolhas(jogador);
         Respostas respostas = new Respostas(jogador, escolhas);
@@ -32,7 +35,7 @@ public class Main {
         arquetipo = sc.nextInt();
         jogador.definirArquetipo(arquetipo);
 
-        texto.tutorial();
+        texto.narrar(1, 1);
 
         //Definição do nome do personagem que irá permanecer por toda a execução do programa
         String nome = sc.next();
@@ -59,22 +62,15 @@ public class Main {
 
         */
 
-        escolhas.definirOpcoes();
+        escolhas.definirOpcoes(1, 1);
         do {
 
-            escolhas.alternativas();
+            escolhas.alternativas(1, 1);
             resposta = sc.nextInt();
-            respostas.responder(resposta);
+            respostas.responder(1, 1, resposta);
 
-        } while (!(resposta == 1 || resposta == 2));
+        } while (resposta != 100);
         escolhas.limparOpcoes();
-
-        //implementação do for para capitulos/turnos removeria a necessecidade das seguinte linhas
-        texto.setTurno(turno++);
-
-        System.out.println("FIM DO CAPITULO 1");
-
-        texto.setCapitulo(capitulo++);
 
         /*
 

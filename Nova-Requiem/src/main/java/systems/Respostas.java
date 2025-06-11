@@ -26,11 +26,13 @@ public class Respostas {
                 if (resposta == 1) {
 
                     System.out.println("Teste 1");
+                    escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 2) {
 
                     System.out.println("Teste 2");
                    // Texto.setFinalBom(Texto.getFinalBom() + 1);
+                    escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 3) {
 
@@ -45,9 +47,9 @@ public class Respostas {
                 } else if (resposta == 4) {
 
                     resultado = jogador.rolarAtributo(jogador.getintelecto(), 8);
-                    if (resultado == false) {
+                    if (!resultado) {
                         System.out.println("Você falhou.");
-                    } else if (resultado == true) {
+                    } else if (resultado) {
                         System.out.println("Você conseguiu!");
                         jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
                     }

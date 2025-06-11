@@ -5,17 +5,16 @@ import main.java.entities.Jogador;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Escolhas extends Texto {
+public class Escolhas {
 
     private Jogador jogador;
-    private List<String> opcoes = new ArrayList<>();
+    private String[] opcoes = new String[4];
 
-    public Escolhas(int turno, int capitulo, Jogador jogador) {
-        super(turno, capitulo);
+    public Escolhas(Jogador jogador) {
         this.jogador = jogador;
     }
 
-    public void alternativas(){
+    public void alternativas(int capitulo, int turno){
 
         if (capitulo == 1) {
 
@@ -49,8 +48,8 @@ public class Escolhas extends Texto {
     }
 
     public void limparOpcoes() {
-        for (int i = 0; i < opcoes.size(); i++) {
-            opcoes.remove(i);
+        for (int i = 0; i < opcoes.length; i++) {
+            opcoes[i] = "";
         }
         /*
         array [0] = 1
@@ -82,10 +81,10 @@ public class Escolhas extends Texto {
     public void definirOpcoes(int capitulo, int turno) {
         if (capitulo == 1) {
             if (turno == 1) {
-                opcoes.add("1. Levantar do sofá.");
-                opcoes.add("2. Permanecer na sua insignificancia.");
-                opcoes.add("3. Olha em volta.");
-                opcoes.add("4. [TESTE (MENTE) - DIFICULDADE: HEROICO (8)] A noite passada?");
+                opcoes[0] = "1. Levantar do sofá.";
+                opcoes("2. Permanecer na sua insignificancia.";
+                opcoes.add("3. Olha em volta.";
+                opcoes.add("4. [TESTE (MENTE) - DIFICULDADE: HEROICO (8)] A noite passada?";
             }
         }
     }
