@@ -60,13 +60,16 @@ public class Escolhas extends Texto {
          */
     }
 
-    public void removerOpcao(int resposta) {
+    // TESTE TESTE com 1 e 2 para ver a aplicação com >TODOS< os loops.
+    // Tornar opções um vetor de strings ao inves de uma lista.
+
+    public void removerOpcao(int resposta) { 
         for (int i = 0; i < opcoes.size(); i++) {
-            if (resposta == (i+1)) {
+            if (resposta == (i+1)) { 
                 opcoes.remove(i);
-            } else if (opcoes.size() == 3 && resposta == 4) {
-                opcoes.remove(2);
-            }
+            } else if (resposta == (i+1)) {
+                opcoes.remove(i);
+            } 
         }
     }
 
@@ -76,7 +79,7 @@ public class Escolhas extends Texto {
         }
     }
 
-    public void definirOpcoes() {
+    public void definirOpcoes(int capitulo, int turno) {
         if (capitulo == 1) {
             if (turno == 1) {
                 opcoes.add("1. Levantar do sofá.");

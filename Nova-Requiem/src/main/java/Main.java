@@ -14,23 +14,50 @@ public class Main {
 
         int arquetipo = 0;
         int resposta = 0;
-        int turno = 0;
-        int capitulo = 0;
-        Texto texto = new Texto(1, 1);
+        Texto texto = new Texto(1);
+        List<Capitulos> capitulos = new ArrayList<>()
         Jogador jogador = new Jogador();
-        Escolhas escolhas = new Escolhas(1, 1, jogador);
-        Respostas respostas = new Respostas(1, 1, jogador, escolhas);
+        Escolhas escolhas = new Escolhas(jogador);
+        Respostas respostas = new Respostas(jogador, escolhas);
 
-        texto.tutorial();
+        // Número de capitulos ainda a ser decidido - valores de exemplo.
+        capitulos.add(new Capitulos(1, 5));
+        capitulos.add(new Capitulos(2, 4));
+        capitulos.add(new Capitulos(3, 6));
+        capitulos.add(new Capitulos(4, 7));
 
+        texto.introducao();
+
+        //Definição de atributos do personagem baseado em arquetipos pré definidos
         arquetipo = sc.nextInt();
         jogador.definirArquetipo(arquetipo);
 
-        texto.narrar();
+        texto.tutorial();
+
+        //Definição do nome do personagem que irá permanecer por toda a execução do programa
         String nome = sc.next();
         jogador.setNome(nome);
 
-        System.out.println("\n" + jogador.getNome() + " ... esse é seu nome. Pelo menos disso você se lembra.");
+        /*
+            Testar laço for - Transformar os Capitulo em uma Classe com Turno:
+
+            for(Capitulo capitulo : capitulos) {
+                for(int t = 0; t < capitulo.getTurnosPorCapitulo; t++) {
+
+                    escolhas.definirOpcoes(capitulo.getCapitulo, t);
+                    
+                    texto.narrar(capitulo.getCapitlo, t); 
+
+                    escolhas.alternativas();
+                    resposta = sc.nextInt();
+                    respostas.responder(resposta);
+
+                    escolhas.limparOpcoes();
+
+                }
+            }
+
+        */
 
         escolhas.definirOpcoes();
         do {
@@ -39,11 +66,10 @@ public class Main {
             resposta = sc.nextInt();
             respostas.responder(resposta);
 
-            // verificar possibilidade de variavel resposta => array para evitar repetição do processo (Try - Catch).
-
         } while (!(resposta == 1 || resposta == 2));
         escolhas.limparOpcoes();
 
+        //implementação do for para capitulos/turnos removeria a necessecidade das seguinte linhas
         texto.setTurno(turno++);
 
         System.out.println("FIM DO CAPITULO 1");
@@ -51,6 +77,8 @@ public class Main {
         texto.setCapitulo(capitulo++);
 
         /*
+
+        > verificar possibilidade de variavel resposta => array para evitar repetição do processo (Try - Catch).
 
         Array [1, 2, 3, 4]
         > escolha 1

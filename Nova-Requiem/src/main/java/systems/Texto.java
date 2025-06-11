@@ -2,15 +2,7 @@ package main.java.systems;
 
 public class Texto {
 
-    protected int turno;
-    protected int capitulo;
-
-    public Texto(int turno, int capitulo) {
-        this.turno = turno;
-        this.capitulo = capitulo;
-    }
-
-    public void tutorial() {
+    public void introducao() {
 
         System.out.print("""
                 ----------------------------------------------------------------------------------
@@ -52,7 +44,7 @@ public class Texto {
 
     }
 
-    public void narrar() {
+    public void narrar(int capitulo, int turno) {
 
         if (capitulo == 1) {
 
@@ -93,22 +85,6 @@ public class Texto {
 
         }
 
-    }
-
-    public int getTurno() {
-        return turno;
-    }
-
-    public void setTurno(int turno) {
-        this.turno = turno;
-    }
-
-    public int getCapitulo() {
-        return capitulo;
-    }
-
-    public void setCapitulo(int capitulo) {
-        this.capitulo = capitulo;
     }
 
 }

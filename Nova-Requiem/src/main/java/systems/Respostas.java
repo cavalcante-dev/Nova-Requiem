@@ -4,20 +4,19 @@ import main.java.entities.Jogador;
 
 import java.util.List;
 
-public class Respostas extends Texto{
+public class Respostas {
 
     boolean resultado = false;
     Jogador jogador;
     Escolhas escolhas;
 
-    public Respostas(int turno, int capitulo, Jogador jogador, Escolhas escolhas) {
-        super(turno, capitulo);
+    public Respostas(Jogador jogador, Escolhas escolhas) {
         this.jogador = jogador;
         this.escolhas = escolhas;
     }
 
 
-    public void responder(int resposta){
+    public void responder(int resposta, int turno, int capitulo){
 
         if (capitulo == 1) {
 
