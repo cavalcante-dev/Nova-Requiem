@@ -1,10 +1,7 @@
 package main.java;
 
 import main.java.entities.Jogador;
-import main.java.systems.Capitulos;
-import main.java.systems.Escolhas;
-import main.java.systems.Respostas;
-import main.java.systems.Texto;
+import main.java.textos.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,60 +14,60 @@ public class Main {
 
         int arquetipo = 0;
         int resposta = 0;
-        Texto texto = new Texto();
+        Turnos turnos = new Turnos();
         List<Capitulos> capitulos = new ArrayList<>();
         Jogador jogador = new Jogador();
         Escolhas escolhas = new Escolhas(jogador);
-        Respostas respostas = new Respostas(jogador, escolhas);
+        Finais finais = new Finais();
+        Respostas respostas = new Respostas(jogador, escolhas, finais);
 
         // Número de capitulos ainda a ser decidido - valores de exemplo.
-        capitulos.add(new Capitulos(1, 5));
-        capitulos.add(new Capitulos(2, 4));
-        capitulos.add(new Capitulos(3, 6));
-        capitulos.add(new Capitulos(4, 7));
+        capitulos.add(new Capitulos(1, 1));
+        capitulos.add(new Capitulos(2, 1));
+        capitulos.add(new Capitulos(3, 1));
+        capitulos.add(new Capitulos(4, 1));
 
-        texto.introducao();
+        turnos.introducao();
 
-        //Definição de atributos do personagem baseado em arquetipos pré definidos
+        //Definição de atributos do personagem baseado em arquetipos pré-definidos
         arquetipo = sc.nextInt();
         jogador.definirArquetipo(arquetipo);
 
-        texto.narrar(1, 1);
+        turnos.narrar(0, 0);
 
         //Definição do nome do personagem que irá permanecer por toda a execução do programa
         String nome = sc.next();
         jogador.setNome(nome);
 
-        /*
-            Testar laço for - Transformar os Capitulo em uma Classe com Turno:
+        //Testar laço for - Transformar os Capítulos em uma Classe com Turno:
 
-            for(Capitulo capitulo : capitulos) {
-                for(int t = 0; t < capitulo.getTurnosPorCapitulo; t++) {
+        for (Capitulos capitulo : capitulos) {
 
-                    escolhas.definirOpcoes(capitulo.getCapitulo, t);
-                    
-                    texto.narrar(capitulo.getCapitlo, t); 
+            for (int t = 0; t < capitulo.getTurnosPorCapitulo(); t++) {
 
-                    escolhas.alternativas();
+                escolhas.definirOpcoes(capitulo.getCapitulo(), t);
+                do {
+
+                    turnos.narrar(capitulo.getCapitulo(), t);
+
+                    escolhas.alternativas(capitulo.getCapitulo(), t);
                     resposta = sc.nextInt();
-                    respostas.responder(resposta);
+                    respostas.responder(resposta, capitulo.getCapitulo(), t);
 
-                    escolhas.limparOpcoes();
+                } while (!respostas.isFimTurno());
 
-                }
+                escolhas.limparOpcoes();
+
             }
 
-        */
+            respostas.setFimTurno(false);
 
-        escolhas.definirOpcoes(1, 1);
-        do {
+            capitulo.finalCapitulo();
+            if (capitulo.getCapitulo() == 4) {
+                finais.narrarFinal();
+            }
 
-            escolhas.alternativas(1, 1);
-            resposta = sc.nextInt();
-            respostas.responder(1, 1, resposta);
-
-        } while (resposta != 100);
-        escolhas.limparOpcoes();
+        }
 
         /*
 
