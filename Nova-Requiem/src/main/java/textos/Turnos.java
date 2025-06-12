@@ -1,16 +1,8 @@
-package main.java.systems;
+package main.java.textos;
 
-public class Texto {
+public class Turnos {
 
-    protected int turno;
-    protected int capitulo;
-
-    public Texto(int turno, int capitulo) {
-        this.turno = turno;
-        this.capitulo = capitulo;
-    }
-
-    public void tutorial() {
+    public void introducao() {
 
         System.out.print("""
                 ----------------------------------------------------------------------------------
@@ -52,11 +44,11 @@ public class Texto {
 
     }
 
-    public void narrar() {
+    public void narrar(int capitulo, int turno) {
 
-        if (capitulo == 1) {
+        if (capitulo == 0) {
 
-            if (turno == 1) {
+            if (turno == 0) {
                 System.out.print("""
                         \n============== CAPITULO 1 - LUZES NEON E ASSASSINATO =============
                         
@@ -75,40 +67,24 @@ public class Texto {
 
         } else if (capitulo == 2) {
 
-            if (turno == 1) {
+            if (turno == 0) {
 
             }
 
         } else if (capitulo == 3) {
 
-            if (turno == 1) {
+            if (turno == 0) {
 
             }
 
         } else if (capitulo == 4) {
 
-            if (turno == 1) {
+            if (turno == 0) {
 
             }
 
         }
 
-    }
-
-    public int getTurno() {
-        return turno;
-    }
-
-    public void setTurno(int turno) {
-        this.turno = turno;
-    }
-
-    public int getCapitulo() {
-        return capitulo;
-    }
-
-    public void setCapitulo(int capitulo) {
-        this.capitulo = capitulo;
     }
 
 }
