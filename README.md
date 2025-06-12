@@ -15,7 +15,7 @@
 
 Como detetive encarregado de investigar um misterioso assassinato, suas escolhas determinarão:
 - Quem você se torna. 
-- Quais habilidades desenvolve (Mente, Fisíco, Coração)
+- Quais habilidades desenvolve (Intelecto, Fisíco e Coração)
 - Como os NPCs reagem à sua presença e as suas ações
 - O desfecho final da trama
 
