@@ -1,6 +1,9 @@
 package main.java;
 
 import main.java.entities.Jogador;
+import main.java.entities.NPC;
+import main.java.entities.npcs.EsmeraldaLobos;
+import main.java.entities.npcs.SofiaVentura;
 import main.java.textos.*;
 
 import java.util.ArrayList;
@@ -20,12 +23,16 @@ public class Main {
         Escolhas escolhas = new Escolhas(jogador);
         Finais finais = new Finais();
         Respostas respostas = new Respostas(jogador, escolhas, finais);
+        List<NPC> npcs = new ArrayList<>();
+
+        // Instancia todos os npcs
+        npcs.add(new SofiaVentura("Sofia Ventura", 2));
+        npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0));
 
         // Número de capitulos ainda a ser decidido - valores de exemplo.
         capitulos.add(new Capitulos(1, 1));
         capitulos.add(new Capitulos(2, 1));
         capitulos.add(new Capitulos(3, 1));
-        capitulos.add(new Capitulos(4, 1));
 
         turnos.introducao();
 
@@ -63,7 +70,7 @@ public class Main {
             respostas.setFimTurno(false);
 
             capitulo.finalCapitulo();
-            if (capitulo.getCapitulo() == 4) {
+            if (capitulo.getCapitulo() == 3) {
                 finais.narrarFinal();
             }
 
