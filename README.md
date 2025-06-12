@@ -15,7 +15,7 @@
 
 Como detetive encarregado de investigar um misterioso assassinato, suas escolhas determinarão:
 - Quem você se torna. 
-- Quais habilidades desenvolve (Mente, Fisíco, Coração)
+- Quais habilidades desenvolve (Intelecto, Fisíco e Coração)
 - Como os NPCs reagem à sua presença e as suas ações
 - O desfecho final da trama
 
@@ -23,8 +23,7 @@ Como detetive encarregado de investigar um misterioso assassinato, suas escolhas
 
 - **Sistema de Habilidades Dinâmico**: 3 habilidades que evoluem com suas escolhas 
 - **NPCs Complexos**: Personagens com motivações e memórias próprias
-- **Sistema de Inventário**: Colete pistas e itens especiais
-- **Múltiplos Finais**: 4 finais diferentes baseados em suas ações
+- **Múltiplos Finais**: 3 finais diferentes baseados em suas ações
 - **Diálogos Ramificados**: Mais de -- opções de diálogo únicas
 
 ## ⚙️ Tecnologias Utilizadas
