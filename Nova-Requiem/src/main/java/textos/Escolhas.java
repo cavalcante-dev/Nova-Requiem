@@ -1,14 +1,21 @@
 package main.java.textos;
 
 import main.java.entities.Jogador;
+import main.java.entities.NPC;
+import main.java.entities.npcs.SofiaVentura;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Escolhas {
 
     private Jogador jogador;
     private String[] opcoes = new String[4];
+    private List<NPC> npcs;
 
-    public Escolhas(Jogador jogador) {
+    public Escolhas(Jogador jogador, List<NPC> npcs) {
         this.jogador = jogador;
+        this.npcs = npcs;
     }
 
     public void alternativas(int capitulo, int turno){
@@ -20,6 +27,8 @@ public class Escolhas {
                 System.out.print("""
                         \n Muito turnos parte 1
                         \n""");
+
+                ((SofiaVentura) npcs.get(0)).diaglogar(capitulo, turno);
 
                 imprimirOpcoes();
 

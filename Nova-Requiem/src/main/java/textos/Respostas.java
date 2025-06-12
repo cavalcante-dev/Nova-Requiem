@@ -1,6 +1,10 @@
 package main.java.textos;
 
 import main.java.entities.Jogador;
+import main.java.entities.NPC;
+import main.java.entities.npcs.SofiaVentura;
+
+import java.util.List;
 
 public class Respostas {
 
@@ -9,13 +13,15 @@ public class Respostas {
     private Escolhas escolhas;
     private boolean fimTurno;
     private Finais finais;
+    private List<NPC> npcs;
 
-    public Respostas(Jogador jogador, Escolhas escolhas, Finais finais) {
+    public Respostas(Jogador jogador, Escolhas escolhas, Finais finais, List<NPC> npcs) {
         this.jogador = jogador;
         this.escolhas = escolhas;
         this.finais = finais;
         this.resultado = false;
         this.fimTurno = false;
+        this.npcs = npcs;
     }
 
 
@@ -28,7 +34,9 @@ public class Respostas {
                 if (resposta == 1) {
 
                     System.out.println("Escolha Neutra");
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     escolhas.removerOpcao(resposta);
+
 
                 } else if (resposta == 2) {
 
