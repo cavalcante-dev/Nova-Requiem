@@ -77,14 +77,7 @@ public class Turnos {
 
             }
 
-        } else if (capitulo == 4) {
-
-            if (turno == 0) {
-
-            }
-
         }
-
     }
 
 }

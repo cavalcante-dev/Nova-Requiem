@@ -124,40 +124,6 @@ public class Respostas {
 
             }
 
-        } else if (capitulo == 4) {
-
-            if (turno == 0) {
-
-                if (resposta == 1) {
-
-                    System.out.println("Escolha Neutra");
-                    escolhas.removerOpcao(resposta);
-
-                } else if (resposta == 2) {
-
-                    System.out.println("Escolha Neutra");
-                    escolhas.removerOpcao(resposta);
-
-                } else if (resposta == 3) {
-
-                    System.out.println("Escolha boa");
-                    escolhas.removerOpcao(resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
-
-                } else if (resposta == 4) {
-
-                    System.out.println("Escolha ruim");
-                    escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getfinalSecreto()+1);
-                    setFimTurno(true);
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
-                }
-
-            }
-
         }
 
     }

@@ -55,22 +55,7 @@ public class Escolhas {
 
             }
 
-        } else if (capitulo == 4) {
-
-            if (turno == 0) {
-
-                System.out.print("""
-                        \n Muito turnos parte 4
-                        \n""");
-
-                imprimirOpcoes();
-
-                System.out.print("\n> ");
-
-            }
-
         }
-
 
     }
 

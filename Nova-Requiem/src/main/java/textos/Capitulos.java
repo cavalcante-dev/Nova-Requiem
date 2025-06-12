@@ -17,8 +17,6 @@ public class Capitulos {
             System.out.println("Final do capitulo 2");
         } else if (capitulo == 3) {
             System.out.println("Final do capitulo 3");
-        } else if (capitulo == 4) {
-            System.out.println("Final do capitulo 4");
         }
     }
 

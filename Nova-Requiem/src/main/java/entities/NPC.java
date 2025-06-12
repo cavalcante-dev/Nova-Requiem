@@ -1,19 +1,18 @@
 package main.java.entities;
 
-public class Personagem {
+public class NPC {
     private String nome;
     private int afinidade;
     private boolean status;
 
-    public Personagem(String nome, int afinidade) {
+    public NPC(String nome, int afinidade) {
         this.nome = nome;
         this.afinidade = afinidade;
         this.status = true;
     } 
 
-    public void morrer(Personagem personagem) {
-        personagem.setStatus(false);
-        
+    public void morrer(NPC NPC) {
+        NPC.setStatus(false);
     }
 
     /* 
