@@ -1,11 +1,12 @@
 package main.java.textos;
 
+import main.java.entities.NPC;
+
 public class Finais {
 
     private int finalBom;
     private int finalRuim;
     private int finalSecreto;
-
 
     public Finais() {
         this.finalBom = 0;
@@ -18,6 +19,14 @@ public class Finais {
             System.out.println("Final Bom");
         } else if (finalRuim > finalBom) {
             System.out.println("Final Ruim");
+        }
+    }
+
+    public void finalSofia(NPC sofia) {
+        if (sofia.getAfinidade() >= 3) {
+            System.out.println("Sofia gosta de você.");
+        } if (sofia.getAfinidade() < 3) {
+            System.out.println("Sofia não gosta de você");
         }
     }
 

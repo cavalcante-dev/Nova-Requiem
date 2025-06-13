@@ -17,7 +17,7 @@ public class SofiaVentura extends NPC {
 
             }
 
-        } else if (capitulo == 2) {
+        } else if (capitulo == 3) {
 
             if (turno == 0) {
 
@@ -47,12 +47,12 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("Escolha boa - Sofia gostou disso!");
-                    setAfinidade(+1);
+                    setAfinidade(getAfinidade()+1);
 
                 } else if (resposta == 4) {
 
                     System.out.println("Escolha ruim - Sofia não gostou disso.");
-                    setAfinidade(-1);
+                    setAfinidade(getAfinidade()-1);
 
                 } else {
                     System.out.println("> Opção Indisponivel");
@@ -65,9 +65,9 @@ public class SofiaVentura extends NPC {
 
             if (turno == 0) {
 
-                if (resposta == 1 && getAfinidade() < 3) {
+                if (resposta == 1) {
 
-                    System.out.println("Sofia não gosta de você");
+                    System.out.println("Escolha Neutra da Sofia");
 
                 } else if (resposta == 2) {
 
@@ -76,16 +76,12 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("Escolha boa - Sofia gostou disso!");
-                    setAfinidade(+1);
+                    setAfinidade(getAfinidade()+1);
 
                 } else if (resposta == 4) {
 
                     System.out.println("Escolha ruim - Sofia não gostou disso.");
-                    setAfinidade(-1);
-
-                } else if (resposta == 1 && getAfinidade() >= 3) {
-
-                    System.out.println("Sofia gosta de você!");
+                    setAfinidade(getAfinidade()-1);
 
                 } else {
                     System.out.println("> Opção Indisponivel");

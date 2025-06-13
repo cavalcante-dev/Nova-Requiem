@@ -27,7 +27,7 @@ public class Main {
 
         // Instancia todos os npcs
 
-        npcs.add(new SofiaVentura("Sofia Ventura", 2));
+        npcs.add(new SofiaVentura("Sofia Ventura", 3));
         npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0));
 
         // Número de capitulos ainda a ser decidido - valores de exemplo.
@@ -65,17 +65,17 @@ public class Main {
 
                 } while (!respostas.isFimTurno());
 
+                respostas.setFimTurno(false);
                 escolhas.limparOpcoes();
 
             }
-
-            respostas.setFimTurno(false);
 
             capitulo.finalCapitulo();
 
         }
 
         finais.narrarFinal();
+        finais.finalSofia(npcs.get(0));
 
         /*
 

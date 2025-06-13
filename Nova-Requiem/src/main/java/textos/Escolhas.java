@@ -58,6 +58,8 @@ public class Escolhas {
                         \n Muito turnos parte 3
                         \n""");
 
+                ((SofiaVentura) npcs.get(0)).diaglogar(capitulo, turno);
+
                 imprimirOpcoes();
 
                 System.out.print("\n> ");

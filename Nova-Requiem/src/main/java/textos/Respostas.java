@@ -41,12 +41,14 @@ public class Respostas {
                 } else if (resposta == 2) {
 
                     System.out.println("Escolha Neutra");
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 3) {
 
                     System.out.println("Escolha boa");
                     escolhas.removerOpcao(resposta);
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
@@ -54,7 +56,8 @@ public class Respostas {
 
                     System.out.println("Escolha ruim");
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getfinalSecreto()+1);
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
 
                 } else {
@@ -89,7 +92,7 @@ public class Respostas {
 
                     System.out.println("Escolha ruim");
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getfinalSecreto()+1);
+                    finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
 
                 } else {
@@ -105,17 +108,20 @@ public class Respostas {
                 if (resposta == 1) {
 
                     System.out.println("Escolha Neutra");
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 2) {
 
                     System.out.println("Escolha Neutra");
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 3) {
 
                     System.out.println("Escolha boa");
                     escolhas.removerOpcao(resposta);
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
@@ -123,7 +129,8 @@ public class Respostas {
 
                     System.out.println("Escolha ruim");
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getfinalSecreto()+1);
+                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
 
                 } else {

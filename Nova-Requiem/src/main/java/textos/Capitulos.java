@@ -12,11 +12,11 @@ public class Capitulos {
 
     public void finalCapitulo() {
         if (capitulo == 1) {
-            System.out.println("Final do capitulo 1");
+            System.out.println("\nFinal do capitulo 1\n");
         } else if (capitulo == 2) {
-            System.out.println("Final do capitulo 2");
+            System.out.println("\nFinal do capitulo 2\n");
         } else if (capitulo == 3) {
-            System.out.println("Final do capitulo 3");
+            System.out.println("\nFinal do capitulo 3\n");
         }
     }
 
