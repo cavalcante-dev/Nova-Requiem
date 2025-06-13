@@ -8,4 +8,6 @@ public class EsmeraldaLobos extends NPC {
         super(nome, afinidade);
     }
 
+
+
 }

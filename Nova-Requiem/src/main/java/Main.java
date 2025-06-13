@@ -20,33 +20,35 @@ public class Main {
         Turnos turnos = new Turnos();
         List<Capitulos> capitulos = new ArrayList<>();
         Jogador jogador = new Jogador();
-        Escolhas escolhas = new Escolhas(jogador);
-        Finais finais = new Finais();
-        Respostas respostas = new Respostas(jogador, escolhas, finais);
         List<NPC> npcs = new ArrayList<>();
+        Escolhas escolhas = new Escolhas(jogador, npcs);
+        Finais finais = new Finais();
+        Respostas respostas = new Respostas(jogador, escolhas, finais, npcs);
 
         // Instancia todos os npcs
-        npcs.add(new SofiaVentura("Sofia Ventura", 2));
+
+        npcs.add(new SofiaVentura("Sofia Ventura", 3));
         npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0));
 
         // Número de capitulos ainda a ser decidido - valores de exemplo.
+
         capitulos.add(new Capitulos(1, 1));
         capitulos.add(new Capitulos(2, 1));
         capitulos.add(new Capitulos(3, 1));
 
-        turnos.introducao();
-
         //Definição de atributos do personagem baseado em arquetipos pré-definidos
+
+        turnos.introducao();
         arquetipo = sc.nextInt();
         jogador.definirArquetipo(arquetipo);
 
-        turnos.narrar(0, 0);
-
         //Definição do nome do personagem que irá permanecer por toda a execução do programa
+
+        turnos.narrar(0, 0);
         String nome = sc.next();
         jogador.setNome(nome);
 
-        //Testar laço for - Transformar os Capítulos em uma Classe com Turno:
+        //Funcionamento principal de turnos e capitulos
 
         for (Capitulos capitulo : capitulos) {
 
@@ -63,18 +65,17 @@ public class Main {
 
                 } while (!respostas.isFimTurno());
 
+                respostas.setFimTurno(false);
                 escolhas.limparOpcoes();
 
             }
 
-            respostas.setFimTurno(false);
-
             capitulo.finalCapitulo();
-            if (capitulo.getCapitulo() == 3) {
-                finais.narrarFinal();
-            }
 
         }
+
+        finais.narrarFinal();
+        finais.finalSofia(npcs.get(0));
 
         /*
 
