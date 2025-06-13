@@ -1,8 +1,15 @@
 package main.java.textos;
 
+import main.java.entities.Jogador;
+import main.java.util.Cores;
+
+import java.util.Scanner;
+
 public class Turnos {
 
-    public void introducao() {
+    public void introducao(Jogador jogador) {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("""
                 ----------------------------------------------------------------------------------
@@ -11,20 +18,7 @@ public class Turnos {
                
                 ----------------------------------------------------------------------------------
               
-                Acorde.
                 
-                O mundo é um borrão de néon e dor de cabeça. Restam ecos: um distintivo enferrujado,
-                um passado nebuloso e o caso que não espera. Traga a ordem.
-                
-                Reconstrua-se.
-                
-                Escolha as vozes na sua cabeça: o Detetive Lógico ou o Vício Brutal? O Empatia que
-                sangra ou a Retórica cortante? Cada habilidade molda seu olhar sobre a cidade podre 
-                e suas mentiras.
-                
-                Quando as luzes neon se apagam na noite, quem olha de volta no espelho?  
-                
-                Defina seu caminho. Escolha quem você é.
               
                 ----------------------------------------------------------------------------------   
               
@@ -42,6 +36,19 @@ public class Turnos {
                
                 > ESCOLHA SEU ARQUEITIPO DE PERSONAGEM:\s""");
 
+        //Definição de atributos do personagem baseado em arquetipos pré-definidos
+
+        int arquetipo = sc.nextInt();
+        jogador.definirArquetipo(arquetipo);
+
+        //Definição do nome do personagem que irá permanecer por toda a execução do programa
+
+        System.out.print("\n> Qual o seu nome? \n> ");
+
+        String nome = sc.next();
+        jogador.setNome(nome);
+
+
     }
 
     public void narrar(int capitulo, int turno) {
@@ -49,20 +56,7 @@ public class Turnos {
         if (capitulo == 0) {
 
             if (turno == 0) {
-                System.out.print("""
-                        \n============== CAPITULO 1 - LUZES NEON E ASSASSINATO =============
-                        
-                        A imensidão do nada. Escuridão. Esquecimento. Profundo e indefinido.
-                        
-                        Tudo parece distante e você se sente afogado em uma dor de cabeça terrível.
-                        
-                        O som distante de um ventilador velho de teto te trás de volta a realidade, a dor
-                        de cabeça parece ter ficado mais forte. Você abre os olhos e tudo está aonde deveria
-                        estar, exceto por você.
-                        ...
-                        ...
-                        
-                        Quem é você... Você se lembra do seu nome?\s""");
+
             }
 
         } else if (capitulo == 2) {

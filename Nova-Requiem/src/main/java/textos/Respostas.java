@@ -3,6 +3,7 @@ package main.java.textos;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.SofiaVentura;
+import main.java.util.Cores;
 
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class Respostas {
 
                 } else if (resposta == 3) {
 
-                    System.out.println("Escolha boa");
+                    System.out.println(Cores.VERDE + "Escolha boa" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalBom(finais.getFinalBom()+1);
@@ -54,7 +55,7 @@ public class Respostas {
 
                 } else if (resposta == 4) {
 
-                    System.out.println("Escolha ruim");
+                    System.out.println(Cores.VERMELHO + "Escolha ruim" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalRuim(finais.getFinalRuim()+1);
@@ -78,19 +79,26 @@ public class Respostas {
 
                 } else if (resposta == 2) {
 
-                    System.out.println("Escolha Neutra");
+                    resultado = jogador.rolarAtributo(jogador.getCoracao(), 8);
+                    if (!resultado) {
+                        System.out.println(Cores.VERMELHO + "Você falhou." + Cores.RESET);
+                    } else if (resultado) {
+                        System.out.println(Cores.VERDE + "Você conseguiu!" + Cores.RESET);
+                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
+                    }
+
                     escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 3) {
 
-                    System.out.println("Escolha boa");
+                    System.out.println(Cores.VERDE + "Escolha boa" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
                 } else if (resposta == 4) {
 
-                    System.out.println("Escolha ruim");
+                    System.out.println(Cores.VERMELHO + "Escolha ruim" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
@@ -119,7 +127,7 @@ public class Respostas {
 
                 } else if (resposta == 3) {
 
-                    System.out.println("Escolha boa");
+                    System.out.println(Cores.VERDE + "Escolha boa" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalBom(finais.getFinalBom()+1);
@@ -127,7 +135,7 @@ public class Respostas {
 
                 } else if (resposta == 4) {
 
-                    System.out.println("Escolha ruim");
+                    System.out.println(Cores.VERMELHO + "Escolha ruim" + Cores.RESET);
                     escolhas.removerOpcao(resposta);
                     ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
                     finais.setFinalRuim(finais.getFinalRuim()+1);
@@ -151,43 +159,5 @@ public class Respostas {
         this.fimTurno = fimTurno;
     }
 
-    /*
-                if (resposta == 1) {
-
-                    System.out.println("Teste 1");
-                    escolhas.removerOpcao(resposta);
-
-                } else if (resposta == 2) {
-
-                    System.out.println("Teste 2");
-                   // Texto.setFinalBom(Texto.getFinalBom() + 1);
-                    escolhas.removerOpcao(resposta);
-
-                } else if (resposta == 3) {
-
-                    System.out.println("""
-                            \nO ventilador de teto velho faz seu máximo para manter o ambiente agradável, o relógio
-                            na parede marca 10:40AM. São as únicas coisas que parecem estar no lugar, o sofá velho
-                            onde você está fede a mofo, as roupas de ontem estão em locais fora do seu campo de visão
-                            e a televisão velha do outro lado da sala continua queimada.""");
-
-                    escolhas.removerOpcao(resposta);
-
-                } else if (resposta == 4) {
-
-                    resultado = jogador.rolarAtributo(jogador.getintelecto(), 8);
-                    if (!resultado) {
-                        System.out.println("Você falhou.");
-                    } else if (resultado) {
-                        System.out.println("Você conseguiu!");
-                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
-                    }
-
-                    escolhas.removerOpcao(resposta);
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
-                }
-     */
 
 }

@@ -3,6 +3,7 @@ package main.java.textos;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.SofiaVentura;
+import main.java.util.Cores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +25,8 @@ public class Escolhas {
 
             if (turno == 0) {
 
-                System.out.print("""
-                        \n Muito turnos parte 1
-                        \n""");
+                System.out.println("""
+                        \nMuito turnos parte 1""");
 
                 ((SofiaVentura) npcs.get(0)).diaglogar(capitulo, turno);
 
@@ -40,9 +40,8 @@ public class Escolhas {
 
             if (turno == 0) {
 
-                System.out.print("""
-                        \n Muito turnos parte 2
-                        \n""");
+                System.out.println("""
+                        \nMuito turnos parte 2""");
 
                 imprimirOpcoes();
 
@@ -54,9 +53,8 @@ public class Escolhas {
 
             if (turno == 0) {
 
-                System.out.print("""
-                        \n Muito turnos parte 3
-                        \n""");
+                System.out.println("""
+                        \nMuito turnos parte 3""");
 
                 ((SofiaVentura) npcs.get(0)).diaglogar(capitulo, turno);
 
@@ -112,7 +110,7 @@ public class Escolhas {
         if (capitulo == 2) {
             if (turno == 0) {
                 opcoes[0] = "1. Opção Neutra - 2";
-                opcoes[1] = "2. Opção Neutra";
+                opcoes[1] = (Cores.AMARELO + "2. [TESTE (CORAÇÃO) - DIFICULDADE (8)] " + Cores.RESET);
                 opcoes[2] = "3. Opção Boa";
                 opcoes[3] = "4. Opção Ruim";
             }
