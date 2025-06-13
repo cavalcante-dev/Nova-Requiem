@@ -13,7 +13,7 @@ public class SofiaVentura extends NPC {
 
             if (turno == 0) {
 
-                System.out.print("Sofia: Oi! Você veio.\n");
+                System.out.println("Sofia: Oi! Você veio.\n");
 
             }
 
@@ -21,7 +21,7 @@ public class SofiaVentura extends NPC {
 
             if (turno == 0) {
 
-                System.out.print("Sofia: Eu não sei o que pensar sobre.");
+                System.out.println("Sofia: Eu não sei o que pensar sobre.\n");
 
                 System.out.print("\n> ");
 

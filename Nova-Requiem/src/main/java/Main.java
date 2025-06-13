@@ -36,17 +36,7 @@ public class Main {
         capitulos.add(new Capitulos(2, 1));
         capitulos.add(new Capitulos(3, 1));
 
-        //Definição de atributos do personagem baseado em arquetipos pré-definidos
-
-        turnos.introducao();
-        arquetipo = sc.nextInt();
-        jogador.definirArquetipo(arquetipo);
-
-        //Definição do nome do personagem que irá permanecer por toda a execução do programa
-
-        turnos.narrar(0, 0);
-        String nome = sc.next();
-        jogador.setNome(nome);
+        turnos.introducao(jogador);
 
         //Funcionamento principal de turnos e capitulos
 
@@ -71,6 +61,7 @@ public class Main {
             }
 
             capitulo.finalCapitulo();
+            System.out.flush();
 
         }
 
