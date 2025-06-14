@@ -36,8 +36,6 @@ public class Main {
         turnos.introducao(jogador);
 
         //Funcionamento principal de turnos e capitulos
-        Musica musica = new Musica();
-        musica.AudioAcerto();
 
         for (Capitulos capitulo : capitulos) {
 

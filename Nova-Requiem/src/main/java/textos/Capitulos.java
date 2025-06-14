@@ -1,5 +1,7 @@
 package main.java.textos;
 
+import main.java.util.Musica;
+
 public class Capitulos {
 
     private int capitulo;
@@ -8,6 +10,20 @@ public class Capitulos {
     public Capitulos(int capitulo, int turnosPorCapitulo) {
         this.capitulo = capitulo;
         this.turnosPorCapitulo = turnosPorCapitulo;
+    }
+
+    public void trilhaSonora() {
+
+        Musica musica = new Musica();
+
+        if (capitulo == 1) {
+            musica.musicaCapitulo1();
+        } else if (capitulo == 2) {
+            musica.musicaCapitulo2();
+        } else if (capitulo == 3) {
+            musica.musicaCapitulo3();
+        }
+
     }
 
     public void finalCapitulo() {
