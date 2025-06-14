@@ -5,7 +5,6 @@ import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.textos.*;
-import main.java.util.Musica;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,11 +36,7 @@ public class Main {
 
         //Funcionamento principal de turnos e capitulos
 
-        Musica musica = new Musica();
-
         for (Capitulos capitulo : capitulos) {
-
-            musica.trilhaSonora(capitulo.getCapitulo());
 
             for (int t = 0; t < capitulo.getTurnosPorCapitulo(); t++) {
 
@@ -63,7 +58,6 @@ public class Main {
 
             }
 
-            musica.parar();
             capitulo.finalCapitulo();
 
         }
