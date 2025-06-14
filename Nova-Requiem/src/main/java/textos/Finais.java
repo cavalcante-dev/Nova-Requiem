@@ -1,6 +1,9 @@
 package main.java.textos;
 
 import main.java.entities.NPC;
+import main.java.util.Cores;
+
+import java.awt.*;
 
 public class Finais {
 
@@ -16,17 +19,17 @@ public class Finais {
 
     public void narrarFinal() {
         if (finalBom > finalRuim) {
-            System.out.println("Final Bom");
+            System.out.println(Cores.VERDE + "Final Bom" + Cores.RESET);
         } else if (finalRuim > finalBom) {
-            System.out.println("Final Ruim");
+            System.out.println(Cores.VERMELHO + "Final Ruim" + Cores.RESET);
         }
     }
 
     public void finalSofia(NPC sofia) {
         if (sofia.getAfinidade() >= 3) {
-            System.out.println("Sofia gosta de você.");
+            System.out.println(Cores.VERDE + "Sofia gosta de você." + Cores.RESET);
         } if (sofia.getAfinidade() < 3) {
-            System.out.println("Sofia não gosta de você");
+            System.out.println(Cores.VERMELHO + "Sofia não gosta de você" + Cores.RESET);
         }
     }
 

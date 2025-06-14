@@ -1,6 +1,7 @@
 package main.java.entities.npcs;
 
 import main.java.entities.NPC;
+import main.java.util.Cores;
 
 public class SofiaVentura extends NPC {
 
@@ -13,7 +14,7 @@ public class SofiaVentura extends NPC {
 
             if (turno == 0) {
 
-                System.out.println("Sofia: Oi! Você veio.\n");
+                System.out.println(Cores.ROXO + "Sofia: Oi! Você veio.\n" + Cores.RESET);
 
             }
 
@@ -21,7 +22,7 @@ public class SofiaVentura extends NPC {
 
             if (turno == 0) {
 
-                System.out.println("Sofia: Eu não sei o que pensar sobre.\n");
+                System.out.println(Cores.ROXO + "Sofia: Eu não sei o que pensar sobre.\n" + Cores.RESET);
 
                 System.out.print("\n> ");
 

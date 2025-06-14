@@ -11,15 +11,17 @@ public class Turnos {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println(Cores.ROXO + """
+                ----------------------------------------------------------------------------------
+
+                                            NOVA REQUIEM
+
+                ----------------------------------------------------------------------------------
+                """ + Cores.RESET);
+
         System.out.print("""
-                ----------------------------------------------------------------------------------
-               
-                                                    NOVA REQUIEM
-               
-                ----------------------------------------------------------------------------------
-              
+                                            [INTRODUÇÃO]
                 
-              
                 ----------------------------------------------------------------------------------   
               
                 Atributos:
@@ -48,27 +50,27 @@ public class Turnos {
         String nome = sc.next();
         jogador.setNome(nome);
 
-
     }
+
 
     public void narrar(int capitulo, int turno) {
 
-        if (capitulo == 0) {
+        if (capitulo == 1) {
 
             if (turno == 0) {
-
+                System.out.println("\nNarração de Turno 1");
             }
 
         } else if (capitulo == 2) {
 
             if (turno == 0) {
-
+                System.out.println("\nNarração de Turno 2");
             }
 
         } else if (capitulo == 3) {
 
             if (turno == 0) {
-
+                System.out.println("\nNarração de Turno 3");
             }
 
         }
