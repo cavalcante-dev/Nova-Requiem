@@ -17,10 +17,13 @@ public class Capitulos {
         Musica musica = new Musica();
 
         if (capitulo == 1) {
+            musica.parar();
             musica.musicaCapitulo1();
         } else if (capitulo == 2) {
+            musica.parar();
             musica.musicaCapitulo2();
         } else if (capitulo == 3) {
+            musica.parar();
             musica.musicaCapitulo3();
         }
 
