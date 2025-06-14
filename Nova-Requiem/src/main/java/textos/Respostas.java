@@ -35,37 +35,98 @@ public class Respostas {
 
                 if (resposta == 1) {
 
-                    System.out.println("Escolha Neutra");
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    System.out.println("""
+                            
+                            Você decide se levantar, afinal, a cidade não não espera.
+                            
+                            Você faz o seu máximo para organizar o que pode e colocar no lugar as
+                            tralhas espalhas pelo apartamento. Seja lá o que tenha acontecido na
+                            noite de ontem você com certeza se divertiu.
+                            
+                            O relógio marca as 8:35AM.
+                            
+                            A cozinha minimamente arrumada é convidativa para um café da manhã, preparado
+                            para duas pessoas.
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+                    npcs.get(0).setAfinidade(((npcs.get(0)).getAfinidade() + 1));
                     escolhas.removerOpcao(resposta);
-
+                    setFimTurno(true);
 
                 } else if (resposta == 2) {
 
-                    System.out.println("Escolha Neutra");
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    System.out.println("""
+                            
+                            O sofá é desconfortável e mofado, o sol está começando a esquentar
+                            as costas e o cheiro de tequila no chão impregnou as suas narinas...
+                            
+                            Mas particularmente? Qualquer coisa é melhor do que tem lá fora, a
+                            podridão aqui dentro não se compara a podridão da cidade e a terrível 
+                            realidade. 
+                            
+                            Esqueça todos os problemas... por mais 5 minutinhos.
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+                    npcs.get(0).setAfinidade(((npcs.get(0)).getAfinidade() - 1));
                     escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
 
                 } else if (resposta == 3) {
 
-                    System.out.println(Cores.VERDE + "Escolha boa" + Cores.RESET);
+                    System.out.println("""
+                            
+                            Você se ajeita no sofá e se examina o estrago.
+                            
+                            O ventilador de teto velho faz seu máximo para manter o ambiente
+                            agradável, o relógio na parede marca 7:12AM. 
+                            
+                            Ambos são as únicas coisas que parecem estar no seu devido lugar, o sofá velho 
+                            onde você está fede a mofo, as roupas de ontem estão em locais fora do seu campo 
+                            de visão e a televisão velha do outro lado da sala continua queimada. 
+                            
+                            A luz da cozinha está apagada mas o cheiro de louça suja impregna todo o 
+                            apartamento e a porta do quarto permanece fechada.
+                            
+                            Seu telefone encima da mesa tem 15 ligações perdidas de Sofia Ventura
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
                     escolhas.removerOpcao(resposta);
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
+
 
                 } else if (resposta == 4) {
 
-                    System.out.println(Cores.VERMELHO + "Escolha ruim" + Cores.RESET);
+                    resultado = jogador.rolarAtributo(jogador.getIntelecto(), 8);
+                    if (!resultado) {
+                        System.out.println("""
+                             
+                             Você fecha os olhos e tenta se lembrar da noite passada, musica disco?
+                             Tequila sunset? Abacaxi alguma coisa? Tudo é muito confuso. 
+                             
+                             ----------------------------------------------------------------------------------------
+                             """);
+                    } else if (resultado) {
+                        System.out.println("""
+                            
+                            As memorias lentamente se colocam no lugar e você começa a ter flashes de ontem.
+                            
+                            Um dia cansativo na delegacia, uma mulher de tranças claras irritada, aquele
+                            velho bar perto do seu apartamento, muita tequila e karaok.
+                            
+                            O vomito no seu sapato e uma longa caminhada até seu sofá. 
+                                
+                            Sua cabeça doi ainda mais.
+                                
+                            ----------------------------------------------------------------------------------------
+                            """);
+                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
+                    }
+
                     escolhas.removerOpcao(resposta);
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
-                    finais.setFinalRuim(finais.getFinalRuim()+1);
-                    setFimTurno(true);
 
-                } else {
-                    System.out.println("> Opção Indisponivel");
                 }
-
 
             }
 

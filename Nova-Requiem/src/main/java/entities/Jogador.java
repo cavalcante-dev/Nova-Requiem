@@ -106,7 +106,7 @@ public class Jogador {
         this.coracaoBarra = coracaoBarra;
     }
 
-    public int getintelecto() {
+    public int getIntelecto() {
         return intelecto;
     }
 

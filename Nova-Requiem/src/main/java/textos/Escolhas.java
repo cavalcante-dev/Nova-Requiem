@@ -26,9 +26,9 @@ public class Escolhas {
             if (turno == 0) {
 
                 System.out.println("""
-                        \nMuito turnos parte 1""");
-
-                ((SofiaVentura) npcs.get(0)).diaglogar(capitulo, turno);
+                        Você se acomoda resistindo a vontade de abrir os olhos. Tudo parece distante.
+                        Tick-Tack do relógio não revela as horas se não se levantar.
+                        """);
 
                 imprimirOpcoes();
 
@@ -89,10 +89,10 @@ public class Escolhas {
     public void definirOpcoes(int capitulo, int turno) {
         if (capitulo == 1) {
             if (turno == 0) {
-                opcoes[0] = "1. Opção Neutra - 1";
-                opcoes[1] = "2. Opção Neutra";
-                opcoes[2] = "3. Opção Boa";
-                opcoes[3] = "4. Opção Ruim";
+                opcoes[0] = "1. Levantar do sofá";
+                opcoes[1] = "2. Permanecer na inconsciência";
+                opcoes[2] = "3. Olhar em volta";
+                opcoes[3] = (Cores.AMARELO + "4. [TESTE (INTELECTO) - DIFICULDADE: Médio (8)] A noite passada?" + Cores.RESET);
             }
         }
         if (capitulo == 2) {
