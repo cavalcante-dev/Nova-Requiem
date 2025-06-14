@@ -1,5 +1,7 @@
 package main.java.entities;
 
+import main.java.util.Cores;
+
 import java.util.Random;
 
 public class Jogador {
@@ -56,10 +58,10 @@ public class Jogador {
         int result = dado1 + dado2 + atributo;
 
         if (result >= dt) {
-            System.out.println("[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")");
+            System.out.println(Cores.VERDE + "[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")" + Cores.RESET);
             resultado = true;
         } else if (result < dt) {
-            System.out.println("[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")");
+            System.out.println(Cores.VERMELHO + "[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")" + Cores.RESET);
             resultado = false;
         }
 

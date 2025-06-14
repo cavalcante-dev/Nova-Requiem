@@ -5,17 +5,14 @@ import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.textos.*;
+import main.java.util.Musica;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
-        int arquetipo = 0;
         int resposta = 0;
         Turnos turnos = new Turnos();
         List<Capitulos> capitulos = new ArrayList<>();
@@ -23,7 +20,7 @@ public class Main {
         List<NPC> npcs = new ArrayList<>();
         Escolhas escolhas = new Escolhas(jogador, npcs);
         Finais finais = new Finais();
-        Respostas respostas = new Respostas(jogador, escolhas, finais, npcs);
+        Respostas resultados = new Respostas(jogador, escolhas, finais, npcs);
 
         // Instancia todos os npcs
 
@@ -39,6 +36,8 @@ public class Main {
         turnos.introducao(jogador);
 
         //Funcionamento principal de turnos e capitulos
+        Musica musica = new Musica();
+        musica.AudioAcerto();
 
         for (Capitulos capitulo : capitulos) {
 
@@ -50,41 +49,24 @@ public class Main {
                     turnos.narrar(capitulo.getCapitulo(), t);
 
                     escolhas.alternativas(capitulo.getCapitulo(), t);
-                    resposta = sc.nextInt();
-                    respostas.responder(resposta, capitulo.getCapitulo(), t);
+                    resposta = resultados.validadeResposta(resposta);
+                    resultados.responder(resposta, capitulo.getCapitulo(), t);
 
-                } while (!respostas.isFimTurno());
+                    resposta = 0;
 
-                respostas.setFimTurno(false);
+                } while (!resultados.isFimTurno());
+
+                resultados.setFimTurno(false);
                 escolhas.limparOpcoes();
 
             }
 
             capitulo.finalCapitulo();
-            System.out.flush();
 
         }
 
         finais.narrarFinal();
         finais.finalSofia(npcs.get(0));
-
-        /*
-
-        > verificar possibilidade de variavel resposta => array para evitar repetição do processo (Try - Catch).
-
-        Array [1, 2, 3, 4]
-        > escolha 1
-
-        try
-        if (resposta == array [0]) {
-            Bla bla bla bla
-            array [0] = 0;
-        }
-        catch () {
-            "Opção indisponivel"
-        }
-
-         */
 
     }
 }
