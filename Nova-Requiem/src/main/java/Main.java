@@ -23,12 +23,12 @@ public class Main {
 
         // Instancia todos os npcs
 
-        npcs.add(new SofiaVentura("Sofia Ventura", 3));
+        npcs.add(new SofiaVentura("Sofia Ventura", 2));
         npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0));
 
         // Número de capitulos ainda a ser decidido - valores de exemplo.
 
-        capitulos.add(new Capitulos(1, 1));
+        capitulos.add(new Capitulos(1, 4));
         capitulos.add(new Capitulos(2, 1));
         capitulos.add(new Capitulos(3, 1));
 
@@ -37,6 +37,8 @@ public class Main {
         //Funcionamento principal de turnos e capitulos
 
         for (Capitulos capitulo : capitulos) {
+
+            capitulo.inicioCapitulo();
 
             for (int t = 0; t < capitulo.getTurnosPorCapitulo(); t++) {
 

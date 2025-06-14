@@ -1,5 +1,7 @@
 package main.java.textos;
 
+import main.java.util.Cores;
+
 public class Capitulos {
 
     private int capitulo;
@@ -8,6 +10,23 @@ public class Capitulos {
     public Capitulos(int capitulo, int turnosPorCapitulo) {
         this.capitulo = capitulo;
         this.turnosPorCapitulo = turnosPorCapitulo;
+    }
+
+    public void inicioCapitulo() {
+        if (capitulo == 1) {
+
+            System.out.println(Cores.AMARELO     + """
+                
+                ----------------------------------------------------------------------------------
+                ================================ CAPÍTULO 1: ECOS ================================
+                ----------------------------------------------------------------------------------
+                """ + Cores.RESET);
+
+        } else if (capitulo == 2) {
+            System.out.println("\nFinal do capitulo 2\n");
+        } else if (capitulo == 3) {
+            System.out.println("\nFinal do capitulo 3\n");
+        }
     }
 
     public void finalCapitulo() {

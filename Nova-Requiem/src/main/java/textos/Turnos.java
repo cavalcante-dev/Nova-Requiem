@@ -13,13 +13,13 @@ public class Turnos {
         System.out.println(Cores.ROXO + """
                 ----------------------------------------------------------------------------------
 
-                                                   NOVA REQUIEM
+                                                NOVA REQUIEM
 
                 ----------------------------------------------------------------------------------
            
                 """ + Cores.RESET);
 
-        System.out.println(Cores.AMARELO + "\n> CRIE SEU PERSONAGEM - MOLDE SUA HISTÓRIA <\n" + Cores.RESET);
+        System.out.println(Cores.AMARELO + "> CRIE SEU PERSONAGEM - MOLDE SUA HISTÓRIA <\n" + Cores.RESET);
 
         System.out.print(
                 "Atributos:" +
@@ -30,8 +30,8 @@ public class Turnos {
                 """
                
                 1. O BRUTAMONTES        2. O INTELECTUAL        3. O SENSITIVO
-                Fisico - 2              Fisico - 0              Fisico - 1    
-                Coração - 1             Coração - 1             Coração - 2    
+                Fisico - 2              Fisico - 0              Fisico - 1
+                Coração - 1             Coração - 1             Coração - 2
                 Intelecto - 0           Intelecto - 2           Intelecto - 0
                 
                 """);
@@ -42,11 +42,13 @@ public class Turnos {
 
         jogador.definirArquetipo(arquetipo);
 
-        System.out.println(Cores.ROXO + "\n----------------------------------------------------------------------------------\n" + Cores.RESET);
-
-        System.out.println(Cores.AMARELO + "\nUN JOUR JE SERAI DE RETOUR PRÈS DE TOI" + Cores.RESET);
-
-        System.out.println(Cores.ROXO + "\n----------------------------------------------------------------------------------\n" + Cores.RESET);
+        System.out.println(Cores.AMARELO + """
+                
+                ----------------------------------------------------------------------------------
+                ===================== UN JOUR JE SERAI DE RETOUR PRÈS DE TOI =====================
+                ----------------------------------------------------------------------------------
+           
+                """ + Cores.RESET);
 
         System.out.print(
                 """
@@ -73,7 +75,20 @@ public class Turnos {
         if (capitulo == 1) {
 
             if (turno == 0) {
-                System.out.println("\nNarração de Turno 1");
+                System.out.println("""
+                        O nada, o gracioso vazio do esquecimento.
+                        
+                        Sem responsabilidades, sem mais casos estúpidos de maridos traídos,
+                        mães desconfiadas que o filho está fumando e assaltos leves.
+                        
+                        Apenas o nada...
+                        
+                        Interrompido apenas pelos primeiros raios de sol da manhã e
+                        a consciência vem acompanhada de uma terrível dor de cabeça.
+                        
+                        Ao fundo, o som do velho ventilador de teto incomoda menos do que
+                        o desconforto do sofá mofado.
+                        """);
             }
 
         } else if (capitulo == 2) {
