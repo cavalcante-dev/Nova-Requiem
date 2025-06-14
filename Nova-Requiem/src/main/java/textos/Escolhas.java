@@ -32,8 +32,6 @@ public class Escolhas {
 
                 imprimirOpcoes();
 
-                System.out.print("\n> ");
-
             }
 
         } else if (capitulo == 2) {
@@ -44,8 +42,6 @@ public class Escolhas {
                         \nMuito turnos parte 2""");
 
                 imprimirOpcoes();
-
-                System.out.print("\n> ");
 
             }
 
@@ -60,8 +56,6 @@ public class Escolhas {
 
                 imprimirOpcoes();
 
-                System.out.print("\n> ");
-
             }
 
         }
@@ -72,12 +66,6 @@ public class Escolhas {
         for (int i = 0; i < opcoes.length; i++) {
             opcoes[i] = "";
         }
-        /*
-        array [0] = 1
-        array [1] = 2
-        ...
-        ...
-         */
     }
 
     public void removerOpcao(int resposta) { 
