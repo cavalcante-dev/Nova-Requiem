@@ -1,6 +1,7 @@
 package main.java.entities;
 
 import main.java.util.Cores;
+import main.java.util.Musica;
 
 import java.util.Random;
 
@@ -52,6 +53,7 @@ public class Jogador {
 
         boolean resultado = false;
         Random random = new Random();
+        Musica efeitoDado = new Musica();
 
         int dado1 = random.nextInt(6) + 1;
         int dado2 = random.nextInt(6) + 1;
@@ -64,6 +66,8 @@ public class Jogador {
             System.out.println(Cores.VERMELHO + "[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")" + Cores.RESET);
             resultado = false;
         }
+
+        efeitoDado.rolarDado();
 
         return resultado;
 

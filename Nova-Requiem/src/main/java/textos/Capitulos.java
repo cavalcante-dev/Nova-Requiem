@@ -12,23 +12,6 @@ public class Capitulos {
         this.turnosPorCapitulo = turnosPorCapitulo;
     }
 
-    public void trilhaSonora() {
-
-        Musica musica = new Musica();
-
-        if (capitulo == 1) {
-            musica.parar();
-            musica.musicaCapitulo1();
-        } else if (capitulo == 2) {
-            musica.parar();
-            musica.musicaCapitulo2();
-        } else if (capitulo == 3) {
-            musica.parar();
-            musica.musicaCapitulo3();
-        }
-
-    }
-
     public void finalCapitulo() {
         if (capitulo == 1) {
             System.out.println("\nFinal do capitulo 1\n");

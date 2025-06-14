@@ -37,14 +37,18 @@ public class Main {
 
         //Funcionamento principal de turnos e capitulos
 
+        Musica musica = new Musica();
+
         for (Capitulos capitulo : capitulos) {
+
+            musica.trilhaSonora(capitulo.getCapitulo());
 
             for (int t = 0; t < capitulo.getTurnosPorCapitulo(); t++) {
 
                 escolhas.definirOpcoes(capitulo.getCapitulo(), t);
-                do {
+                turnos.narrar(capitulo.getCapitulo(), t);
 
-                    turnos.narrar(capitulo.getCapitulo(), t);
+                do {
 
                     escolhas.alternativas(capitulo.getCapitulo(), t);
                     resposta = resultados.validadeResposta(resposta);
@@ -59,6 +63,7 @@ public class Main {
 
             }
 
+            musica.parar();
             capitulo.finalCapitulo();
 
         }
