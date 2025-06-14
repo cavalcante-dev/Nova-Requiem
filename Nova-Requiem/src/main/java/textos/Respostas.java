@@ -5,7 +5,9 @@ import main.java.entities.NPC;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Respostas {
 
@@ -24,7 +26,6 @@ public class Respostas {
         this.fimTurno = false;
         this.npcs = npcs;
     }
-
 
     public void responder(int resposta, int capitulo, int turno){
 
@@ -148,6 +149,36 @@ public class Respostas {
             }
 
         }
+
+    }
+
+    // Função de verificação de resposta no turno.
+    public int validadeResposta(int resposta) {
+
+        boolean caiuNoCatch;
+        Scanner sc = new Scanner(System.in);
+
+        if (resposta == 0) {
+            do {
+
+                try {
+                    System.out.print("> ");
+                    resposta = sc.nextInt();
+                    caiuNoCatch = false;
+                } catch (InputMismatchException e) {
+                    sc.next();
+                    caiuNoCatch = true;
+                    System.out.println(Cores.VERMELHO + "> CARACTERE INVALIDO <" + Cores.RESET);
+                }
+
+                if (resposta < 1 || resposta > 4) {
+                    System.out.println(Cores.VERMELHO + "> OPÇÃO INDISPONIVEL: Insira um valor entre 1 e 4 <" + Cores.RESET);
+                }
+
+            } while (caiuNoCatch && resposta < 1 || resposta > 4);
+        }
+
+        return resposta;
 
     }
 

@@ -1,18 +1,13 @@
 package main.java.entities;
 
 public class NPC {
+
     private String nome;
     private int afinidade;
-    private boolean status;
 
     public NPC(String nome, int afinidade) {
         this.nome = nome;
         this.afinidade = afinidade;
-        this.status = true;
-    } 
-
-    public void morrer(NPC NPC) {
-        NPC.setStatus(false);
     }
 
     /* 
@@ -37,10 +32,5 @@ public class NPC {
     public void setAfinidade(int afinidade) {
         this.afinidade = afinidade;
     }
-    public boolean isStatus() {
-        return status;
-    }
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
+
 }

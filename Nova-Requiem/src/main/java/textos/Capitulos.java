@@ -1,5 +1,7 @@
 package main.java.textos;
 
+import main.java.util.Musica;
+
 public class Capitulos {
 
     private int capitulo;
