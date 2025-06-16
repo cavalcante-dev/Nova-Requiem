@@ -84,17 +84,45 @@ public class SofiaVentura extends NPC {
 
                     System.out.println("""
                             
+                            Sofia dá um suspiro longo.
+
+                            - Um empresário foi encontrado morto está manhã. O corpo estava
+                            dentro de uma maleta dentro do escritório dele, quem encontrou 
+                            foram os zeladores. - Outro suspiro longo se segue, ele fecha os 
+                            olhos e franze o cenho. - A viúva está devastada, principalmente
+                            por estar sendo suspeita do caso. 
                             
+                            Ela se levanta e hesita, como se quisesse ficar um pouco mais. 
+
+                            - Vamos, a pasta está no carro você pode ver os detalhes no carro. 
                             
                             ----------------------------------------------------------------------------------------
                             """);
 
                 } else if (resposta == 2) {
 
+                       System.out.println("""
+                            
+                            - Não, não estou. - O olhar sério denúncia a sinceridade e um
+                            silêncio constrangedor se estende por alguns segundos. - Mas valeu
+                            pela tentativa. 
 
+                            ----------------------------------------------------------------------------------------
+                            """);
 
                 } else if (resposta == 3) {
 
+                        System.out.println("""
+                            
+                            - Se você não se lembrar não serei eu a te contar. - Ela olha 
+                            para a janela, agora com um sol da manhã agrádavel. Você se 
+                            pergunta o que ela está pensando. 
+
+                            O olhar de Sofia é distante, ao mesmo tempo que caloroso. Ela 
+                            está bonita hoje. 
+
+                            ----------------------------------------------------------------------------------------
+                            """);
 
 
                 } else if (resposta == 4) {
