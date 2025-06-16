@@ -146,6 +146,7 @@ public class Respostas {
                         }
                     }
                     escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
 
                 } else if (resposta == 2) {
 
@@ -164,7 +165,6 @@ public class Respostas {
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
 
                 } else if (resposta == 4) {
 
