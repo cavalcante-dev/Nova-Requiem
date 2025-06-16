@@ -7,6 +7,7 @@ import java.util.Random;
 public class Jogador {
 
     private String nome;
+
     private int intelecto;
     private int intelectoBarra;
 
@@ -15,7 +16,6 @@ public class Jogador {
 
     private int coracao;
     private int coracaoBarra;
-
 
     public Jogador(){
     }
@@ -46,6 +46,7 @@ public class Jogador {
 
     }
 
+    // Metodo de Testes de Atributo para definir sucessos e falhas - a abastração do conceito de rolar 2 dados de 6 lados
     public boolean rolarAtributo(int atributo, int dt){
 
         //DT = Dificuldade do TESTE
@@ -58,10 +59,10 @@ public class Jogador {
         int result = dado1 + dado2 + atributo;
 
         if (result >= dt) {
-            System.out.println(Cores.VERDE + "[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")" + Cores.RESET);
+            System.out.println(Cores.VERDE + "\n[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")" + Cores.RESET);
             resultado = true;
         } else if (result < dt) {
-            System.out.println(Cores.VERMELHO + "[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")" + Cores.RESET);
+            System.out.println(Cores.VERMELHO + "\n[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")" + Cores.RESET);
             resultado = false;
         }
 

@@ -12,14 +12,14 @@ import java.util.Scanner;
 public class Respostas {
 
     private boolean resultado;
-    private Jogador jogador;
+    private Jogador jogadorUtilitarios;
     private Escolhas escolhas;
     private boolean fimTurno;
     private Finais finais;
     private List<NPC> npcs;
 
-    public Respostas(Jogador jogador, Escolhas escolhas, Finais finais, List<NPC> npcs) {
-        this.jogador = jogador;
+    public Respostas(Jogador jogadorUtilitarios, Escolhas escolhas, Finais finais, List<NPC> npcs) {
+        this.jogadorUtilitarios = jogadorUtilitarios;
         this.escolhas = escolhas;
         this.finais = finais;
         this.resultado = false;
@@ -50,7 +50,11 @@ public class Respostas {
                             
                             ----------------------------------------------------------------------------------------
                             """);
-                    npcs.get(0).setAfinidade(((npcs.get(0)).getAfinidade() + 1));
+                    for (NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            npc.setAfinidade((npc.getAfinidade() + 1));
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
 
@@ -69,7 +73,11 @@ public class Respostas {
                             
                             ----------------------------------------------------------------------------------------
                             """);
-                    npcs.get(0).setAfinidade(((npcs.get(0)).getAfinidade() - 1));
+                    for (NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            npc.setAfinidade((npc.getAfinidade() - 1));
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
 
@@ -80,7 +88,7 @@ public class Respostas {
                             Você se ajeita no sofá e se examina o estrago.
                             
                             O ventilador de teto velho faz seu máximo para manter o ambiente
-                            agradável, o relógio na parede marca 7:12AM. 
+                            agradável, o relógio na parede marca 7:12AM.
                             
                             Ambos são as únicas coisas que parecem estar no seu devido lugar, o sofá velho 
                             onde você está fede a mofo, as roupas de ontem estão em locais fora do seu campo 
@@ -98,7 +106,7 @@ public class Respostas {
 
                 } else if (resposta == 4) {
 
-                    resultado = jogador.rolarAtributo(jogador.getIntelecto(), 8);
+                    resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getIntelecto(), 8);
                     if (!resultado) {
                         System.out.println("""
                              
@@ -121,9 +129,50 @@ public class Respostas {
                                 
                             ----------------------------------------------------------------------------------------
                             """);
-                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
+                        jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getIntelectoBarra()+1);
                     }
 
+                    escolhas.removerOpcao(resposta);
+
+                }
+
+            } else if (turno == 1) {
+
+                if (resposta == 1) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+
+                } else if (resposta == 2) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+
+                } else if (resposta == 3) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
+
+                } else if (resposta == 4) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
 
                 }
@@ -141,12 +190,12 @@ public class Respostas {
 
                 } else if (resposta == 2) {
 
-                    resultado = jogador.rolarAtributo(jogador.getCoracao(), 8);
+                    resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getCoracao(), 8);
                     if (!resultado) {
                         System.out.println(Cores.VERMELHO + "Você falhou." + Cores.RESET);
                     } else if (resultado) {
                         System.out.println(Cores.VERDE + "Você conseguiu!" + Cores.RESET);
-                        jogador.setIntelectoBarra(jogador.getIntelectoBarra()+1);
+                        jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getIntelectoBarra()+1);
                     }
 
                     escolhas.removerOpcao(resposta);
@@ -213,7 +262,8 @@ public class Respostas {
 
     }
 
-    // Função de verificação de resposta no turno.
+    // Metodo de verificação de resposta no turno.
+
     public int validadeResposta(int resposta) {
 
         boolean caiuNoCatch;
@@ -223,13 +273,13 @@ public class Respostas {
             do {
 
                 try {
-                    System.out.print("> ");
+                    System.out.print("\n> ");
                     resposta = sc.nextInt();
                     caiuNoCatch = false;
                 } catch (InputMismatchException e) {
                     sc.next();
                     caiuNoCatch = true;
-                    System.out.println(Cores.VERMELHO + "> CARACTERE INVALIDO <" + Cores.RESET);
+                    System.out.println(Cores.VERMELHO + "\n> CARACTERE INVALIDO <" + Cores.RESET);
                 }
 
                 if (resposta < 1 || resposta > 4) {
@@ -242,6 +292,24 @@ public class Respostas {
         return resposta;
 
     }
+
+    /* MODELO DE RESPOSTA
+
+        if (resposta == 1) {
+
+            escolhas.removerOpcao(resposta);
+        } else if (resposta == 2) {
+
+            escolhas.removerOpcao(resposta);
+        } else if (resposta == 3) {
+
+            escolhas.removerOpcao(resposta);
+        } else if (resposta == 4) {
+
+            escolhas.removerOpcao(resposta);
+        }
+
+     */
 
     public boolean isFimTurno() {
         return fimTurno;
