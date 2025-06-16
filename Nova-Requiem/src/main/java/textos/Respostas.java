@@ -17,6 +17,7 @@ public class Respostas {
     private boolean fimTurno;
     private Finais finais;
     private List<NPC> npcs;
+    private int contadorFimTurno;
 
     public Respostas(Jogador jogadorUtilitarios, Escolhas escolhas, Finais finais, List<NPC> npcs) {
         this.jogadorUtilitarios = jogadorUtilitarios;
@@ -25,6 +26,7 @@ public class Respostas {
         this.resultado = false;
         this.fimTurno = false;
         this.npcs = npcs;
+        this.contadorFimTurno = 0;
     }
 
     public void responder(int resposta, int capitulo, int turno){
@@ -111,7 +113,7 @@ public class Respostas {
                         System.out.println("""
                              
                              Você fecha os olhos e tenta se lembrar da noite passada, musica disco?
-                             Tequila sunset? Abacaxi alguma coisa? Tudo é muito confuso. 
+                             Tequila sunset? Abacaxi alguma coisa? Tudo é muito confuso.
                              
                              ----------------------------------------------------------------------------------------
                              """);
@@ -145,7 +147,13 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
+                    
                     escolhas.removerOpcao(resposta);
+
+                    contadorFimTurno++;
+                    if (contadorFimTurno == 4) {
+                        setFimTurno(true);
+                    }
 
                 } else if (resposta == 2) {
 
@@ -154,7 +162,13 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
+
                     escolhas.removerOpcao(resposta);
+
+                    contadorFimTurno++;
+                    if (contadorFimTurno == 4) {
+                        setFimTurno(true);
+                    }
 
                 } else if (resposta == 3) {
 
@@ -163,8 +177,13 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
+
                     escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
+
+                    contadorFimTurno++;
+                    if (contadorFimTurno == 4) {
+                        setFimTurno(true);
+                    }
 
                 } else if (resposta == 4) {
 
@@ -173,7 +192,13 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
+
                     escolhas.removerOpcao(resposta);
+
+                    contadorFimTurno++;
+                    if (contadorFimTurno == 4) {
+                        setFimTurno(true);
+                    }
 
                 }
 
