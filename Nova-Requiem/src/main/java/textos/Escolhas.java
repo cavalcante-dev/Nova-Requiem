@@ -6,6 +6,7 @@ import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Escolhas {
@@ -19,6 +20,8 @@ public class Escolhas {
         this.npcs = npcs;
     }
 
+    // Imprime o gancho de turno e as opções disponiveis
+
     public void alternativas(int capitulo, int turno){
 
         if (capitulo == 1) {
@@ -28,6 +31,15 @@ public class Escolhas {
                 System.out.println("""
                         Você se acomoda resistindo a vontade de abrir os olhos. Tudo parece distante.
                         Tick-Tack do relógio não revela as horas se não se levantar.
+                        """);
+
+                imprimirOpcoes();
+
+            } else if (turno == 1) {
+
+                System.out.println("""
+                        Sofia está sentada na bancada do seu pequeno apartamento, o olhar impaciente e 
+                        cansado revela que algo aconteceu mais cedo.
                         """);
 
                 imprimirOpcoes();
@@ -62,10 +74,10 @@ public class Escolhas {
 
     }
 
+    // Metodos de definição de opções por turno
+
     public void limparOpcoes() {
-        for (int i = 0; i < opcoes.length; i++) {
-            opcoes[i] = "";
-        }
+        Arrays.fill(opcoes, "");
     }
 
     public void removerOpcao(int resposta) { 
@@ -79,7 +91,7 @@ public class Escolhas {
     public void imprimirOpcoes() {
         for (String opcao : opcoes) {
             if (opcao.equals(" ")) {
-                System.out.println("------------");
+                System.out.println(Cores.VERDE + "----------------------" + Cores.RESET);
             } else {
                 System.out.println(opcao);
             }
@@ -89,10 +101,15 @@ public class Escolhas {
     public void definirOpcoes(int capitulo, int turno) {
         if (capitulo == 1) {
             if (turno == 0) {
-                opcoes[0] = "1. Levantar do sofá";
-                opcoes[1] = "2. Permanecer na inconsciência";
-                opcoes[2] = "3. Olhar em volta";
+                opcoes[0] = "1. Levantar do sofá.";
+                opcoes[1] = "2. Permanecer na inconsciência.";
+                opcoes[2] = "3. Olhar em volta.";
                 opcoes[3] = (Cores.AMARELO + "4. [TESTE (INTELECTO) - DIFICULDADE: Médio (8)] A noite passada?" + Cores.RESET);
+            } else if (turno == 1) {
+                opcoes[0] = "1. 'O que te trás aqui tão cedo? Aconteceu algo?'";
+                opcoes[1] = "2. 'Você está bonita hoje...'";
+                opcoes[2] = "3. 'O que aconteceu ontem a noite?'";
+                opcoes[3] = "4. Oferecer um café.";
             }
         }
         if (capitulo == 2) {

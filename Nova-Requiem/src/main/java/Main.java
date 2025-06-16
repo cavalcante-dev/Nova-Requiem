@@ -13,26 +13,27 @@ public class Main {
     public static void main(String[] args) {
 
         int resposta = 0;
-        Turnos turnos = new Turnos();
-        List<Capitulos> capitulos = new ArrayList<>();
         Jogador jogador = new Jogador();
+        List<Capitulos> capitulos = new ArrayList<>();
         List<NPC> npcs = new ArrayList<>();
+        Turnos turnos = new Turnos(jogador, npcs);
         Escolhas escolhas = new Escolhas(jogador, npcs);
         Finais finais = new Finais();
         Respostas resultados = new Respostas(jogador, escolhas, finais, npcs);
 
-        // Instancia todos os npcs
+        // Instancia todos os npcs (personagens não jogaveis)
 
-        npcs.add(new SofiaVentura("Sofia Ventura", 2));
-        npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0));
+        npcs.add(new SofiaVentura("Sofia Ventura", 2, jogador));
+        npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0, jogador));
 
-        // Número de capitulos ainda a ser decidido - valores de exemplo.
+        // Instancia o capitulo e quantidade de turnos em cada.
 
         capitulos.add(new Capitulos(1, 4));
         capitulos.add(new Capitulos(2, 1));
         capitulos.add(new Capitulos(3, 1));
+        capitulos.add(new Capitulos(4, 1));
 
-        turnos.introducao(jogador);
+        turnos.introducao();
 
         //Funcionamento principal de turnos e capitulos
 
@@ -56,6 +57,7 @@ public class Main {
                 } while (!resultados.isFimTurno());
 
                 resultados.setFimTurno(false);
+                jogador.uparAtributo();
                 escolhas.limparOpcoes();
 
             }
@@ -65,7 +67,6 @@ public class Main {
         }
 
         finais.narrarFinal();
-        finais.finalSofia(npcs.get(0));
 
     }
 }

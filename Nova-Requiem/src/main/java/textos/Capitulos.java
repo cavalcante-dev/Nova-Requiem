@@ -12,6 +12,7 @@ public class Capitulos {
         this.turnosPorCapitulo = turnosPorCapitulo;
     }
 
+    // Titulos dos capitulos, separado em 4 momentos - Introdução / Analise de pistas / Interrogatorio / Final
     public void inicioCapitulo() {
         if (capitulo == 1) {
 

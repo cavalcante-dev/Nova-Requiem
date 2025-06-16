@@ -1,14 +1,25 @@
 package main.java.textos;
 
 import main.java.entities.Jogador;
+import main.java.entities.NPC;
+import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Turnos {
 
-    public void introducao(Jogador jogador) {
+    private Jogador jogador;
+    private List<NPC> npcs;
+
+    public Turnos(Jogador jogador, List<NPC> npcs) {
+        this.jogador = jogador;
+        this.npcs = npcs;
+    }
+
+    public void introducao() {
 
         System.out.println(Cores.ROXO + """
                 ----------------------------------------------------------------------------------
@@ -46,8 +57,7 @@ public class Turnos {
                 
                 ----------------------------------------------------------------------------------
                 ===================== UN JOUR JE SERAI DE RETOUR PRÈS DE TOI =====================
-                ----------------------------------------------------------------------------------
-           
+                ----------------------------------------------------------------------------------           
                 """ + Cores.RESET);
 
         System.out.print(
@@ -89,12 +99,28 @@ public class Turnos {
                         Ao fundo, o som do velho ventilador de teto incomoda menos do que
                         o desconforto do sofá mofado.
                         """);
+            } else if (turno == 1) {
+                System.out.println(
+                        "Sua manhã é bruscamente interrompida por batidas na impacientes na porta\n" +
+                        "\n- " + jogador.getNome() + ", você tá em casa?\n" +
+                        """
+                        
+                        Uma voz feminina abafada e claramente irritada fala do outro lado da porta,
+                        Sofia Ventura, sua parceira.
+                        """);
+                for (NPC npc : npcs) {
+                    if (npc instanceof SofiaVentura) {
+                        ((SofiaVentura) npc).diaglogar(capitulo, turno);
+                    }
+                }
             }
 
         } else if (capitulo == 2) {
 
             if (turno == 0) {
-                System.out.println("\nNarração de Turno 2");
+                System.out.println("""
+                        
+                        """);
             }
 
         } else if (capitulo == 3) {
@@ -106,12 +132,12 @@ public class Turnos {
         }
     }
 
+    // Função de verificação do arquetipo do personagem.
     public int verificarArquetipo(int arquetipo) {
 
         boolean caiuNoCatch;
         Scanner sc = new Scanner(System.in);
 
-        // Função de verificação do arquetipo do personagem.
         if (arquetipo == 0) {
             do {
 

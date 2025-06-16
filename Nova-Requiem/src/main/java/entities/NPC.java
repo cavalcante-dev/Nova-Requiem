@@ -4,21 +4,17 @@ public class NPC {
 
     private String nome;
     private int afinidade;
+    private Jogador jogadorUtilitarios;
 
-    public NPC(String nome, int afinidade) {
+    public NPC(String nome, int afinidade, Jogador jogadorUtilitarios) {
         this.nome = nome;
         this.afinidade = afinidade;
+        this.jogadorUtilitarios = jogadorUtilitarios;
     }
 
-    /* 
-    
-    if (status) {
-        System.out.println(personagem.getNome() + " está vivo e pode agir!");
-    } else {
-        System.out.println(personagem.getNome() + " está morto. Nada será feito.");
+    public Jogador getJogadorUtilitarios() {
+        return jogadorUtilitarios;
     }
-
-    */
 
     public String getNome() {
         return nome;

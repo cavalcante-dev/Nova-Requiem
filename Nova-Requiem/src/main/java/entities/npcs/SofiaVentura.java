@@ -1,20 +1,63 @@
 package main.java.entities.npcs;
 
+import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.util.Cores;
 
 public class SofiaVentura extends NPC {
 
-    public SofiaVentura(String nome, int afinidade) {
-        super(nome, afinidade);
+    public SofiaVentura(String nome, int afinidade, Jogador jogador) {
+        super(nome, afinidade, jogador);
     }
 
     public void diaglogar(int capitulo, int turno) {
         if (capitulo == 1) {
 
-            if (turno == 0) {
+            if (turno == 1) {
 
-                System.out.println(Cores.ROXO + "Sofia: Oi! Você veio.\n" + Cores.RESET);
+                if (getAfinidade() < 3) {
+
+                    System.out.println("""
+                            
+                            - Você tá ai dentro? Ou morreu no caminho pra casa ontem? - As batidas ficam
+                            mais impacientes e a sua dor de cabeça consequentemente mais forte. Você escuta
+                            no fundo da sua inconsciência o som da maçaneta virando.
+                            
+                            - Eu não acredito que você deixou a maldita porta aberta... Ah meu Deus que bagunça\s""" + getJogadorUtilitarios().getNome() + ", " +
+                            """
+                            \ne eu achando que a minha manhã não podia ficar pior. Anda levanta desse sofá.
+                            
+                            Após finalmente abrir os olhos, você vê Sofia em pé e te olhando de braços cruzados. A pele escura
+                            se destaca com as tranças loiras presas em um coque e a roupa social bem arrumada em baixo de um
+                            sobretudo preto aberto que revela o distintivo do Distrito 41. Ela parece cansada.
+                            
+                            Não existe outra opção a não ser se levantar e se deixar minimamente apresentável. Ela se senta
+                            na bancada da cozinha esperando a sua boa vontade, o olhar dela busca por uma xícara de café.
+                            
+                            - Rápido, não temos a manhã toda.
+                            
+                            """
+                            );
+
+                } else if (getAfinidade() >= 3) {
+
+                    System.out.println("""
+                            Você prontamente vai até a porta e abre antes que ela possa bater mais uma vez.
+                            
+                            - Você tá ai dent- Ah, bom dia\s""" + getJogadorUtilitarios().getNome() + ". - A surpresa na voz dela é clara." +
+                            """
+                            
+                            \nSofia está em frente a porta te o olhar surpreso te dá certa satisfação. A pele escura
+                            se destaca com as tranças loiras presas em um coque e a roupa social bem arrumada em baixo
+                            de um sobretudo preto aberto que revela o distintivo do Distrito 41. Ela parece cansada.
+                            
+                            Ela entra e examina o seu apartamento ajeitado na medida do possível e se senta na bancada
+                            da cozinha, o cheiro do café atrai o olhar dela.
+                            
+                            - Que bicho te mordeu? Levantou antes das duas da tarde e ainda vez café? Aceito um pouco antes de irmos.
+                            """);
+
+                }
 
             }
 
@@ -35,28 +78,62 @@ public class SofiaVentura extends NPC {
 
         if (capitulo == 1) {
 
-            if (turno == 0) {
+            if (turno == 1) {
 
                 if (resposta == 1) {
 
-                    System.out.println("Escolha Neutra da Sofia");
+                    System.out.println("""
+                            
+                            
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
 
                 } else if (resposta == 2) {
 
-                    System.out.println("Escolha Neutra da Sofia");
+
 
                 } else if (resposta == 3) {
 
-                    System.out.println("Escolha boa - Sofia gostou disso!");
-                    setAfinidade(getAfinidade()+1);
+
 
                 } else if (resposta == 4) {
 
-                    System.out.println("Escolha ruim - Sofia não gostou disso.");
-                    setAfinidade(getAfinidade()-1);
+                    if (getAfinidade() >= 3) {
 
-                } else {
-                    System.out.println("> Opção Indisponivel");
+                        System.out.println("""
+                                
+                                Você serve uma quantidade generosa, o olhar investigativo de Sofia acompanha
+                                seus movimentos, o cheiro de café novo infesta o ambiente e você coloca a xícara
+                                próximo a ela.
+                                
+                                Ela examina a xícara estampada com uma foto de vocês dois e se pergunta se essa
+                                é a única que você tem inteira. Sofia suspira.
+                                
+                                - Obrigado, eu tava precisando disso. - Ela toma um gole e da um pequeno 
+                                sorriso. - Você é realmente péssimo com café.
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
+
+                        setAfinidade(getAfinidade() + 1);
+
+                    } else if (getAfinidade() < 3) {
+
+                        System.out.println("""
+                                
+                                Não tem café, você não fez nenhum.
+                                
+                                Você olha em volta procurando as coisas para começar a preparar 
+                                um pouco, Sofia vê você abrindo os armários.
+                                
+                                - Não temos tempo para passar um café agora. - Ela parece mais impaciente.
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
+
+                    }
+
                 }
 
 
