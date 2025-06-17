@@ -85,6 +85,7 @@ public class Turnos {
         if (capitulo == 1) {
 
             if (turno == 0) {
+
                 System.out.println("""
                         O nada, o gracioso vazio do esquecimento.
                         
@@ -99,7 +100,9 @@ public class Turnos {
                         Ao fundo, o som do velho ventilador de teto incomoda menos do que
                         o desconforto do sofá mofado.
                         """);
+
             } else if (turno == 1) {
+
                 System.out.println(
                         "Sua manhã é bruscamente interrompida por batidas na impacientes na porta\n" +
                         "\n- " + jogador.getNome() + ", você tá em casa?\n" +
@@ -113,6 +116,23 @@ public class Turnos {
                         ((SofiaVentura) npc).diaglogar(capitulo, turno);
                     }
                 }
+
+            } else if (turno == 2) {
+
+                System.out.println("""
+                        Sofia sai do apartamento e você a acompanha logo atrás e por algum motivo se sente
+                        como nos velhos tempos. O caminho até o carro é silencioso, tenso, e quando chegam 
+                        você se depara com o velho Impala 67 que ela dirige por Santa Tereza.
+                        
+                        Sem perder muito tempo, ela entra e dá partida, observando você ocupar o
+                        banco do passageiro.
+                        """);
+                for (NPC npc : npcs) {
+                    if (npc instanceof SofiaVentura) {
+                        ((SofiaVentura) npc).diaglogar(capitulo, turno);
+                    }
+                }
+
             }
 
         } else if (capitulo == 2) {

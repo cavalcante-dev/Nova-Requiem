@@ -21,33 +21,29 @@ public class Jogador {
     }
 
     public void definirArquetipo(int arquetipo) {
+
+        this.intelectoBarra = 0;
+        this.fisicoBarra = 0;
+        this.coracaoBarra = 0;
+
         if (arquetipo == 1) {
             this.intelecto = 0;
             this.fisico = 2;
             this.coracao = 1;
-            this.intelectoBarra = 0;
-            this.fisicoBarra = 0;
-            this.coracaoBarra = 0;
         } else if (arquetipo == 2) {
             this.intelecto = 2;
             this.fisico = 0;
             this.coracao = 1;
-            this.intelectoBarra = 0;
-            this.fisicoBarra = 0;
-            this.coracaoBarra = 0;
         } else if (arquetipo == 3) {
             this.intelecto = 0;
             this.fisico = 1;
             this.coracao = 2;
-            this.intelectoBarra = 0;
-            this.fisicoBarra = 0;
-            this.coracaoBarra = 0;
         }
 
     }
 
-    // Metodo de Testes de Atributo para definir sucessos e falhas - a abastração do conceito de rolar 2 dados de 6 lados
-    public boolean rolarAtributo(int atributo, int dt){
+    // Metodo de Testes para definir sucessos e falhas - a abastração do conceito de rolar 2 dados de 6 lados
+    public boolean rolarTeste(int atributo, int dt){
 
         //DT = Dificuldade do TESTE
 
