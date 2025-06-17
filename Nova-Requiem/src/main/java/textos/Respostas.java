@@ -265,7 +265,7 @@ public class Respostas {
 
                 } else if (resposta == 2) {
 
-                    resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getIntelecto(), 8);
+                    resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getIntelecto(), 8);
 
                     if (!resultado) {
                         System.out.println("""
