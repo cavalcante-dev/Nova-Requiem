@@ -64,7 +64,25 @@ public class Escolhas {
 
                 imprimirOpcoes();
 
-            }
+            } 
+
+            else if (turno == 1) {
+
+                System.out.println("""
+                        \nMuito turnos parte 2""");
+
+                imprimirOpcoes();
+
+            } 
+
+            else if (turno == 2) {
+
+                System.out.println("""
+                        \nMuito turnos parte 2""");
+
+                imprimirOpcoes();
+
+            } 
 
         } else if (capitulo == 3) {
 
@@ -127,11 +145,26 @@ public class Escolhas {
             }
         }
         if (capitulo == 2) {
+
             if (turno == 0) {
-                opcoes[0] = "1. Opção Neutra - 2";
-                opcoes[1] = (Cores.AMARELO + "2. [TESTE (CORAÇÃO) - DIFICULDADE (8)] " + Cores.RESET);
-                opcoes[2] = "3. Opção Boa";
-                opcoes[3] = "4. Opção Ruim";
+                opcoes[0] = "1. Separar as provas físicas em categorias";
+                opcoes[1] = (Cores.AMARELO + "2. [TESTE (INTELECTO) - DIFICULDADE (8)] - Ver além do óbvio" + Cores.RESET);
+                opcoes[2] = "3. Organizar a linha do tempo dos acontecimentos";
+                opcoes[3] = "4. Chamar Sofia para te ajudar a pensar";
+            }
+
+            else if (turno == 1) {
+                opcoes[0] = "1. Perguntar a opinião dela sobre os suspeitos";
+                opcoes[1] = "2. Fazer piada com o caso ou com a vítima ";
+                opcoes[2] = "3. Falar que está cansado e que talvez esteja exagerando nas suspeitas";
+                opcoes[3] = "4. Oferecer mais um café para Sofia e demonstrar preocupação com ela";
+            }
+
+            else if (turno == 2) {
+                opcoes[0] = "1. Montar um plano de Interrogatório baseada na ordem dos acontecimentos";
+                opcoes[1] = "2. Dizer que não se importa, todos vão mentir de qualquer jeito.";
+                opcoes[2] = "3. Deixar Sofia decidir a ordem";
+                opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE (8)] - Mostrar confiança na Investigação e nela " + Cores.RESET);;
             }
         }
         if (capitulo == 3) {
