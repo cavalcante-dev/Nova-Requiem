@@ -119,9 +119,41 @@ public class Turnos {
 
             if (turno == 0) {
                 System.out.println("""
-                        
+                        O som da chuva batendo contra a janela da delegacia parece acompanhar o ritmo dos pensamentos. 
+                        A sala de investigação está tomada por fotos, documentos e anotações rabiscadas às pressas. 
+
+                        Sofia joga um maço de papéis sobre a mesa e cruza os braços.
+                        — “Se a gente não encaixar isso logo... alguém sai livre.” — diz, com aquele olhar que mistura, 
+                        cansaço e desafio.
+                        O cheiro de café velho e papel molhado toma conta da sala.
+                         
+                        Seu quadro de investigação é um caos: fotos amassadas, recibos tortos e rabiscos confusos. 
+                        Cada linha vermelha traçada nas paredes parece mais confundir do que esclarecer. 
+                        As vozes da delegacia ecoam lá fora. O tempo corre... e a pressão pesa.
+
                         """);
-            }
+                        
+            } else if (turno == 1) {
+                System.out.println("""
+                    O som da porta batendo te tira dos pensamentos. 
+                    Sofia entra, se aproxima com um café na mão. 
+                    Ela está cansada, mas alerta.
+
+                        """);
+
+            }  else if (turno == 2) {
+                System.out.println("""
+                    Sofia está de pé, olhando fixamente para as fotos dos suspeitos presas no quadro. 
+                    Ela respira fundo.
+
+                    — “Você decide por onde começamos amanhã, mas faça isso com certeza. Por que errar... Ele vai sair impune.”
+
+                    Você sente o peso dessa responsabilidade. 
+                    Ainda há tempo para mais uma decisão antes de dormir.
+
+
+                        """);
+            } 
 
         } else if (capitulo == 3) {
 

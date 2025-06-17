@@ -24,7 +24,14 @@ public class Capitulos {
                 """ + Cores.RESET);
 
         } else if (capitulo == 2) {
-            System.out.println("\nFinal do capitulo 2\n");
+
+            System.out.println(Cores.AMARELO     + """
+                
+            ----------------------------------------------------------------------------------
+            =============================== CAPÍTULO 2: MORTIS ===============================
+            ----------------------------------------------------------------------------------
+            """ + Cores.RESET);
+        
         } else if (capitulo == 3) {
             System.out.println("\nFinal do capitulo 3\n");
         }
