@@ -38,8 +38,17 @@ public class Escolhas {
             } else if (turno == 1) {
 
                 System.out.println("""
-                        Sofia está sentada na bancada do seu pequeno apartamento, o olhar impaciente e 
+                        Sofia está sentada na bancada do seu pequeno apartamento, o olhar impaciente e
                         cansado revela que algo aconteceu mais cedo.
+                        """);
+
+                imprimirOpcoes();
+
+            } else if (turno == 2) {
+
+                System.out.println("""
+                        O Impala bem cuidado de Sofia atravessa Santa Tereza com pressa, no seu colo
+                        uma pasta com documentos do caso e detalhes coletados pelo Distrito 41.
                         """);
 
                 imprimirOpcoes();
@@ -128,6 +137,11 @@ public class Escolhas {
                 opcoes[1] = "2. 'Você está bonita hoje...'";
                 opcoes[2] = "3. 'O que aconteceu ontem a noite?'";
                 opcoes[3] = "4. Oferecer um café.";
+            } else if (turno == 2) {
+                opcoes[0] = "1. Examinar documentos.";
+                opcoes[1] = "2. 'O que você sabe sobre os suspeitos?'";
+                opcoes[2] = "3. 'Quais pistas nós temos?'";
+                opcoes[3] = "4. Olhas pela janela.";
             }
         }
         if (capitulo == 2) {

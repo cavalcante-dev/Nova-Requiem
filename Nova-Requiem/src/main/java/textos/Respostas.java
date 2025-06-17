@@ -37,6 +37,8 @@ public class Respostas {
 
                 if (resposta == 1) {
 
+                    // Resposta com aumento de afinidade - usar como modelo posteriormente.
+
                     System.out.println("""
                             
                             Você decide se levantar, afinal, a cidade não não espera.
@@ -105,10 +107,11 @@ public class Respostas {
                             """);
                     escolhas.removerOpcao(resposta);
 
-
                 } else if (resposta == 4) {
 
-                    resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getIntelecto(), 8);
+                    // Resposta com teste de habilidade - usar como modelo posteriormente.
+
+                    resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getIntelecto(), 8);
                     if (!resultado) {
                         System.out.println("""
                              
@@ -147,13 +150,9 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
-                    
                     escolhas.removerOpcao(resposta);
 
-                    contadorFimTurno++;
-                    if (contadorFimTurno == 4) {
-                        setFimTurno(true);
-                    }
+                    finalDoTurno();
 
                 } else if (resposta == 2) {
 
@@ -162,13 +161,10 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
-
                     escolhas.removerOpcao(resposta);
 
-                    contadorFimTurno++;
-                    if (contadorFimTurno == 4) {
-                        setFimTurno(true);
-                    }
+                    finalDoTurno();
+
 
                 } else if (resposta == 3) {
 
@@ -177,13 +173,9 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
-
                     escolhas.removerOpcao(resposta);
 
-                    contadorFimTurno++;
-                    if (contadorFimTurno == 4) {
-                        setFimTurno(true);
-                    }
+                    finalDoTurno();
 
                 } else if (resposta == 4) {
 
@@ -192,27 +184,67 @@ public class Respostas {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                         }
                     }
-
                     escolhas.removerOpcao(resposta);
 
-                    contadorFimTurno++;
-                    if (contadorFimTurno == 4) {
-                        setFimTurno(true);
-                    }
+                    finalDoTurno();
 
                 }
 
-            } 
+            } else if (turno == 2) {
 
-               else if (turno == 2) {
-                setFimTurno(true);
-            } else if (turno == 3) {
-                setFimTurno(true);
-                
-            }
+                if (resposta == 1) {
 
-               else if (turno == 4) {
-                setFimTurno(true);
+                    System.out.println("""
+                            
+                            Os documentos de perícia mostram fotos do escritório onde o corpo foi encontrado.
+                            A foto terrível do homem empacotado na mala embrulha o estômago, você sente toda 
+                            a tequila da noite passada voltando pela garganta. 
+                            
+                            Na próxima página, há fotos de quatro pessoas com o nome escrito na letra da Sofia:
+                            Henrico,  Guilherme, Pedro e Esmeralda.
+                             
+                            Na parte de trás da foto de Guilherme está escrito: ‘Foi esse que encontrou o corpo.
+                           
+                            ----------------------------------------------------------------------------------------
+                            """);
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno();
+
+                } else if (resposta == 2) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno();
+
+                } else if (resposta == 3) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno();
+
+                } else if (resposta == 4) {
+
+                    System.out.println("""
+                            
+                            O sol agradável da manhã é substituído pelo som suave de uma chuva leve. Os prédios
+                            altos de Santa Tereza te sufocam. Poucas pessoas caminham pelas ruas e o clima de 
+                            tensão aumenta à medida que se aproximam da delegacia.
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno();
+
+                }
+                                       
             }
 
         } else if (capitulo == 2) {
@@ -235,6 +267,7 @@ public class Respostas {
                 } else if (resposta == 2) {
 
                     resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getIntelecto(), 8);
+
                     if (!resultado) {
                         System.out.println("""
 
@@ -502,6 +535,14 @@ public class Respostas {
 
         return resposta;
 
+    }
+
+    private void finalDoTurno() {
+        contadorFimTurno++;
+        if (contadorFimTurno == 4) {
+            setFimTurno(true);
+            contadorFimTurno = 0;
+        }
     }
 
     /* MODELO DE RESPOSTA

@@ -39,7 +39,18 @@ public class Capitulos {
 
     public void finalCapitulo() {
         if (capitulo == 1) {
-            System.out.println("\nFinal do capitulo 1\n");
+            System.out.println("""
+                    O Impala 67 estaciona na sua vaga regular em frente ao Distrito 41 e ambos
+                    caminham até a delegacia, a chuva está fraca o suficiente para que não incomode
+                    nenhum dos dois.
+                    
+                    Os outros policiais param para te olhar, alguns riem de canto e cochicham, outros
+                    olham com um certo respeito mas todos abrem espaço até a sala de Sofia Ventura.
+                    
+                    Você vê a plaquinha na porta e logo abaixo o espaço onde deveria ter um outro nome.
+                    Sua boca seca. Sofia abre a porta e o olhar cansado aponta para o lado de dentro,
+                    para a investigação e para a responsabilidade.
+                    """);
         } else if (capitulo == 2) {
             System.out.println("\nFinal do capitulo 2\n");
         } else if (capitulo == 3) {
