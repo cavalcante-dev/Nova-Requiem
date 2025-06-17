@@ -174,7 +174,6 @@ public class Respostas {
                         }
                     }
                     escolhas.removerOpcao(resposta);
-
                     finalDoTurno();
 
                 } else if (resposta == 4) {
@@ -244,7 +243,7 @@ public class Respostas {
                     finalDoTurno();
 
                 }
-                                       
+
             }
 
         } else if (capitulo == 2) {
@@ -266,7 +265,7 @@ public class Respostas {
 
                 } else if (resposta == 2) {
 
-                    resultado = jogadorUtilitarios.rolarAtributo(jogadorUtilitarios.getIntelecto(), 8);
+                    resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getIntelecto(), 8);
 
                     if (!resultado) {
                         System.out.println("""
@@ -293,7 +292,7 @@ public class Respostas {
 
                 } else if (resposta == 3) {
 
-                    
+
                     System.out.println("""
 
                             Você pega as anotações, rabiscos e fotos, começa a puxar linhas no quadro: 
@@ -336,8 +335,8 @@ public class Respostas {
                     System.out.println("> Opção Indisponivel");
                 }
 
-            } 
-            
+            }
+
             else if (turno == 1) {
 
                 if (resposta == 1) {
@@ -352,20 +351,20 @@ public class Respostas {
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
-                } 
+                }
                     else if (resposta == 2) {
 
                         for(NPC npc : npcs) {
                             if (npc instanceof SofiaVentura) {
                                 ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                             }
-                        }    
-            
+                        }
+
                     escolhas.removerOpcao(resposta);
                     finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
 
-                } 
+                }
                     else if (resposta == 3) {
 
                     for(NPC npc : npcs) {
@@ -378,7 +377,7 @@ public class Respostas {
                     setFimTurno(true);
 
                 }  else if (resposta == 4) {
-                
+
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
                             ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
@@ -389,9 +388,9 @@ public class Respostas {
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
-                } 
-            }  
-            
+                }
+            }
+
             else if (turno == 2) {
 
                 if (resposta == 1) {
@@ -412,20 +411,20 @@ public class Respostas {
                     finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
-                } 
+                }
                     else if (resposta == 2) {
 
                         for(NPC npc : npcs) {
                             if (npc instanceof SofiaVentura) {
                                 ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
                             }
-                        }    
-            
+                        }
+
                     escolhas.removerOpcao(resposta);
                     finais.setFinalRuim(finais.getFinalRuim()+1);
                     setFimTurno(true);
 
-                } 
+                }
                     else if (resposta == 3) {
 
                     for(NPC npc : npcs) {
@@ -438,7 +437,7 @@ public class Respostas {
                     setFimTurno(true);
 
                 }  else if (resposta == 4) {
-                
+
                     if (!resultado) {
                         System.out.println("""
 

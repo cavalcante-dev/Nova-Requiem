@@ -98,7 +98,10 @@ public class SofiaVentura extends NPC {
                             
                             Ela se levanta e hesita, como se quisesse ficar um pouco mais. 
 
-                            - Vamos, a pasta está no carro você pode ver os detalhes no carro. 
+                            - Vamos, a pasta está no carro você pode ver os detalhes lá, o pessoal
+                            está começando a ficar impaciente na delegacia.
+                            
+                            Sofia espera em frente a porta, aguardando você. 
                             
                             ----------------------------------------------------------------------------------------
                             """);
@@ -109,7 +112,7 @@ public class SofiaVentura extends NPC {
                             
                             - Não, não estou. - O olhar sério denúncia a sinceridade e um
                             silêncio constrangedor se estende por alguns segundos. - Mas valeu
-                            pela tentativa. 
+                            pela tentativa.
 
                             ----------------------------------------------------------------------------------------
                             """);
@@ -118,12 +121,11 @@ public class SofiaVentura extends NPC {
 
                         System.out.println("""
                             
-                            - Se você não se lembrar não serei eu a te contar. - Ela olha 
-                            para a janela, agora com um sol da manhã agrádavel. Você se 
-                            pergunta o que ela está pensando. 
+                            - Se você não se lembra não serei eu a te contar. - Ela olha para a janela e
+                            observa o agradável sol da manhã. Você se pergunta o que ela está pensando,
+                            sobre o que ela pensa sobre você.
 
-                            O olhar de Sofia é distante, ao mesmo tempo que caloroso. Ela 
-                            está bonita hoje. 
+                            O olhar de Sofia é distante, ao mesmo tempo que caloroso. Ela está bonita hoje.
 
                             ----------------------------------------------------------------------------------------
                             """);
