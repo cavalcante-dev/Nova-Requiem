@@ -253,39 +253,58 @@ public class Respostas {
                 if (resposta == 1) {
 
                     System.out.println("""
-                            Você começa a organizar os objetos na mesa: carta, recibos, aliança 
-                            e alguns registros bancários. 
-                            As conexões ainda não estão claras, mas o caos começa a fazer sentido.
-
+                            
+                            Você observa atentamente os objetos na mesa e busca uma conexão entre eles. 
+                            
+                            A carta conta sobre o adulterio de Esmeralda, o texto parece ter sido escrito e enviado de 
+                            forma anônima, os detalhes são precisos com datas e horários que batem com a rotina de 
+                            Esmeralda. A carta revela que o amante era o zelador Guilherme. Talvez os dois tenham
+                            agido juntos?
+                                                        
+                            A aliança fina de casamento, confirmada ser de Esmeralda. Por quê ela a deixou lá? 
+                            talvez tenha discutido.
+                            
+                            Os registros legais da herança da família Lobos e os últimos papeís a serem assinados
+                            por Francisco para formalizar o recebimento dos bens. Os documentos revelam que houveram
+                            diferentes contestações de Henrico em relação a repartição da herança.    
+                            
+                            As conexões ainda não estão claras, mas algo parece começar a se encaixar. 
+                            
                             ----------------------------------------------------------------------------------------
-                    """);
+                            """);
 
                     escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
+                    finalDoTurno(2);
 
                 } else if (resposta == 2) {
 
                     resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getIntelecto(), 8);
 
                     if (!resultado) {
+
                         System.out.println("""
 
-                            Parece tudo igual ao que já viu, você está começando a sentir dor de cabeça
+                            As pistas não parecem se encaixar e está tudo igual ao que estava antes, a ressaca está
+                            começando a bater de novo e a dor de cabeça é eminente.
                         
-                        ----------------------------------------------------------------------------------------
-                        """);
-                    } else if (resultado) {
-                        System.out.println("""
-                            
-                            Você percebe que a carta encontrada tem traços de escrita forjados.
+                            ----------------------------------------------------------------------------------------
+                            """);
 
-                            Não é preciso ser um perito para notar... as linhas são trêmulas demais em alguns pontos e 
-                            rígidas demais em outros, como se quem escreveu
-                            lutasse contra a própria mão, tentando imitar algo que não dominava. 
+                    } else if (resultado) {
+
+                        System.out.println("""
+                        
+                            Você compara os documentos legais com a carta contando sobre o adulterio e nota que existe
+                            uma incrivel semelhança entre as letras de Henrico e as da carta. 
                             
-                        ----------------------------------------------------------------------------------------
-                        """);
+                            Os traços de escrita forjada agora se tornam mais claros. As linhas são trêmulas demais em 
+                            alguns pontos e rígidas demais em outros, como se quem escreveu lutasse contra a própria mão, 
+                            tentando escrever de uma maneira grotescamente diferente.  
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
                         jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getIntelectoBarra()+1);
+
                     }
 
                     escolhas.removerOpcao(resposta);
@@ -295,44 +314,34 @@ public class Respostas {
 
                     System.out.println("""
 
-                            Você pega as anotações, rabiscos e fotos, começa a puxar linhas no quadro: 
-                            Henrico esteve na casa de manhã, 
-                            Pedro ouviu uma discussão intensa à tarde, Guilherme encontrou o corpo à noite.
-                            Tudo começa a ganhar uma ordem lógica. 
-
+                            Você pega as anotações de Sofia, os rabiscos, as fotos e pistas e começar a puxar linhas 
+                            no quadro da investigação, fazendo conexões que antes não apareciam e traçando o caminho 
+                            dos suspeitos. 
+                            
+                            Henrico esteve com Francisco pela manhã, Esmeralda estava no Yoga no mesmo horário.
+                            
+                            Pedro diz ter ouvido uma dicussão intensa na parte da tarde e alguma horas depois encontrou
+                            o corpo no escritório junto com Guilherme. 
+                            
+                            Os caminhos agora parecem se conectar de uma estranha maneira, interrogar os supeitos
+                            irá revelar mais informações.
+                            
                             ----------------------------------------------------------------------------------------
                             """);
 
                     escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
+                    finalDoTurno(2);
 
                 } else if (resposta == 4) {
 
-                    System.out.println("""
-
-                            - Sofia... vem cá.
-
-                            Sua voz saiu mais baixa do que esperava, quase como um sussurro cansado, 
-                            mas ela sabia exatamente o que isso significava. 
-                            No fundo, acho que ela sempre soube quando eu estava preso em algo que eu não conseguia ver. 
-                            Cruzei os braços, olhando fixamente para aquele quadro cheio de fotos, setas, rabiscos
-                            e perguntas que só cresciam e nunca se respondiam.
-
-                            - Sofia… eu preciso que você me ajude a pensar. Me diz… o que a gente não tá enxergando? 
-                            O que tá aqui, bem na nossa cara, e a gente insiste em ignorar? 
-                            Porque, cá entre nós... nada nesse caso faz sentido sem esse detalhe invisível.
-
-                            ----------------------------------------------------------------------------------------
-
-                    
-                    """);
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                        }
+                    }
 
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
 
-                } else {
-                    System.out.println("> Opção Indisponivel");
                 }
 
             }
@@ -405,11 +414,9 @@ public class Respostas {
                         e se a sequência for certa, as máscaras caem mais rápido.
 
                         ----------------------------------------------------------------------------------------
-                """);
+                        """);
 
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
 
                 }
                     else if (resposta == 2) {
@@ -421,8 +428,6 @@ public class Respostas {
                         }
 
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getFinalRuim()+1);
-                    setFimTurno(true);
 
                 }
                     else if (resposta == 3) {
@@ -534,6 +539,15 @@ public class Respostas {
 
         return resposta;
 
+    }
+
+
+    private void finalDoTurno(int contador) {
+        contadorFimTurno++;
+        if (contadorFimTurno == contador) {
+            setFimTurno(true);
+            contadorFimTurno = 0;
+        }
     }
 
     private void finalDoTurno() {

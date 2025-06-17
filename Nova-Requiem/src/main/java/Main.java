@@ -29,7 +29,7 @@ public class Main {
         // Instancia o capitulo e quantidade de turnos em cada.
 
         capitulos.add(new Capitulos(1, 3));
-        capitulos.add(new Capitulos(2, 1));
+        capitulos.add(new Capitulos(2, 3));
         capitulos.add(new Capitulos(3, 1));
         capitulos.add(new Capitulos(4, 1));
 

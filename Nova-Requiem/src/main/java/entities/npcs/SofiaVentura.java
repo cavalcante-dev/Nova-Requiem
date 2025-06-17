@@ -90,16 +90,15 @@ public class SofiaVentura extends NPC {
                             
                             Sofia dá um suspiro longo.
 
-                            - Um empresário foi encontrado morto está manhã. O corpo estava
-                            dentro de uma maleta dentro do escritório dele, quem encontrou 
-                            foram os zeladores. - Outro suspiro longo se segue, ele fecha os 
-                            olhos e franze o cenho. - A viúva está devastada, principalmente
+                            - Um empresário foi encontrado morto está manhã. O corpo estava dentro de uma maleta
+                            dentro do escritório dele, quem encontrou foram os zeladores. - Outro suspiro longo
+                            se segue, ele fecha os olhos e franze o cenho. - A viúva está devastada, principalmente
                             por estar sendo suspeita do caso. 
-                            
+                           
                             Ela se levanta e hesita, como se quisesse ficar um pouco mais. 
 
-                            - Vamos, a pasta está no carro você pode ver os detalhes lá, o pessoal
-                            está começando a ficar impaciente na delegacia.
+                            - Vamos, a pasta está no carro você pode ver os detalhes lá, o pessoal está começando a 
+                            ficar impaciente na delegacia.
                             
                             Sofia espera em frente a porta, aguardando você. 
                             
@@ -110,9 +109,8 @@ public class SofiaVentura extends NPC {
 
                        System.out.println("""
                             
-                            - Não, não estou. - O olhar sério denúncia a sinceridade e um
-                            silêncio constrangedor se estende por alguns segundos. - Mas valeu
-                            pela tentativa.
+                            - Não, não estou. - O olhar sério denúncia a sinceridade e um silêncio constrangedor se 
+                            estende por alguns segundos. - Mas valeu pela tentativa.
 
                             ----------------------------------------------------------------------------------------
                             """);
@@ -121,9 +119,9 @@ public class SofiaVentura extends NPC {
 
                         System.out.println("""
                             
-                            - Se você não se lembra não serei eu a te contar. - Ela olha para a janela e
-                            observa o agradável sol da manhã. Você se pergunta o que ela está pensando,
-                            sobre o que ela pensa sobre você.
+                            - Se você não se lembra não serei eu a te contar. - Ela olha para a janela e observa o 
+                            agradável sol da manhã. Você se pergunta o que ela está pensando, sobre o que ela pensa 
+                            sobre você.
 
                             O olhar de Sofia é distante, ao mesmo tempo que caloroso. Ela está bonita hoje.
 
@@ -137,12 +135,12 @@ public class SofiaVentura extends NPC {
 
                         System.out.println("""
                                 
-                                Você serve uma quantidade generosa, o olhar investigativo de Sofia acompanha
-                                seus movimentos, o cheiro de café novo infesta o ambiente e você coloca a xícara
-                                próximo a ela.
+                                Você serve uma quantidade generosa, o olhar investigativo de Sofia acompanha seus 
+                                movimentos, o cheiro de café novo infesta o ambiente e você coloca a xícara próximo 
+                                a ela.
                                 
-                                Ela examina a xícara estampada com uma foto de vocês dois e se pergunta se essa
-                                é a única que você tem inteira. Sofia suspira.
+                                Ela examina a xícara estampada com uma foto de vocês dois e se pergunta se essa é a 
+                                única que você tem inteira. Sofia suspira.
                                 
                                 - Obrigado, eu tava precisando disso. - Ela toma um gole e da um pequeno 
                                 sorriso. - Você é realmente péssimo com café.
@@ -158,8 +156,8 @@ public class SofiaVentura extends NPC {
                                 
                                 Não tem café, você não fez nenhum.
                                 
-                                Você olha em volta procurando as coisas para começar a preparar 
-                                um pouco, Sofia vê você abrindo os armários.
+                                Você olha em volta procurando as coisas para começar a preparar um pouco, Sofia vê 
+                                você abrindo os armários.
                                 
                                 - Não temos tempo para passar um café agora. - Ela parece mais impaciente.
                                 
@@ -201,6 +199,37 @@ public class SofiaVentura extends NPC {
             }
 
         }   else if (capitulo == 2) {
+
+            if (turno == 0) {
+
+                if (resposta == 4) {
+
+                    System.out.println("""
+
+                            - Sofia... vem cá.
+
+                            Sua voz saiu mais baixa do que esperava, quase como um sussurro cansado, mas ela sabia 
+                            exatamente o que isso significava. 
+                            
+                            No fundo, acho que ela sempre soube quando eu estava preso em algo que eu não conseguia ver. 
+                            Cruzei os braços, olhando fixamente para aquele quadro cheio de fotos, setas, rabiscos
+                            e perguntas que só cresciam e nunca se respondiam.
+
+                            - Sofia… o que não estamos enxergando? O que está aqui, bem na nossa cara, e a gente insiste 
+                            em ignorar? - O seu olhar intenso examina todos os cantos do quadro buscando uma resposta.
+                            
+                            Sofia te encara com certa admiração, ela ainda se lembra o porquê de você ser considerado
+                            um dos melhores.
+                            
+                            - Claramente ainda falta alguma coisa. - Ela diz se apoiando na mesa. - Talvez o depoimento
+                            dos suspeitos nos ajude a entender melhor o caso, afinal, eles são a última peça. 
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+
+                }
+
+            }
 
             if (turno == 1) {
 
