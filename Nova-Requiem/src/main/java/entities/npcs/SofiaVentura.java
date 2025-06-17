@@ -186,7 +186,7 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("""
-                                    
+                                   
                                     Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
                                     alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
                                     suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
@@ -205,8 +205,6 @@ public class SofiaVentura extends NPC {
                 if (resposta == 4) {
 
                     System.out.println("""
-
-                            - Sofia... vem cá.
 
                             Sua voz saiu mais baixa do que esperava, quase como um sussurro cansado, mas ela sabia 
                             exatamente o que isso significava. 
@@ -236,19 +234,21 @@ public class SofiaVentura extends NPC {
                 if (resposta == 1) {
 
                     System.out.println("""
-                                — Henrico… tá tentando demais parecer inocente. Cada palavra dele vem
-                                ensaiada e limpa demais...ninguém é assim naturalmente, não em uma situação dessas. 
                                 
-                                E Esmeralda... ela esconde algo, isso é certo. Dá pra ver no olhar.
-                                Ela pesa cada palavra,  como quem carrega um segredo que pode explodir a
-                                qualquer segundo. 
-                               
-                                A boca dela fala uma coisa, mas os olhos...os olhos gritam outra. 
-                                E eu te digo… ou ela tá protegendo alguém, ou tá no centro dessa bagunça toda. 
-                                E, sinceramente, eu não sei o que me preocupa mais.
-
+                                — Henrico… tá tentando demais parecer inocente. Cada palavra dele vem ensaiada e limpa
+                                demais... ninguém é assim naturalmente, não em uma situação dessas, Esmeralda esconde 
+                                algo, isso é certo, dá pra ver no olhar dela. — Ela se levanta e vai até o quadro de 
+                                provas, aponta para a aliança. — A boca dela fala uma coisa, mas os olhos... os olhos 
+                                gritam outra. Ou ela tá protegendo alguém, ou está se protegendo.
+                                
+                                "Pedro e Guilherme?"
+                                
+                                — Por um lado, Pedro parece ser uma carta solta nessa mão, mas Guilherme parece ter um 
+                                envolvimento mais... pessoal. - Ela aponta para a carta. - De toda forma, não são de se
+                                ignorar totalmente.   
+                                
                                 ----------------------------------------------------------------------------------------
-                            """);
+                                """);
 
                             setAfinidade(getAfinidade() + 1);
 
@@ -256,33 +256,33 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 2) {
 
                     System.out.println("""
-                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, 
-                                como quem calcula mil possibilidades ao mesmo tempo.
-                                O silêncio pesa na sala, denso, sufocante. 
-                                Ela respira fundo, sem desviar os olhos, e então você solta:
-
-                                — Sinceramente… devia ter deixado o cara na mala e mandado por SEDEX. 
                                 
-                                Ela franze o rosto, cruzando os braços com aquele 
-                                olhar de quem não tem mais paciência pra amadorismo. 
-
-                        ----------------------------------------------------------------------------------------
-
-            """);
+                                Ela franze o rosto, cruzando os braços com aquele olhar de quem não tem mais 
+                                paciência pra amadorismo. — Sério? Agora?
+                                
+                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, como quem 
+                                calcula mil possibilidades ao mesmo tempo. O silêncio pesa na sala, denso, sufocante. 
+                                Ela respira fundo e solta um suspiro.
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
 
                         setAfinidade(getAfinidade() - 1);
 
                 } else if (resposta == 3) {
 
                     System.out.println("""
-                                — Se você não consegue lidar com pressão… então troca de função. 
-                                Esse trabalho não é pra quem desaba na primeira rachadura. 
-                                Aqui a gente respira tensão, vive no limite, e quem não aguenta...atrapalha. 
-                                Ou você se mantém firme, encara de cabeça erguida, ou vira mais 
-                                um peso morto na investigação.
+                                
+                                — Se você não consegue lidar com pressão, então troca de função. Você conhece o trabalho 
+                                e não é pra quem desaba na primeira rachadura. — O semblante dela permanece firma — Se 
+                                preferir eu posso te jogar de volta no primeiro beco que encontrar. Ou você se mantém 
+                                firme e encara de cabeça erguida, ou vira mais um peso morto na investigação.
+                                
+                                O voz dela é imponente, você se lembra do porquê ela é a chefe por aqui. 
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
 
-                       ----------------------------------------------------------------------------------------
-                    """);
                     setAfinidade(getAfinidade()+1);
 
                 } else if (resposta == 4) {
@@ -299,9 +299,8 @@ public class SofiaVentura extends NPC {
                                 E por um instante... fica feliz pelo cuidado. 
                                 Só que ela é do tipo que aprendeu a não se permitir parar nem por isso. 
                                 Afinal, ainda tem um caso pra resolver...
-
-                        ----------------------------------------------------------------------------------------
-                """);
+                                ----------------------------------------------------------------------------------------
+                                """);
 
                     setAfinidade(getAfinidade()+1);
 

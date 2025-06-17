@@ -139,41 +139,43 @@ public class Turnos {
 
             if (turno == 0) {
                 System.out.println("""
-                       O som da chuva batendo contra a janela da delegacia parece acompanhar o ritmo dos pensamentos. 
-                       A sala de investigação está tomada por fotos, documentos e anotações rabiscadas às pressas. 
-
-                       Sofia joga um maço de papéis sobre a mesa e cruza os braços.
-                       — “Se a gente não encaixar isso logo... alguém sai livre.” — diz, com aquele olhar que mistura, 
-                       cansaço e desafio.
+                       A sala de está uma bagunça, o que não é usual, os papeis jogados e o quadro bagunçado
+                       revela que muitas coisas foram montadas as pressas essa manhã.
+                       
+                       Sofia joga uma pasta de papéis sobre a mesa e cruza os braços.
+                       
+                       — Se a gente não encaixar isso logo, alguém vai sair livre. — o olhar cansado revela que ela 
+                       está tentando encaixar essas peças a mais tempo do que gostaria, mas, ao mesmo tempo, ele 
+                       revela uma certa admiração, uma esperança de que você vai conseguir resolver esse caso.
+                       
                        O cheiro de café velho e papel molhado toma conta da sala.
-                         
-                       Seu quadro de investigação é um caos: fotos amassadas, recibos tortos e rabiscos confusos. 
-                       Cada linha vermelha traçada nas paredes parece mais confundir do que esclarecer. 
-                       As vozes da delegacia ecoam lá fora. O tempo corre... e a pressão pesa.
-
-                        """);
+                       """);
                         
             } else if (turno == 1) {
                 System.out.println("""
-                    O som da porta batendo te tira dos pensamentos.
-                    
-                    Sofia entra, se aproxima com um café na mão.
-                    
-                    Ela está cansada, mas alerta.
-                    """);
+                        O som da porta abrindo te tira dos seus pensamentos, Fernando, o um dos rapazes novos 
+                        está na abaixo da soleira, seu olhar é determinado. 
+                        
+                        - Senhorita Ventura, os suspeitos chegaram para o interrogatório.
+                        
+                        Sofia te lança um olhar de desafio e se vira para Fernando. 
+                        
+                        - Obrigado, iremos interrogo-los daqui a pouco. - o olhar dela se volta a você enquanto 
+                        Fernando sai. - Você sabe o que fazer. O palco é todo seu.
+                        """);
 
             }  else if (turno == 2) {
                 System.out.println("""
-                    Sofia está de pé, olhando fixamente para as fotos dos suspeitos presas no quadro.
-                    
-                    Ela respira fundo.
-
-                    — “Você decide por onde começamos amanhã, mas faça isso com certeza. Por que errar... Ele vai sair impune.”
-
-                    Você sente o peso dessa responsabilidade.
-                    Ainda há tempo para mais uma decisão antes de dormir.
-
-                    """);
+                        Sofia está de pé, olhando fixamente para as fotos dos suspeitos presas no quadro.
+                        
+                        Ela respira fundo.
+    
+                        — “Você decide por onde começamos amanhã, mas faça isso com certeza. Por que errar... Ele vai sair impune.”
+    
+                        Você sente o peso dessa responsabilidade.
+                        Ainda há tempo para mais uma decisão antes de dormir.
+    
+                        """);
             } 
 
         } else if (capitulo == 3) {

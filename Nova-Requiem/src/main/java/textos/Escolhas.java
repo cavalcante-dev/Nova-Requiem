@@ -60,8 +60,11 @@ public class Escolhas {
             if (turno == 0) {
 
                 System.out.println("""
-                        
-                        """);
+                       Seu quadro de investigação é um caos: fotos amassadas, recibos tortos e rabiscos 
+                       confusos. Cada linha vermelha traçada parece mais confundir do que esclarecer.
+                       
+                       As vozes da delegacia ecoam lá fora e a cidade se esconde da chuva.
+                       """);
 
                 imprimirOpcoes();
 
@@ -135,15 +138,15 @@ public class Escolhas {
                 opcoes[2] = "3. Olhar em volta.";
                 opcoes[3] = (Cores.AMARELO + "4. [TESTE (INTELECTO) - DIFICULDADE: Médio (8)] A noite passada?" + Cores.RESET);
             } else if (turno == 1) {
-                opcoes[0] = "1. 'O que te trás aqui tão cedo? Aconteceu algo?'";
-                opcoes[1] = "2. 'Você está bonita hoje...'";
-                opcoes[2] = "3. 'O que aconteceu ontem a noite?'";
+                opcoes[0] = "1. \"O que te trás aqui tão cedo? Aconteceu algo?\"";
+                opcoes[1] = "2. \"Você está bonita hoje...\"";
+                opcoes[2] = "3. \"O que aconteceu ontem a noite?\"";
                 opcoes[3] = "4. Oferecer um café.";
             } else if (turno == 2) {
                 opcoes[0] = "1. Examinar documentos.";
-                opcoes[1] = "2. 'O que você sabe sobre os suspeitos?'";
-                opcoes[2] = "3. 'Quais pistas nós temos?'";
-                opcoes[3] = "4. Olhas pela janela.";
+                opcoes[1] = "2. \"O que você sabe sobre os suspeitos?\"";
+                opcoes[2] = "3. \"Quais pistas nós temos?\"";
+                opcoes[3] = "4. Olhar pela janela.";
             }
         }
         if (capitulo == 2) {
@@ -152,12 +155,12 @@ public class Escolhas {
                 opcoes[0] = "1. Examinar as provas.";
                 opcoes[1] = (Cores.AMARELO + "2. [TESTE (INTELECTO) - DIFICULDADE MÉDIA (8)] Ver além do óbvio" + Cores.RESET);
                 opcoes[2] = "3. Organizar os acontecimentos.";
-                opcoes[3] = "4. 'Tem algo aqui que ainda não vismo...'";
+                opcoes[3] = "4. \"Tem algo aqui que ainda não vimos...\"";
             } else if (turno == 1) {
-                opcoes[0] = "1. Perguntar a opinião dela sobre os suspeitos";
-                opcoes[1] = "2. Fazer piada com o caso ou com a vítima ";
-                opcoes[2] = "3. Falar que está cansado e que talvez esteja exagerando nas suspeitas";
-                opcoes[3] = "4. Oferecer mais um café para Sofia e demonstrar preocupação com ela";
+                opcoes[0] = "1. \"O que você acha sobre os suspeitos?\" ";
+                opcoes[1] = "2. \"Teria sido mais fácil deixar o cara na mala e mandar por SEDEX...\"";
+                opcoes[2] = "3. \"Talvez seja a tequila de ontem falando, mas talvez estamos exagerando as suspeitas.\"";
+                opcoes[3] = "4. \"Aceita mais café? Você parece cansada...\"";
             } else if (turno == 2) {
                 opcoes[0] = "1. Montar um plano de Interrogatório baseada na ordem dos acontecimentos";
                 opcoes[1] = "2. Dizer que não se importa, todos vão mentir de qualquer jeito.";
