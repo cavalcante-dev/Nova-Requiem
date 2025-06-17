@@ -59,6 +59,10 @@ public class SofiaVentura extends NPC {
 
                 }
 
+            } else if (turno == 2) {
+                System.out.println("""
+                        - Os documentos estão no banco. Recomendo dar uma olhada antes de chegarmos.
+                        """);
             }
 
         } else if (capitulo == 3) {
@@ -165,6 +169,33 @@ public class SofiaVentura extends NPC {
                 }
 
 
+            } else if (turno == 2) {
+
+               if (resposta == 2) {
+
+                    System.out.println("""
+                                    
+                                    Não muito para ser sincera, ainda não tive oportunidade de conversar com eles.
+                                    Pedro e Guilherme são zeladores do prédio onde Francisco foi encontrado. Henrico
+                                    é o irmão mais novo e foi visto no dia do crime com a vítima na parte da manhã
+                                    e Esmeralda é a viúva.
+                                    
+                                    ----------------------------------------------------------------------------------------
+                                    """);
+
+                } else if (resposta == 3) {
+
+                    System.out.println("""
+                                    
+                                    Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
+                                    alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
+                                    suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
+                                    ser dela na mesa do escritório.
+                                    
+                                    ----------------------------------------------------------------------------------------
+                                    """);
+
+                }
             }
 
         } else if (capitulo == 3) {
