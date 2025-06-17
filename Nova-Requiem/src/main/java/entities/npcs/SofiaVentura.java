@@ -59,6 +59,10 @@ public class SofiaVentura extends NPC {
 
                 }
 
+            } else if (turno == 2) {
+                System.out.println("""
+                        - Os documentos estão no banco. Recomendo dar uma olhada antes de chegarmos.
+                        """);
             }
 
         } else if (capitulo == 3) {
@@ -167,9 +171,174 @@ public class SofiaVentura extends NPC {
                 }
 
 
+            } else if (turno == 2) {
+
+               if (resposta == 2) {
+
+                    System.out.println("""
+                                    
+                                    Não muito para ser sincera, ainda não tive oportunidade de conversar com eles.
+                                    Pedro e Guilherme são zeladores do prédio onde Francisco foi encontrado. Henrico
+                                    é o irmão mais novo e foi visto no dia do crime com a vítima na parte da manhã
+                                    e Esmeralda é a viúva.
+                                    
+                                    ----------------------------------------------------------------------------------------
+                                    """);
+
+                } else if (resposta == 3) {
+
+                    System.out.println("""
+                                    
+                                    Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
+                                    alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
+                                    suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
+                                    ser dela na mesa do escritório.
+                                    
+                                    ----------------------------------------------------------------------------------------
+                                    """);
+
+                }
             }
 
-        } else if (capitulo == 3) {
+        }   else if (capitulo == 2) {
+
+            if (turno == 1) {
+
+                if (resposta == 1) {
+
+                    System.out.println("""
+                                — Henrico… tá tentando demais parecer inocente. Cada palavra dele vem
+                                ensaiada e limpa demais...ninguém é assim naturalmente, não em uma situação dessas. 
+                                
+                                E Esmeralda... ela esconde algo, isso é certo. Dá pra ver no olhar.
+                                Ela pesa cada palavra,  como quem carrega um segredo que pode explodir a
+                                qualquer segundo. 
+                               
+                                A boca dela fala uma coisa, mas os olhos...os olhos gritam outra. 
+                                E eu te digo… ou ela tá protegendo alguém, ou tá no centro dessa bagunça toda. 
+                                E, sinceramente, eu não sei o que me preocupa mais.
+
+                                ----------------------------------------------------------------------------------------
+                            """);
+
+                            setAfinidade(getAfinidade() + 1);
+
+
+                } else if (resposta == 2) {
+
+                    System.out.println("""
+                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, 
+                                como quem calcula mil possibilidades ao mesmo tempo.
+                                O silêncio pesa na sala, denso, sufocante. 
+                                Ela respira fundo, sem desviar os olhos, e então você solta:
+
+                                — Sinceramente… devia ter deixado o cara na mala e mandado por SEDEX. 
+                                
+                                Ela franze o rosto, cruzando os braços com aquele 
+                                olhar de quem não tem mais paciência pra amadorismo. 
+
+                        ----------------------------------------------------------------------------------------
+
+            """);
+
+                        setAfinidade(getAfinidade() - 1);
+
+                } else if (resposta == 3) {
+
+                    System.out.println("""
+                                — Se você não consegue lidar com pressão… então troca de função. 
+                                Esse trabalho não é pra quem desaba na primeira rachadura. 
+                                Aqui a gente respira tensão, vive no limite, e quem não aguenta...atrapalha. 
+                                Ou você se mantém firme, encara de cabeça erguida, ou vira mais 
+                                um peso morto na investigação.
+
+                       ----------------------------------------------------------------------------------------
+                    """);
+                    setAfinidade(getAfinidade()+1);
+
+                } else if (resposta == 4) {
+
+                    System.out.println("""
+                                Ela escuta, mantém aquele semblante sério, profissional, 
+                                mas é impossível não notar...por um segundo, os olhos de Sofia suavizam. 
+                                É rápido, quase imperceptível. 
+                                Talvez quem não a conheça nem perceba. Mas eu percebo. Sempre percebi.
+
+                                — Obrigada... mas não vamos nos distrair do caso.
+
+                                Sofia gosta. Não diz, não admite, mas gosta. 
+                                E por um instante... fica feliz pelo cuidado. 
+                                Só que ela é do tipo que aprendeu a não se permitir parar nem por isso. 
+                                Afinal, ainda tem um caso pra resolver...
+
+                        ----------------------------------------------------------------------------------------
+                """);
+
+                    setAfinidade(getAfinidade()+1);
+
+                } else {
+                    System.out.println("> Opção Indisponivel");
+                }
+            }
+
+            else if (turno == 2) {
+
+                if (resposta == 1) {
+
+                            setAfinidade(getAfinidade() + 1);
+
+
+                } else if (resposta == 2) {
+
+                    System.out.println("""
+                                Ela aperta os olhos, respira fundo, como quem segura a vontade de não explodir. 
+                                E então diz, sem filtrar uma única palavra, a voz carregada de irritação: 
+
+                                - Se você continuar duvidando, a gente já perdeu. 
+                                Deixa de ser frouxo e tome uma decisão coerente.
+
+                                No segundo seguinte, vira de costas, jogando as
+                                mãos no bolso da jaqueta, frustrada.
+                                E, se depender dela, não vai ficar ali pra assistir ninguém se afoga
+                                na própria indecisão.
+                                
+
+                        ----------------------------------------------------------------------------------------
+
+            """);
+
+                        setAfinidade(getAfinidade() - 1);
+
+                } else if (resposta == 3) {
+
+                    System.out.println("""
+                               Por um instante, ela hesita. Um olhar desviado,
+                               os lábios que pressionam um no outro como quem calcula 
+                               riscos. Não é medo. É peso. Peso de quem sabe que, uma vez que assume,
+                               não tem mais volta.
+
+                               Sofia respira fundo, endireita os ombros, e então diz decidida:
+                               - “Eu... posso cuidar disso.”
+
+                       ----------------------------------------------------------------------------------------
+                    """);
+                    setAfinidade(getAfinidade()+1);
+
+                } else if (resposta == 4) {
+                    
+
+                } else {
+                    System.out.println("> Opção Indisponivel");
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        
+        else if (capitulo == 3) {
 
             if (turno == 0) {
 

@@ -85,6 +85,7 @@ public class Turnos {
         if (capitulo == 1) {
 
             if (turno == 0) {
+
                 System.out.println("""
                         O nada, o gracioso vazio do esquecimento.
                         
@@ -99,7 +100,9 @@ public class Turnos {
                         Ao fundo, o som do velho ventilador de teto incomoda menos do que
                         o desconforto do sofá mofado.
                         """);
+
             } else if (turno == 1) {
+
                 System.out.println(
                         "Sua manhã é bruscamente interrompida por batidas na impacientes na porta\n" +
                         "\n- " + jogador.getNome() + ", você tá em casa?\n" +
@@ -113,15 +116,64 @@ public class Turnos {
                         ((SofiaVentura) npc).diaglogar(capitulo, turno);
                     }
                 }
+
+            } else if (turno == 2) {
+
+                System.out.println("""
+                        Sofia sai do apartamento e você a acompanha logo atrás e por algum motivo se sente
+                        como nos velhos tempos. O caminho até o carro é silencioso, tenso, e quando chegam 
+                        você se depara com o velho Impala 67 que ela dirige por Santa Tereza.
+                        
+                        Sem perder muito tempo, ela entra e dá partida, observando você ocupar o
+                        banco do passageiro.
+                        """);
+                for (NPC npc : npcs) {
+                    if (npc instanceof SofiaVentura) {
+                        ((SofiaVentura) npc).diaglogar(capitulo, turno);
+                    }
+                }
+
             }
 
         } else if (capitulo == 2) {
 
             if (turno == 0) {
                 System.out.println("""
-                        
+                        O som da chuva batendo contra a janela da delegacia parece acompanhar o ritmo dos pensamentos. 
+                        A sala de investigação está tomada por fotos, documentos e anotações rabiscadas às pressas. 
+
+                        Sofia joga um maço de papéis sobre a mesa e cruza os braços.
+                        — “Se a gente não encaixar isso logo... alguém sai livre.” — diz, com aquele olhar que mistura, 
+                        cansaço e desafio.
+                        O cheiro de café velho e papel molhado toma conta da sala.
+                         
+                        Seu quadro de investigação é um caos: fotos amassadas, recibos tortos e rabiscos confusos. 
+                        Cada linha vermelha traçada nas paredes parece mais confundir do que esclarecer. 
+                        As vozes da delegacia ecoam lá fora. O tempo corre... e a pressão pesa.
+
                         """);
-            }
+                        
+            } else if (turno == 1) {
+                System.out.println("""
+                    O som da porta batendo te tira dos pensamentos. 
+                    Sofia entra, se aproxima com um café na mão. 
+                    Ela está cansada, mas alerta.
+
+                        """);
+
+            }  else if (turno == 2) {
+                System.out.println("""
+                    Sofia está de pé, olhando fixamente para as fotos dos suspeitos presas no quadro. 
+                    Ela respira fundo.
+
+                    — “Você decide por onde começamos amanhã, mas faça isso com certeza. Por que errar... Ele vai sair impune.”
+
+                    Você sente o peso dessa responsabilidade. 
+                    Ainda há tempo para mais uma decisão antes de dormir.
+
+
+                        """);
+            } 
 
         } else if (capitulo == 3) {
 
