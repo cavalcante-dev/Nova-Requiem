@@ -57,7 +57,7 @@ public class Turnos {
                 
                 ----------------------------------------------------------------------------------
                 ===================== UN JOUR JE SERAI DE RETOUR PRÈS DE TOI =====================
-                ----------------------------------------------------------------------------------           
+                ----------------------------------------------------------------------------------
                 """ + Cores.RESET);
 
         System.out.print(
@@ -164,24 +164,22 @@ public class Turnos {
                         Fernando sai. - Você sabe o que fazer. O palco é todo seu.
                         """);
 
-            }  else if (turno == 2) {
-                System.out.println("""
-                        Sofia está de pé, olhando fixamente para as fotos dos suspeitos presas no quadro.
-                        
-                        Ela respira fundo.
-    
-                        — “Você decide por onde começamos amanhã, mas faça isso com certeza. Por que errar... Ele vai sair impune.”
-    
-                        Você sente o peso dessa responsabilidade.
-                        Ainda há tempo para mais uma decisão antes de dormir.
-    
-                        """);
-            } 
+            }
 
         } else if (capitulo == 3) {
 
             if (turno == 0) {
-                System.out.println("\nNarração de Turno 3");
+
+                System.out.println("""
+                        O jovem zelador entra na sala, ele não parece ter mais de 25 e anda curvado com
+                        as mãos no bolso.
+                        
+                        Ele se senta na cadeira de costas para a porta.
+                        
+                        O rosto angular de cabelos curtos escuros revelam um rosto simples,
+                        que você veria na multidão e não notaria.
+                        """);
+
             }
 
         }

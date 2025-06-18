@@ -2,6 +2,7 @@ package main.java.textos;
 
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
+import main.java.entities.npcs.GuilhermeZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
@@ -147,7 +148,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -158,7 +159,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -170,7 +171,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -180,7 +181,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -213,7 +214,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -223,7 +224,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
@@ -336,7 +337,7 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
 
@@ -352,12 +353,11 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
 
                     escolhas.removerOpcao(resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
                     setFimTurno(true);
 
                 }
@@ -365,65 +365,7 @@ public class Respostas {
 
                         for(NPC npc : npcs) {
                             if (npc instanceof SofiaVentura) {
-                                ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
-                            }
-                        }
-
-                    escolhas.removerOpcao(resposta);
-                    finais.setFinalRuim(finais.getFinalRuim()+1);
-                    setFimTurno(true);
-
-                }
-                    else if (resposta == 3) {
-
-                    for(NPC npc : npcs) {
-                        if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
-                        }
-                    }
-
-                    escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
-
-                }  else if (resposta == 4) {
-
-                    for(NPC npc : npcs) {
-                        if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
-                        }
-                    }
-
-                    escolhas.removerOpcao(resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
-
-                }
-            }
-
-            else if (turno == 2) {
-
-                if (resposta == 1) {
-
-                    System.out.println("""
-                        — Começando por Henrico... depois Pedro, Esmeralda e, por último, Guilherme.
-
-                        marcando cada nome como se organizasse peças em um tabuleiro. 
-                        Sua voz carrega aquela segurança de quem sabe exatamente o que está fazendo.
-
-                        — “Uma estratégia lógica. A ordem importa. Cada um desses sabe de algo... 
-                        e se a sequência for certa, as máscaras caem mais rápido.
-
-                        ----------------------------------------------------------------------------------------
-                        """);
-
-                    escolhas.removerOpcao(resposta);
-
-                }
-                    else if (resposta == 2) {
-
-                        for(NPC npc : npcs) {
-                            if (npc instanceof SofiaVentura) {
-                                ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                                ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                             }
                         }
 
@@ -434,41 +376,24 @@ public class Respostas {
 
                     for(NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
-                            ((SofiaVentura) npc).resposta(capitulo, turno, resposta);
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
                         }
                     }
 
                     escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
 
                 }  else if (resposta == 4) {
 
-                    if (!resultado) {
-                        System.out.println("""
-
-                            — “Cuidado pra sua autoconfiança não virar teimosia.”
-                        
-                        ----------------------------------------------------------------------------------------
-                        """);
-                    } else if (resultado) {
-                        System.out.println("""
-                            
-                            Pela primeira vez no dia, um sorriso verdadeiro rompe o semblante fechado.
-
-                            — Vamos pegar ele juntos. Do nosso jeito. 
-                            
-                           Ela sentiu o peso do momento, a força da parceria que a gente construiu no meio do caos. 
-                           Porque, no final das contas, 
-                           não importa o quão escuro o caso seja — a gente vai desvendar tudo, lado a lado.
-                            
-                        ----------------------------------------------------------------------------------------
-                        """);
-                        jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getIntelectoBarra()+1);
+                    for(NPC npc : npcs) {
+                        if (npc instanceof SofiaVentura) {
+                            ((SofiaVentura) npc).responder(capitulo, turno, resposta);
+                        }
                     }
 
                     escolhas.removerOpcao(resposta);
-            }
 
+                }
+            }
 
         } else if (capitulo == 3) {
 
@@ -476,41 +401,114 @@ public class Respostas {
 
                 if (resposta == 1) {
 
-                    System.out.println("Escolha Neutra");
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
 
                 } else if (resposta == 2) {
 
-                    System.out.println("Escolha Neutra");
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                } else if (resposta == 3) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                } else if (resposta == 4) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                }
+
+            } else if (turno == 1) {
+
+                if (resposta == 1) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
+
+                } else if (resposta == 2) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
 
                 } else if (resposta == 3) {
 
-                    System.out.println(Cores.VERDE + "Escolha boa" + Cores.RESET);
+                    for(NPC npc : npcs) {
+                        if (npc instanceof GuilhermeZelador) {
+                            ((GuilhermeZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
                     escolhas.removerOpcao(resposta);
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
-                    finais.setFinalBom(finais.getFinalBom()+1);
-                    setFimTurno(true);
 
                 } else if (resposta == 4) {
 
-                    System.out.println(Cores.VERMELHO + "Escolha ruim" + Cores.RESET);
-                    escolhas.removerOpcao(resposta);
-                    ((SofiaVentura) npcs.get(0)).resposta(capitulo, turno, resposta);
-                    finais.setFinalRuim(finais.getFinalRuim()+1);
-                    setFimTurno(true);
+                    resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getCoracao(), 4);
+                    if (!resultado) {
+                        System.out.println("""
+                             
+                             - Olha… Tudo bem eu admito… a gente tinha… algo! Mas eu juro que não fiz isso, nem ela! 
+                             O Francisco era um marido distante e ela ficava muito tempo sozinha, mas isso não é 
+                             motivo para matar ele cara!
+                             
+                             O jovem se sente tirando um peso enorme das costas, até sua respiração fica mais leve. 
+                             
+                             - Você tem que acreditar em mim, a gente não fez isso.
+                                
+                             ----------------------------------------------------------------------------------------
+                             """);
+                    } else if (resultado) {
+                        System.out.println("""
+                            
+                            - Qual sua obsessão com ela? Já falei que a gente não tinha nada. Além do mais, o que 
+                            isso tem haver com o cara que morreu?
+                            
+                            Ele parece ainda mais irritado e faz menção de se levantar.
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+                        jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getIntelectoBarra()+1);
+                    }
 
-                } else {
-                    System.out.println("> Opção Indisponivel");
+                    escolhas.removerOpcao(resposta);
+
                 }
             }
+
         }
     }
-}
 
-    // Metodo de verificação de resposta no turno.
+    // Metodo de verificação de responder no turno.
 
     public int validadeResposta(int resposta) {
 
@@ -560,18 +558,18 @@ public class Respostas {
 
     /* MODELO DE RESPOSTA
 
-        if (resposta == 1) {
+        if (responder == 1) {
 
-            escolhas.removerOpcao(resposta);
-        } else if (resposta == 2) {
+            escolhas.removerOpcao(responder);
+        } else if (responder == 2) {
 
-            escolhas.removerOpcao(resposta);
-        } else if (resposta == 3) {
+            escolhas.removerOpcao(responder);
+        } else if (responder == 3) {
 
-            escolhas.removerOpcao(resposta);
-        } else if (resposta == 4) {
+            escolhas.removerOpcao(responder);
+        } else if (responder == 4) {
 
-            escolhas.removerOpcao(resposta);
+            escolhas.removerOpcao(responder);
         }
 
      */

@@ -78,7 +78,7 @@ public class SofiaVentura extends NPC {
         }
     }
 
-    public void resposta(int capitulo, int turno, int resposta) {
+    public void responder(int capitulo, int turno, int resposta) {
 
         if (capitulo == 1) {
 
@@ -257,11 +257,11 @@ public class SofiaVentura extends NPC {
 
                     System.out.println("""
                                 
-                                Ela franze o rosto, cruzando os braços com aquele olhar de quem não tem mais 
+                                Ela franze o rosto, cruzando os braços com aquele olhar de quem não tem mais
                                 paciência pra amadorismo. — Sério? Agora?
                                 
-                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, como quem 
-                                calcula mil possibilidades ao mesmo tempo. O silêncio pesa na sala, denso, sufocante. 
+                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, como quem
+                                calcula mil possibilidades ao mesmo tempo. O silêncio pesa na sala, denso, sufocante.
                                 Ela respira fundo e solta um suspiro.
                                 
                                 ----------------------------------------------------------------------------------------
@@ -273,8 +273,8 @@ public class SofiaVentura extends NPC {
 
                     System.out.println("""
                                 
-                                — Se você não consegue lidar com pressão, então troca de função. Você conhece o trabalho 
-                                e não é pra quem desaba na primeira rachadura. — O semblante dela permanece firma — Se 
+                                — Se você não consegue lidar com pressão, então troca de função. Você conhece o trabalho
+                                e não é pra quem desaba na primeira rachadura. — O semblante dela permanece firma — Se
                                 preferir eu posso te jogar de volta no primeiro beco que encontrar. Ou você se mantém 
                                 firme e encara de cabeça erguida, ou vira mais um peso morto na investigação.
                                 
@@ -288,17 +288,15 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 4) {
 
                     System.out.println("""
-                                Ela escuta, mantém aquele semblante sério, profissional, 
-                                mas é impossível não notar...por um segundo, os olhos de Sofia suavizam. 
-                                É rápido, quase imperceptível. 
-                                Talvez quem não a conheça nem perceba. Mas eu percebo. Sempre percebi.
+                                
+                                Ela escuta e uma leve surpresa brota em seus olhos, ela deixa escapar um pequeno 
+                                sorriso, quase que impercepítivel. 
+                                
+                                — Obrigada... esse pelo menos é melhor que o que você faz. 
 
-                                — Obrigada... mas não vamos nos distrair do caso.
-
-                                Sofia gosta. Não diz, não admite, mas gosta. 
-                                E por um instante... fica feliz pelo cuidado. 
-                                Só que ela é do tipo que aprendeu a não se permitir parar nem por isso. 
-                                Afinal, ainda tem um caso pra resolver...
+                                Sofia prefere morrer a admitir que apreciou o seu gesto, mas por um  instante se permite
+                                ficar feliz pelo cuidado. 
+                                
                                 ----------------------------------------------------------------------------------------
                                 """);
 
@@ -340,6 +338,7 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("""
+                               
                                Por um instante, ela hesita. Um olhar desviado,
                                os lábios que pressionam um no outro como quem calcula 
                                riscos. Não é medo. É peso. Peso de quem sabe que, uma vez que assume,
@@ -347,57 +346,14 @@ public class SofiaVentura extends NPC {
 
                                Sofia respira fundo, endireita os ombros, e então diz decidida:
                                - “Eu... posso cuidar disso.”
+                               
+                               ----------------------------------------------------------------------------------------
+                               """);
 
-                       ----------------------------------------------------------------------------------------
-                    """);
                     setAfinidade(getAfinidade()+1);
 
-                } else if (resposta == 4) {
-                    
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
                 }
             }
         }
-        
-        
-        
-        
-        
-        
-        else if (capitulo == 3) {
-
-            if (turno == 0) {
-
-                if (resposta == 1) {
-
-                    System.out.println("Escolha Neutra da Sofia");
-
-                } else if (resposta == 2) {
-
-                    System.out.println("Escolha Neutra da Sofia");
-
-                } else if (resposta == 3) {
-
-                    System.out.println("Escolha boa - Sofia gostou disso!");
-                    setAfinidade(getAfinidade()+1);
-
-                } else if (resposta == 4) {
-
-                    System.out.println("Escolha ruim - Sofia não gostou disso.");
-                    setAfinidade(getAfinidade()-1);
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
-                }
-
-
-            }
-
-        }
-
-
     }
-
 }

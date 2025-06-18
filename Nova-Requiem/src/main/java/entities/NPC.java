@@ -15,7 +15,6 @@ public class NPC {
     public Jogador getJogadorUtilitarios() {
         return jogadorUtilitarios;
     }
-
     public String getNome() {
         return nome;
     }
