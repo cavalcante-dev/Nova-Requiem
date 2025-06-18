@@ -3,10 +3,10 @@ package main.java.entities.npcs;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 
-public class EsmeraldaLobos extends NPC {
+public class PedroZelador extends NPC {
 
-    public EsmeraldaLobos(String nome, int afinidade, Jogador jogador) {
-        super(nome, afinidade, jogador);
+    public PedroZelador(String nome, int afinidade, Jogador jogadorUtilitarios) {
+        super(nome, afinidade, jogadorUtilitarios);
     }
 
     public void dialogar(int capitulo, int turno, int resposta) {
@@ -16,6 +16,5 @@ public class EsmeraldaLobos extends NPC {
     public void responder(int capitulo, int turno, int resposta) {
 
     }
-
 
 }

@@ -133,8 +133,8 @@ public class GuilhermeZelador extends NPC {
 
                         System.out.println("""
                            
-                           - Ela é simpática comigo, só isso. Às vezes leva refrigerante no horário do almoço e 
-                           organiza uma resenha pros funcionários nada demais.
+                           - Ela é simpática comigo, só isso. Às vezes leva refrigerante no horário do almoço e
+                           organiza uma resenha pros funcionários nada demais, ta sempre presente com a gente.
                            
                            Ele se vira para a porta, o olhar de preocupação parece buscar o olhar de outra pessoa.
                            
@@ -161,7 +161,8 @@ public class GuilhermeZelador extends NPC {
                         System.out.println("""
                            
                            - Sim, estava. Era quarta-feira então todos sabiam que era nosso turno de limpar 
-                           o escritório.
+                           o escritório. Não era segredo pra ninguém que a gente ia tá lá, se alguém não sabia
+                           é porque não leu o itinerario da semana. 
                            
                            Guilherme dá de ombros.
                            
