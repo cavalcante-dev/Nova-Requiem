@@ -78,7 +78,7 @@ public class SofiaVentura extends NPC {
         }
     }
 
-    public void resposta(int capitulo, int turno, int resposta) {
+    public void responder(int capitulo, int turno, int resposta) {
 
         if (capitulo == 1) {
 
@@ -90,16 +90,15 @@ public class SofiaVentura extends NPC {
                             
                             Sofia dá um suspiro longo.
 
-                            - Um empresário foi encontrado morto está manhã. O corpo estava
-                            dentro de uma maleta dentro do escritório dele, quem encontrou 
-                            foram os zeladores. - Outro suspiro longo se segue, ele fecha os 
-                            olhos e franze o cenho. - A viúva está devastada, principalmente
+                            - Um empresário foi encontrado morto está manhã. O corpo estava dentro de uma maleta
+                            dentro do escritório dele, quem encontrou foram os zeladores. - Outro suspiro longo
+                            se segue, ele fecha os olhos e franze o cenho. - A viúva está devastada, principalmente
                             por estar sendo suspeita do caso. 
-                            
+                           
                             Ela se levanta e hesita, como se quisesse ficar um pouco mais. 
 
-                            - Vamos, a pasta está no carro você pode ver os detalhes lá, o pessoal
-                            está começando a ficar impaciente na delegacia.
+                            - Vamos, a pasta está no carro você pode ver os detalhes lá, o pessoal está começando a 
+                            ficar impaciente na delegacia.
                             
                             Sofia espera em frente a porta, aguardando você. 
                             
@@ -110,9 +109,8 @@ public class SofiaVentura extends NPC {
 
                        System.out.println("""
                             
-                            - Não, não estou. - O olhar sério denúncia a sinceridade e um
-                            silêncio constrangedor se estende por alguns segundos. - Mas valeu
-                            pela tentativa.
+                            - Não, não estou. - O olhar sério denúncia a sinceridade e um silêncio constrangedor se 
+                            estende por alguns segundos. - Mas valeu pela tentativa.
 
                             ----------------------------------------------------------------------------------------
                             """);
@@ -121,9 +119,9 @@ public class SofiaVentura extends NPC {
 
                         System.out.println("""
                             
-                            - Se você não se lembra não serei eu a te contar. - Ela olha para a janela e
-                            observa o agradável sol da manhã. Você se pergunta o que ela está pensando,
-                            sobre o que ela pensa sobre você.
+                            - Se você não se lembra não serei eu a te contar. - Ela olha para a janela e observa o 
+                            agradável sol da manhã. Você se pergunta o que ela está pensando, sobre o que ela pensa 
+                            sobre você.
 
                             O olhar de Sofia é distante, ao mesmo tempo que caloroso. Ela está bonita hoje.
 
@@ -137,12 +135,12 @@ public class SofiaVentura extends NPC {
 
                         System.out.println("""
                                 
-                                Você serve uma quantidade generosa, o olhar investigativo de Sofia acompanha
-                                seus movimentos, o cheiro de café novo infesta o ambiente e você coloca a xícara
-                                próximo a ela.
+                                Você serve uma quantidade generosa, o olhar investigativo de Sofia acompanha seus 
+                                movimentos, o cheiro de café novo infesta o ambiente e você coloca a xícara próximo 
+                                a ela.
                                 
-                                Ela examina a xícara estampada com uma foto de vocês dois e se pergunta se essa
-                                é a única que você tem inteira. Sofia suspira.
+                                Ela examina a xícara estampada com uma foto de vocês dois e se pergunta se essa é a 
+                                única que você tem inteira. Sofia suspira.
                                 
                                 - Obrigado, eu tava precisando disso. - Ela toma um gole e da um pequeno 
                                 sorriso. - Você é realmente péssimo com café.
@@ -158,8 +156,8 @@ public class SofiaVentura extends NPC {
                                 
                                 Não tem café, você não fez nenhum.
                                 
-                                Você olha em volta procurando as coisas para começar a preparar 
-                                um pouco, Sofia vê você abrindo os armários.
+                                Você olha em volta procurando as coisas para começar a preparar um pouco, Sofia vê 
+                                você abrindo os armários.
                                 
                                 - Não temos tempo para passar um café agora. - Ela parece mais impaciente.
                                 
@@ -188,7 +186,7 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("""
-                                    
+                                   
                                     Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
                                     alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
                                     suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
@@ -202,24 +200,55 @@ public class SofiaVentura extends NPC {
 
         }   else if (capitulo == 2) {
 
+            if (turno == 0) {
+
+                if (resposta == 4) {
+
+                    System.out.println("""
+
+                            Sua voz saiu mais baixa do que esperava, quase como um sussurro cansado, mas ela sabia 
+                            exatamente o que isso significava. 
+                            
+                            No fundo, acho que ela sempre soube quando eu estava preso em algo que eu não conseguia ver. 
+                            Cruzei os braços, olhando fixamente para aquele quadro cheio de fotos, setas, rabiscos
+                            e perguntas que só cresciam e nunca se respondiam.
+
+                            - Sofia… o que não estamos enxergando? O que está aqui, bem na nossa cara, e a gente insiste 
+                            em ignorar? - O seu olhar intenso examina todos os cantos do quadro buscando uma resposta.
+                            
+                            Sofia te encara com certa admiração, ela ainda se lembra o porquê de você ser considerado
+                            um dos melhores.
+                            
+                            - Claramente ainda falta alguma coisa. - Ela diz se apoiando na mesa. - Talvez o depoimento
+                            dos suspeitos nos ajude a entender melhor o caso, afinal, eles são a última peça. 
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+
+                }
+
+            }
+
             if (turno == 1) {
 
                 if (resposta == 1) {
 
                     System.out.println("""
-                                — Henrico… tá tentando demais parecer inocente. Cada palavra dele vem
-                                ensaiada e limpa demais...ninguém é assim naturalmente, não em uma situação dessas. 
                                 
-                                E Esmeralda... ela esconde algo, isso é certo. Dá pra ver no olhar.
-                                Ela pesa cada palavra,  como quem carrega um segredo que pode explodir a
-                                qualquer segundo. 
-                               
-                                A boca dela fala uma coisa, mas os olhos...os olhos gritam outra. 
-                                E eu te digo… ou ela tá protegendo alguém, ou tá no centro dessa bagunça toda. 
-                                E, sinceramente, eu não sei o que me preocupa mais.
-
+                                — Henrico… tá tentando demais parecer inocente. Cada palavra dele vem ensaiada e limpa
+                                demais... ninguém é assim naturalmente, não em uma situação dessas, Esmeralda esconde 
+                                algo, isso é certo, dá pra ver no olhar dela. — Ela se levanta e vai até o quadro de 
+                                provas, aponta para a aliança. — A boca dela fala uma coisa, mas os olhos... os olhos 
+                                gritam outra. Ou ela tá protegendo alguém, ou está se protegendo.
+                                
+                                "Pedro e Guilherme?"
+                                
+                                — Por um lado, Pedro parece ser uma carta solta nessa mão, mas Guilherme parece ter um 
+                                envolvimento mais... pessoal. - Ela aponta para a carta. - De toda forma, não são de se
+                                ignorar totalmente.   
+                                
                                 ----------------------------------------------------------------------------------------
-                            """);
+                                """);
 
                             setAfinidade(getAfinidade() + 1);
 
@@ -227,52 +256,49 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 2) {
 
                     System.out.println("""
-                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, 
-                                como quem calcula mil possibilidades ao mesmo tempo.
-                                O silêncio pesa na sala, denso, sufocante. 
-                                Ela respira fundo, sem desviar os olhos, e então você solta:
-
-                                — Sinceramente… devia ter deixado o cara na mala e mandado por SEDEX. 
                                 
-                                Ela franze o rosto, cruzando os braços com aquele 
-                                olhar de quem não tem mais paciência pra amadorismo. 
-
-                        ----------------------------------------------------------------------------------------
-
-            """);
+                                Ela franze o rosto, cruzando os braços com aquele olhar de quem não tem mais
+                                paciência pra amadorismo. — Sério? Agora?
+                                
+                                Sofia se mantém encostada na parede, braços cruzados, olhar fixo no nada, como quem
+                                calcula mil possibilidades ao mesmo tempo. O silêncio pesa na sala, denso, sufocante.
+                                Ela respira fundo e solta um suspiro.
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
 
                         setAfinidade(getAfinidade() - 1);
 
                 } else if (resposta == 3) {
 
                     System.out.println("""
-                                — Se você não consegue lidar com pressão… então troca de função. 
-                                Esse trabalho não é pra quem desaba na primeira rachadura. 
-                                Aqui a gente respira tensão, vive no limite, e quem não aguenta...atrapalha. 
-                                Ou você se mantém firme, encara de cabeça erguida, ou vira mais 
-                                um peso morto na investigação.
+                                
+                                — Se você não consegue lidar com pressão, então troca de função. Você conhece o trabalho
+                                e não é pra quem desaba na primeira rachadura. — O semblante dela permanece firma — Se
+                                preferir eu posso te jogar de volta no primeiro beco que encontrar. Ou você se mantém 
+                                firme e encara de cabeça erguida, ou vira mais um peso morto na investigação.
+                                
+                                O voz dela é imponente, você se lembra do porquê ela é a chefe por aqui. 
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
 
-                       ----------------------------------------------------------------------------------------
-                    """);
                     setAfinidade(getAfinidade()+1);
 
                 } else if (resposta == 4) {
 
                     System.out.println("""
-                                Ela escuta, mantém aquele semblante sério, profissional, 
-                                mas é impossível não notar...por um segundo, os olhos de Sofia suavizam. 
-                                É rápido, quase imperceptível. 
-                                Talvez quem não a conheça nem perceba. Mas eu percebo. Sempre percebi.
+                                
+                                Ela escuta e uma leve surpresa brota em seus olhos, ela deixa escapar um pequeno 
+                                sorriso, quase que impercepítivel. 
+                                
+                                — Obrigada... esse pelo menos é melhor que o que você faz. 
 
-                                — Obrigada... mas não vamos nos distrair do caso.
-
-                                Sofia gosta. Não diz, não admite, mas gosta. 
-                                E por um instante... fica feliz pelo cuidado. 
-                                Só que ela é do tipo que aprendeu a não se permitir parar nem por isso. 
-                                Afinal, ainda tem um caso pra resolver...
-
-                        ----------------------------------------------------------------------------------------
-                """);
+                                Sofia prefere morrer a admitir que apreciou o seu gesto, mas por um  instante se permite
+                                ficar feliz pelo cuidado. 
+                                
+                                ----------------------------------------------------------------------------------------
+                                """);
 
                     setAfinidade(getAfinidade()+1);
 
@@ -312,6 +338,7 @@ public class SofiaVentura extends NPC {
                 } else if (resposta == 3) {
 
                     System.out.println("""
+                               
                                Por um instante, ela hesita. Um olhar desviado,
                                os lábios que pressionam um no outro como quem calcula 
                                riscos. Não é medo. É peso. Peso de quem sabe que, uma vez que assume,
@@ -319,57 +346,14 @@ public class SofiaVentura extends NPC {
 
                                Sofia respira fundo, endireita os ombros, e então diz decidida:
                                - “Eu... posso cuidar disso.”
+                               
+                               ----------------------------------------------------------------------------------------
+                               """);
 
-                       ----------------------------------------------------------------------------------------
-                    """);
                     setAfinidade(getAfinidade()+1);
 
-                } else if (resposta == 4) {
-                    
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
                 }
             }
         }
-        
-        
-        
-        
-        
-        
-        else if (capitulo == 3) {
-
-            if (turno == 0) {
-
-                if (resposta == 1) {
-
-                    System.out.println("Escolha Neutra da Sofia");
-
-                } else if (resposta == 2) {
-
-                    System.out.println("Escolha Neutra da Sofia");
-
-                } else if (resposta == 3) {
-
-                    System.out.println("Escolha boa - Sofia gostou disso!");
-                    setAfinidade(getAfinidade()+1);
-
-                } else if (resposta == 4) {
-
-                    System.out.println("Escolha ruim - Sofia não gostou disso.");
-                    setAfinidade(getAfinidade()-1);
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
-                }
-
-
-            }
-
-        }
-
-
     }
-
 }

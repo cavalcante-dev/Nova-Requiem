@@ -3,6 +3,7 @@ package main.java;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
+import main.java.entities.npcs.GuilhermeZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.textos.*;
 
@@ -25,11 +26,12 @@ public class Main {
 
         npcs.add(new SofiaVentura("Sofia Ventura", 2, jogador));
         npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0, jogador));
+        npcs.add(new GuilhermeZelador("Guilherme Silva", 0, jogador));
 
         // Instancia o capitulo e quantidade de turnos em cada.
 
         capitulos.add(new Capitulos(1, 3));
-        capitulos.add(new Capitulos(2, 1));
+        capitulos.add(new Capitulos(2, 2));
         capitulos.add(new Capitulos(3, 1));
         capitulos.add(new Capitulos(4, 1));
 
