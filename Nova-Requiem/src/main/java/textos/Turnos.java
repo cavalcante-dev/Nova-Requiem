@@ -37,17 +37,14 @@ public class Turnos {
 
         System.out.print(
                 "Atributos:" +
-                Cores.ITALIC + Cores.AMARELO + "\nFisico " + Cores.RESET + "- Sua musculatura, o quão forte você é. Emponha sua vontade através da força." +
                 Cores.ITALIC + Cores.AMARELO + "\nCoração " + Cores.RESET + "- Sua empatia, o quão emocionalmente inteligente você é. Entenda as pessoas e a si mesmo." +
                 Cores.ITALIC + Cores.AMARELO + "\nIntelecto " + Cores.RESET + "- Sua mente, o quão esperto você é. Racionalize o mundo e entenda seus padrões.\n" +
                 Cores.VERDE + "\n> Evoluem a cada 2 testes bem sucedidos com o atributo.\n" + Cores.RESET +
                 """
                
-                1. O BRUTAMONTES        2. O INTELECTUAL        3. O SENSITIVO
-                Fisico - 2              Fisico - 0              Fisico - 1
-                Coração - 1             Coração - 1             Coração - 2
-                Intelecto - 0           Intelecto - 2           Intelecto - 0
-                
+                1. O INTELECTUAL        2. O SENSITIVO
+                Coração - 1             Coração - 2
+                Intelecto - 2           Intelecto - 1
                 """);
 
         //Definição de atributos do personagem baseado em arquetipos pré-definidos
@@ -114,6 +111,7 @@ public class Turnos {
                         Uma voz feminina abafada e claramente irritada fala do outro lado da porta,
                         Sofia Ventura, sua parceira.
                         """);
+
                 for (NPC npc : npcs) {
                     if (npc instanceof SofiaVentura) {
                         ((SofiaVentura) npc).dialogar(capitulo, turno);
@@ -130,6 +128,7 @@ public class Turnos {
                         Sem perder muito tempo, ela entra e dá partida, observando você ocupar o
                         banco do passageiro.
                         """);
+
                 for (NPC npc : npcs) {
                     if (npc instanceof SofiaVentura) {
                         ((SofiaVentura) npc).dialogar(capitulo, turno);
@@ -141,6 +140,7 @@ public class Turnos {
         } else if (capitulo == 2) {
 
             if (turno == 0) {
+
                 System.out.println("""
                        A sala de está uma bagunça, o que não é usual, os papeis jogados e o quadro bagunçado
                        revela que muitas coisas foram montadas as pressas essa manhã.
@@ -155,6 +155,7 @@ public class Turnos {
                        """);
                         
             } else if (turno == 1) {
+
                 System.out.println("""
                         O som da porta abrindo te tira dos seus pensamentos, Fernando, o um dos rapazes novos 
                         está na abaixo da soleira, seu olhar é determinado. 
@@ -183,53 +184,69 @@ public class Turnos {
                         que você veria na multidão e não notaria.
                         """);
 
-            }
+            } else if (turno == 2) {
 
-            else if (turno == 2) {
                 System.out.println("""
                        Pedro é um homem mais velho, mais velho que Guilherme, ele entra segurando seu chapeuzinho
-                       e tem um porte humilde. Deve ter não mais que 1,70 de altura e dificilmente conseguiria 
+                       e tem um porte humilde. Deve ter não mais que 1,70 de altura e dificilmente conseguiria
                        colocar um homem adulto em uma mala sem ajuda. 
-
                        """);
 
-                        for (NPC npc : npcs) {
-                            if (npc instanceof PedroZelador) {
-                                ((PedroZelador) npc).dialogar(capitulo, turno);
-                            }
-                        }
+                for (NPC npc : npcs) {
+                    if (npc instanceof PedroZelador) {
+                        ((PedroZelador) npc).dialogar(capitulo, turno);
+                    }
                 }
 
-            else if (turno == 4) {
+            } else if (turno == 4) {
+
                 System.out.println("""
                        O som de salto alto caro ecoa pela sala pequena, a mulher de cabelos ruivos e vestido preto 
                        se senta desconfortavelmente na pequena cadeira a sua frente. Os olhos inchados de chorar se 
                        escondem atrás de um óculos escuro chamativo. A voz dela é trêmula e o rosto esbelto está 
                        estampado por uma aflição sincera. 
-
                        """);
 
-                        for (NPC npc : npcs) {
-                            if (npc instanceof EsmeraldaLobos) {
-                                ((EsmeraldaLobos) npc).dialogar(capitulo, turno);
-                            }
-                        }
+                for (NPC npc : npcs) {
+                    if (npc instanceof EsmeraldaLobos) {
+                        ((EsmeraldaLobos) npc).dialogar(capitulo, turno);
+                    }
                 }
 
-            else if (turno == 6) {
-                System.out.println("""
-                        O homem alto, utilizando um terno fino e caro entra e se senta 
-                        na cadeira em frente a sua. Seu rosto demonstra calma, seu porte
-                        uma certa altivez e desdém. Ele acredita estar acima dessa investigação. 
+            } else if (turno == 6) {
 
+                System.out.println("""
+                        O homem alto, utilizando um terno fino e caro entra e se senta na cadeira em frente a sua.
+                        Seu rosto demonstra calma, seu porte uma certa altivez e desdém.
+                        
+                        Ele acredita estar acima dessa investigação.
                         """);
 
-                        for (NPC npc : npcs) {
-                            if (npc instanceof HenricoLobos) {
-                                ((HenricoLobos) npc).dialogar(capitulo, turno);
-                            }
-                        }
+                for (NPC npc : npcs) {
+                    if (npc instanceof HenricoLobos) {
+                        ((HenricoLobos) npc).dialogar(capitulo, turno);
+                    }
                 }
+
+            }
+
+        } else if (capitulo == 4) {
+
+            if (turno == 0) {
+
+                System.out.println("""
+                        As palavras ficam rodando na sua cabeça enquanto observa Sofia, o olhar dela denuncia
+                        a urgência. Ela olha pra você.
+                       
+                        - E agora? Precisamos definir um suspeito para invetigarmos. Esse é um caso que não
+                        podemos perder tempo investigando 4 pessoas diferentes. Qualquer atraso ou demora
+                        pode significar a fuga do suspeito. - ela diz, cruzando os braços, o pé batendo no 
+                        chão ansiosamente.
+                        
+                        É hora de tentar ligar os fatos. Agora tudo depende de você.
+                        """);
+
+            }
 
         }
     }
@@ -244,20 +261,20 @@ public class Turnos {
             do {
 
                 try {
-                    System.out.print("> ESCOLHA SEU ARQUETIPO DE PERSONAGEM: ");
+                    System.out.print("\n> ESCOLHA SEU ARQUETIPO DE PERSONAGEM: ");
                     arquetipo = sc.nextInt();
                     caiuNoCatch = false;
                 } catch (InputMismatchException e) {
                     sc.next();
                     caiuNoCatch = true;
-                    System.out.println(Cores.VERMELHO + "> CARACTERE INVALIDO <" + Cores.RESET);
+                    System.out.println(Cores.VERMELHO + "\n> CARACTERE INVALIDO <" + Cores.RESET);
                 }
 
-                if (arquetipo < 1 || arquetipo > 3) {
-                    System.out.println(Cores.VERMELHO + "> OPÇÃO INDISPONIVEL: Insira um valor entre 1 e 3 <" + Cores.RESET);
+                if (arquetipo < 1 || arquetipo > 2) {
+                    System.out.println(Cores.VERMELHO + "\n> OPÇÃO INDISPONIVEL: Insira um valor entre 1 e 2 <" + Cores.RESET);
                 }
 
-            } while (caiuNoCatch && arquetipo < 1 || arquetipo > 3);
+            } while (caiuNoCatch && arquetipo < 1 || arquetipo > 2);
         }
 
         return arquetipo;

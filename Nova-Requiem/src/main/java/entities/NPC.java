@@ -15,15 +15,19 @@ public class NPC {
     public Jogador getJogadorUtilitarios() {
         return jogadorUtilitarios;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public int getAfinidade() {
         return afinidade;
     }
+
     public void setAfinidade(int afinidade) {
         this.afinidade = afinidade;
     }

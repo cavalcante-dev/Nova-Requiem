@@ -64,9 +64,11 @@ public class SofiaVentura extends NPC {
                 }
 
             } else if (turno == 2) {
+
                 System.out.println("""
                         - Os documentos estão no banco. Recomendo dar uma olhada antes de chegarmos.
                         """);
+
             }
 
         }
@@ -141,7 +143,6 @@ public class SofiaVentura extends NPC {
                                 
                                 ----------------------------------------------------------------------------------------
                                 """);
-
                         setFinalSecreto(getFinalSecreto() + 1);
                         setAfinidade(getAfinidade() + 1);
 
@@ -170,25 +171,25 @@ public class SofiaVentura extends NPC {
 
                     System.out.println("""
                                     
-                                    Não muito para ser sincera, ainda não tive oportunidade de conversar com eles.
-                                    Pedro e Guilherme são zeladores do prédio onde Francisco foi encontrado. Henrico
-                                    é o irmão mais novo e foi visto no dia do crime com a vítima na parte da manhã
-                                    e Esmeralda é a viúva.
+                                   Não muito para ser sincera, ainda não tive oportunidade de conversar com eles.
+                                   Pedro e Guilherme são zeladores do prédio onde Francisco foi encontrado. Henrico
+                                   é o irmão mais novo e foi visto no dia do crime com a vítima na parte da manhã
+                                   e Esmeralda é a viúva.
                                     
-                                    ----------------------------------------------------------------------------------------
-                                    """);
+                                   ----------------------------------------------------------------------------------------
+                                   """);
 
                } else if (resposta == 3) {
 
                     System.out.println("""
                                    
-                                    Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
-                                    alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
-                                    suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
-                                    ser dela na mesa do escritório.
+                                   Não encontramos muita coisa na cena do crime, mas o pessoal da perícia recuperou
+                                   alguns documentos que falavam sobre a herança que Francisco iria receber, uma carta
+                                   suspeita para Francisco que não sabemos o remetente e a aliança que Esmeralda confirmou
+                                   ser dela na mesa do escritório.
                                     
-                                    ----------------------------------------------------------------------------------------
-                                    """);
+                                   ----------------------------------------------------------------------------------------
+                                   """);
 
                }
             }
@@ -222,9 +223,7 @@ public class SofiaVentura extends NPC {
 
                 }
 
-            }
-
-            if (turno == 1) {
+            } else if (turno == 1) {
 
                 if (resposta == 1) {
 
@@ -258,8 +257,7 @@ public class SofiaVentura extends NPC {
                                 
                                 ----------------------------------------------------------------------------------------
                                 """);
-
-                        setAfinidade(getAfinidade() - 1);
+                    setAfinidade(getAfinidade()-1);
 
                 } else if (resposta == 3) {
 
@@ -275,7 +273,7 @@ public class SofiaVentura extends NPC {
                                 ----------------------------------------------------------------------------------------
                                 """);
 
-                    setAfinidade(getAfinidade()+1);
+                    setAfinidade(getAfinidade()-1);
 
                 } else if (resposta == 4) {
 
@@ -291,8 +289,7 @@ public class SofiaVentura extends NPC {
                                 
                                 ----------------------------------------------------------------------------------------
                                 """);
-
-                    setFinalSecreto(getFinalSecreto() + 1);
+                    setFinalSecreto(getFinalSecreto()+1);
                     setAfinidade(getAfinidade()+1);
 
                 }

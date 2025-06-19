@@ -11,9 +11,6 @@ public class Jogador {
     private int intelecto;
     private int intelectoBarra;
 
-    private int fisico;
-    private int fisicoBarra;
-
     private int coracao;
     private int coracaoBarra;
 
@@ -23,26 +20,20 @@ public class Jogador {
     public void definirArquetipo(int arquetipo) {
 
         this.intelectoBarra = 0;
-        this.fisicoBarra = 0;
         this.coracaoBarra = 0;
 
         if (arquetipo == 1) {
-            this.intelecto = 0;
-            this.fisico = 2;
-            this.coracao = 1;
+            this.intelecto = 1;
+            this.coracao = 2;
         } else if (arquetipo == 2) {
             this.intelecto = 2;
-            this.fisico = 0;
             this.coracao = 1;
-        } else if (arquetipo == 3) {
-            this.intelecto = 0;
-            this.fisico = 1;
-            this.coracao = 2;
         }
 
     }
 
     // Metodo de Testes para definir sucessos e falhas - a abastração do conceito de rolar 2 dados de 6 lados
+
     public boolean rolarTeste(int atributo, int dt){
 
         //DT = Dificuldade do TESTE
@@ -55,11 +46,15 @@ public class Jogador {
         int result = dado1 + dado2 + atributo;
 
         if (result >= dt) {
+
             System.out.println(Cores.VERDE + "\n[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - SUCESSO (" + result + ")" + Cores.RESET);
             resultado = true;
+
         } else if (result < dt) {
+
             System.out.println(Cores.VERMELHO + "\n[TESTE] - (" + dado1 + ", " + dado2 + ") + " + atributo + " - FALHA (" + result + ")" + Cores.RESET);
             resultado = false;
+
         }
 
         return resultado;
@@ -73,9 +68,6 @@ public class Jogador {
         } else if (this.intelectoBarra >= 2) {
             this.intelecto++;
             this.intelectoBarra = 0;
-        } else if (this.fisicoBarra >= 2) {
-            this.fisico++;
-            this.fisicoBarra = 0;
         }
     }
 
@@ -85,14 +77,6 @@ public class Jogador {
 
     public void setIntelectoBarra(int intelectoBarra) {
         this.intelectoBarra = intelectoBarra;
-    }
-
-    public int getFisicoBarra() {
-        return fisicoBarra;
-    }
-
-    public void setFisicoBarra(int fisicoBarra) {
-        this.fisicoBarra = fisicoBarra;
     }
 
     public int getCoracaoBarra() {
@@ -109,14 +93,6 @@ public class Jogador {
 
     public void setIntelecto(int intelecto) {
         this.intelecto = intelecto;
-    }
-
-    public int getFisico() {
-        return fisico;
-    }
-
-    public void setFisico(int fisico) {
-        this.fisico = fisico;
     }
 
     public int getCoracao() {

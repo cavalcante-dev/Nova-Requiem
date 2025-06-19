@@ -100,85 +100,88 @@ public class Escolhas {
 
                 imprimirOpcoes();
 
-            }
-             else if (turno == 2) {
+            } else if (turno == 2) {
 
                 System.out.println("""
-                        O homem franzino te olha com um olhar preocupado, de tempos em tempos ele 
-                        encara o relógio por alguns segundos e volta o olhar para você.
+                        O homem franzino te olha com um olhar preocupado, de tempos em tempos ele encara o 
+                        relógio por alguns segundos e volta o olhar para você.
                         """);
 
                 imprimirOpcoes();
 
-            } 
-
-            else if (turno == 3) {
+            } else if (turno == 3) {
 
                 System.out.println("""
-                        O tic tac do relógio se torna mais alto e a impaciência de Pedro mais notável, 
-                        suas próximas perguntas devem ser pensadas com cuidado. 
-
+                        O tic tac do relógio se torna mais alto e a impaciência de Pedro mais notável, suas 
+                        próximas perguntas devem ser pensadas com cuidado.
                         """);
 
                 imprimirOpcoes();
 
-            }
-
-            else if (turno == 4) {
+            } else if (turno == 4) {
 
                 System.out.println("""
-                        – Eu nã- não sei po- porque eu to aq- aqui... - Ela diz entre soluços enquanto 
-                        enxuga o rosto com um lencinho chique. 
-                        É difícil dizer o quanto dessas lágrimas são sinceras, mas no fim, 
-                        seu trabalho é exatamente esse.
-
+                        – Eu nã- não sei po- porque eu to aq- aqui...
+                        
+                        Ela diz entre soluços enquanto enxuga o rosto com um lencinho chique. É difícil dizer o 
+                        quanto dessas lágrimas são sinceras, mas no fim, seu trabalho é exatamente esse.
                         """);
 
                 imprimirOpcoes();
 
-            }
-            else if (turno == 5) {
+            } else if (turno == 5) {
 
                 System.out.println("""
-                        O temperamento da viúva fica mais volátil, as informações menos confiáveis. 
-                        O cuidado é a chave essencial 
-                        para lidar com Esmeralda. O par de óculos agora descansam no canto da mesa, 
-                        a maquiagem borrada escorre pelo rosto jovem da mulher de cabelos ruivos.
-
+                        O temperamento da viúva fica mais volátil, as informações menos confiáveis. O cuidado é
+                        a chave essencial para lidar com Esmeralda.
+                        
+                        O par de óculos agora descansam no canto da mesa, a maquiagem borrada escorre pelo 
+                        rosto jovem da mulher de cabelos ruivos.
                         """);
 
                 imprimirOpcoes();
 
-            }
-
-            else if (turno == 6) {
+            } else if (turno == 6) {
 
                 System.out.println("""
-                         Henrico está parado na sua frente, suas mãos bem comportadas e 
-                         seu olhar firme. 
-                         Encontre o que é necessário para abri-lo e fazê-lo falar.
-
+                        Henrico está parado na sua frente, suas mãos são bem comportadas e seu olhar firme.
+                        Encontre o que é necessário para abri-lo e fazê-lo falar.
                         """);
 
                 imprimirOpcoes();
 
-            }
-
-            else if (turno == 7) {
+            } else if (turno == 7) {
 
                 System.out.println("""
-                         A postura impecável mostra rachaduras, ele parece saber mais do que deveria. 
-                         Talvez ele só precise de mais um empurrãozinho.
-
+                        A postura impecável mostra rachaduras, ele parece saber mais do que deveria.
+                        Talvez ele só precise de mais um empurrãozinho.
                         """);
 
                 imprimirOpcoes();
 
             }
 
-            
+        } else if (capitulo == 4) {
 
+            if (turno == 0) {
 
+                System.out.println("""
+                        Sofia respira fundo. Ela encara você, séria, mas com um olhar que mistura cansaço 
+                        e talvez orgulho.
+                       
+                        -  Está nas suas mãos agora.
+                        
+                        O quadro está completo: horários, depoimentos, contradições, provas, mentiras. Você revisão
+                        mentalmente cada rosto, cada palavra dita nas últimas horas. Na sua frente, um formulário 
+                        esperando um nome e uma assinatura.
+                       
+                        Agora não tem volta.
+                        
+                        """);
+
+                imprimirOpcoes();
+
+            }
 
         }
 
@@ -293,10 +296,10 @@ public class Escolhas {
         }
         if (capitulo == 4) {
             if (turno == 0) {
-                opcoes[0] = "1. Opção Neutra - 4";
-                opcoes[1] = "2. Opção Neutra";
-                opcoes[2] = "3. Opção Boa";
-                opcoes[3] = "4. Opção Ruim";
+                opcoes[0] = "1. Culpar Henrico.";
+                opcoes[1] = "2. Culpar Esmeralda.";
+                opcoes[2] = "3. Culpar Guilherme.";
+                opcoes[3] = "4. Culpar Pedro.";
             }
         }
     }

@@ -10,15 +10,6 @@ public class Cores {
     public static final String ROXO = "\u001B[35m";
     public static final String CIANO = "\u001B[36m";
 
-    public static final String BOLD = "\u001B[1m";
-    public static final String DIM = "\u001B[2m";
     public static final String ITALIC = "\u001B[3m";
-    public static final String UNDERLINE = "\u001B[4m";
-    public static final String BLINK = "\u001B[5m";
-    public static final String REVERSE = "\u001B[7m"; // Inverte cores
-    public static final String HIDDEN = "\u001B[8m";
-    public static final String STRIKETHROUGH = "\u001B[9m";
-
-    // System.out.println(Cores.ROXO + "\n----------------------------------------------------------------------------------\n" + Cores.RESET);
 
 }
