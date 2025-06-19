@@ -121,10 +121,10 @@ Cada capítulo é definido por apenas dois atributos:
 Possui dois métodos: `inicioCapitulo()` para o título e `finalCapitulo()` para texto de transição (disponível apenas nos **capítulos** 1–3). 
 
 #### iniciocapítulo()
-![Função de inicio de capítulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Iniciocapítulos.png?raw=true)
+![Função de inicio de capítulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/InicioCapitulos.png?raw=true)
 
 #### finalcapítulo()
-![Função de final de capítulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Finalcapítulos.png?raw=true)
+![Função de final de capítulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FinalCapitulos.png?raw=true)
 
 ---
 
@@ -146,7 +146,7 @@ Os turnos são compostos por apenas um bloco de texto principal que serve como d
 
 O método narrar() recebe na classe *Main* os valores de capítulo e turno atual e utiliza de uma verificação em `if/else` para determinar qual bloco de texto será utilizado. 
 
-![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Modelocapítulo-Preenchido.png?raw=true)
+![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloCapitulo-Preenchido.png?raw=true)
 
 **Métodos auxiliares**:
 - `verificarArquetipo()` e `verificarNome()`: Validam inputs do Scanner.
