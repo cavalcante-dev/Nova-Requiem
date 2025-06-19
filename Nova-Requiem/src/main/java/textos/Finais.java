@@ -12,6 +12,7 @@ public class Finais {
 
     private boolean finalSecreto;
     private List<NPC> listaSuspeitos;
+    private boolean finalSofia;
 
     public Finais(List<NPC> listaSuspeitos){
         this.listaSuspeitos = listaSuspeitos;
@@ -42,7 +43,7 @@ public class Finais {
                             Ela confiou em você. Ela *confia* em você.
                             """);
 
-                    if (finalSecreto) {
+                    if (finalSecreto) { // Cena Secreta
 
                          System.out.println("""
                                         ===================================================================================
@@ -64,9 +65,18 @@ public class Finais {
 
                     }
 
-                    System.out.println(Cores.AMARELO + Cores.ITALIC + "Un jour je serai de retour près de toi.\n" + Cores.RESET);
+                    System.out.println(Cores.AMARELO + """
+                                ----------------------------------------------------------------------------------
+                                ===================== UN JOUR JE SERAI DE RETOUR PRÈS DE TOI =====================
+                                ----------------------------------------------------------------------------------
+                                """ + Cores.RESET);
 
-                    System.out.println(Cores.ROXO + "FIM" + Cores.RESET);
+                    System.out.println(Cores.ROXO     + """
+                
+                                ----------------------------------------------------------------------------------
+                                ====================================== FIM =======================================
+                                ----------------------------------------------------------------------------------
+                                """ + Cores.RESET);
 
                 } else { // Final Ruim
 
@@ -89,46 +99,45 @@ public class Finais {
                                     
                                     """);
 
-                    for (NPC sofia : listaSuspeitos) {
-                        if(sofia instanceof SofiaVentura) {
+                    if (finalSofia) {
 
-                            if (sofia.getAfinidade() >= 5) {
+                        System.out.println("""
+                                Sofia confiou em você, ela *confia* em você.
+                                
+                                Ele viu seus esforços e a sua dedicação e acredita que você estava no caminho
+                                certo, mas depositou sua confiança no suspeito errado. Ela acredita que talvez
+                                você só precise de um tempo para voltar aos trilhos.
+                                
+                                Graças a ela, você conseguiu mais uma chance.
+                                
+                                """);
 
-                                System.out.println("""
-                                        Sofia confiou em você, ela *confia* em você.
-                                        
-                                        Ele viu seus esforços e a sua dedicação e acredita que você estava no caminho
-                                        certo, mas depositou sua confiança no suspeito errado. Ela acredita que talvez
-                                        você só precise de um tempo para voltar aos trilhos.
-                                        
-                                        Graças a ela, você conseguiu mais uma chance.
-                                        
-                                        """);
+                    } else {
 
-                            } else {
+                        System.out.println("""
+                                Sofia se pergunta o porquê de ter ido até seu apartamento, o porquê de ter te 
+                                trazido para esse caso. Ela no fundo sabia o resultado, ela sabia que você 
+                                não conseguiria e você a provou estar certa, se mostrou ser aquilo que ela 
+                                esperava. 
+                                
+                                Uma bagunça.
+                                
+                                Não existem mais chances de ser melhor, você já teve demais dessas.
+                                
+                                """);
 
-                                System.out.println("""
-                                        Sofia se pergunta o porquê de ter ido até seu apartamento, o porquê de ter te 
-                                        trazido para esse caso. Ela no fundo sabia o resultado, ela sabia que você 
-                                        não conseguiria e você a provou estar certa, se mostrou ser aquilo que ela 
-                                        esperava. 
-                                        
-                                        Uma bagunça.
-                                        
-                                        Não existem mais chances de ser melhor, você já teve demais dessas.
-                                        
-                                        """);
-
-                            }
-
-                        }
                     }
 
                     System.out.println(Cores.AMARELO + Cores.ITALIC +
                             "Vença o arrependimento. Sacuda a poeira e prossiga. Você conseguirá na próxima vida, " +
                             "\nonde não comete erros. Faça o que puder com esta, enquanto estiver vivo." + Cores.RESET);
 
-                    System.out.println(Cores.ROXO + "\nFIM" + Cores.RESET);
+
+                    System.out.println(Cores.ROXO     + """
+                                ----------------------------------------------------------------------------------
+                                ====================================== FIM =======================================
+                                ----------------------------------------------------------------------------------
+                                """ + Cores.RESET);
 
                 }
             }
@@ -142,7 +151,18 @@ public class Finais {
         if (finalSecreto >= 2 && sofiaAfinidade >= 5) {
             this.finalSecreto = true;
         }
+        if (sofiaAfinidade >= 5) {
+            this.finalSofia = true;
+        }
 
+    }
+
+    public boolean isFinalSofia() {
+        return finalSofia;
+    }
+
+    public void setFinalSofia(boolean finalSofia) {
+        this.finalSofia = finalSofia;
     }
 
     public boolean isFinalSecreto() {
