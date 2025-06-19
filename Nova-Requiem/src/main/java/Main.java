@@ -50,7 +50,7 @@ public class Main {
 
                 do {
 
-                    escolhas.alternativas(capitulo.getCapitulo(), t);
+                    escolhas.gacnhoTurno(capitulo.getCapitulo(), t);
                     resposta = resultados.validadeResposta(resposta);
                     resultados.responder(resposta, capitulo.getCapitulo(), t);
 

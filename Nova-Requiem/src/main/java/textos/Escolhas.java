@@ -20,7 +20,7 @@ public class Escolhas {
 
     // Imprime o gancho de turno e as opções disponiveis
 
-    public void alternativas(int capitulo, int turno){
+    public void gacnhoTurno(int capitulo, int turno){
 
         if (capitulo == 1) {
 
