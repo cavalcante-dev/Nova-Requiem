@@ -74,7 +74,17 @@ public class Capitulos {
                     """);
 
         } else if (capitulo == 3) {
-            System.out.println("\nFinal do capitulo 3\n");
+            System.out.println("""
+                    O último interrogado sai da sala e você tem um breve momento de silêncio para 
+                    refletir sobre o que escutou. 
+                    
+                    O silêncio é interrompido pela entrada de Sofia, ela está inquieta e não diz nada, 
+                    apenas se senta na cadeira de interrogado. 
+                    Ela coloca as mãos sobre a mesa com um olhar determinado. 
+
+                    Chegou a hora de tomar uma decisão.
+
+                    """);
         }
     }
 

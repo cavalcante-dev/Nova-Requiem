@@ -32,7 +32,7 @@ public class Main {
 
         capitulos.add(new Capitulos(1, 3));
         capitulos.add(new Capitulos(2, 2));
-        capitulos.add(new Capitulos(3, 6));
+        capitulos.add(new Capitulos(3, 7));
         capitulos.add(new Capitulos(4, 1));
 
         turnos.introducao();

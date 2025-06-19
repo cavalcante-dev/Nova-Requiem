@@ -3,6 +3,7 @@ package main.java.textos;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
+import main.java.entities.npcs.HenricoLobos;
 import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
@@ -190,7 +191,7 @@ public class Turnos {
                        e tem um porte humilde. Deve ter não mais que 1,70 de altura e dificilmente conseguiria 
                        colocar um homem adulto em uma mala sem ajuda. 
 
-                        """);
+                       """);
 
                         for (NPC npc : npcs) {
                             if (npc instanceof PedroZelador) {
@@ -206,11 +207,26 @@ public class Turnos {
                        escondem atrás de um óculos escuro chamativo. A voz dela é trêmula e o rosto esbelto está 
                        estampado por uma aflição sincera. 
 
-                        """);
+                       """);
 
                         for (NPC npc : npcs) {
                             if (npc instanceof EsmeraldaLobos) {
                                 ((EsmeraldaLobos) npc).dialogar(capitulo, turno);
+                            }
+                        }
+                }
+
+            else if (turno == 6) {
+                System.out.println("""
+                        O homem alto, utilizando um terno fino e caro entra e se senta 
+                        na cadeira em frente a sua. Seu rosto demonstra calma, seu porte
+                        uma certa altivez e desdém. Ele acredita estar acima dessa investigação. 
+
+                        """);
+
+                        for (NPC npc : npcs) {
+                            if (npc instanceof HenricoLobos) {
+                                ((HenricoLobos) npc).dialogar(capitulo, turno);
                             }
                         }
                 }

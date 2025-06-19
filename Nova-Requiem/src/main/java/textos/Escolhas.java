@@ -137,16 +137,38 @@ public class Escolhas {
                 imprimirOpcoes();
 
             }
-
             else if (turno == 5) {
 
                 System.out.println("""
-                         O temperamento da viúva fica mais volátil, as informações menos confiáveis. 
-                         O cuidado é a chave essencial para lidar com Esmeralda. 
-                         O par de óculos agora descansam no canto da mesa, a maquiagem borrada escorre 
-                         pelo rosto jovem da mulher de cabelos ruivos.
+                        O temperamento da viúva fica mais volátil, as informações menos confiáveis. 
+                        O cuidado é a chave essencial 
+                        para lidar com Esmeralda. O par de óculos agora descansam no canto da mesa, 
+                        a maquiagem borrada escorre pelo rosto jovem da mulher de cabelos ruivos.
 
+                        """);
 
+                imprimirOpcoes();
+
+            }
+
+            else if (turno == 6) {
+
+                System.out.println("""
+                         Henrico está parado na sua frente, suas mãos bem comportadas e 
+                         seu olhar firme. 
+                         Encontre o que é necessário para abri-lo e fazê-lo falar.
+
+                        """);
+
+                imprimirOpcoes();
+
+            }
+
+            else if (turno == 7) {
+
+                System.out.println("""
+                         A postura impecável mostra rachaduras, ele parece saber mais do que deveria. 
+                         Talvez ele só precise de mais um empurrãozinho.
 
                         """);
 
@@ -255,6 +277,18 @@ public class Escolhas {
                 opcoes[1] = ("2. \"Qual era sua relação com Henrico?\"");
                 opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";
                 opcoes[3] = "4. \"Os relatos dizem que você discutiu com seu marido no dia. Qual seria o motivo dessa discussão?\"";
+            }
+            else if (turno == 6) {
+                opcoes[0] = "1. \"Henrico certo? As perguntas que iremos fazer serão breves, esperamos sua colaboração.\"";
+                opcoes[1] = ("2. \"Conhecia os zeladores? Você parecia ser frequente em conversas com Francisco.\"");
+                opcoes[2] = "3. \"Você o matou por inveja, não foi? Afinal ele tinha tudo o que você gostaria de ter\"";
+                opcoes[3] = "4. \"Esmeralda nunca pareceu te querer, a fortuna foi para seu irmão e que sobra para você? Absolutamente nada.\"";
+            }
+            else if (turno == 7) {
+                opcoes[0] = "1. Finalizar interrogatório";
+                opcoes[1] = ("2. \"Onde você estava no dia do crime, pela manhã?\"");
+                opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";
+                opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda." + Cores.RESET);;
             }
         }
         if (capitulo == 4) {
