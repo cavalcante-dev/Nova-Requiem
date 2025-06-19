@@ -35,6 +35,7 @@ public class PedroZelador extends NPC {
                     
                         ----------------------------------------------------------------------------------------
                         """);
+                        setAfinidade(getAfinidade()+1);
                 } else if (resposta == 2) {
                     System.out.println("""
 
@@ -48,6 +49,7 @@ public class PedroZelador extends NPC {
  
                         ----------------------------------------------------------------------------------------
                          """);
+                         setAfinidade(getAfinidade()+1);
                 } 
 
                 else if (resposta == 3) {
@@ -60,6 +62,7 @@ public class PedroZelador extends NPC {
  
                         ----------------------------------------------------------------------------------------
                          """);
+                         setAfinidade(getAfinidade()-1);
                 } 
 
                 else if (resposta == 4) {
@@ -74,6 +77,7 @@ public class PedroZelador extends NPC {
 
                         ----------------------------------------------------------------------------------------
                          """);
+                         setAfinidade(getAfinidade()-1);
                 } 
             } 
 

@@ -124,6 +124,36 @@ public class Escolhas {
 
             }
 
+            else if (turno == 4) {
+
+                System.out.println("""
+                        – Eu nã- não sei po- porque eu to aq- aqui... - Ela diz entre soluços enquanto 
+                        enxuga o rosto com um lencinho chique. 
+                        É difícil dizer o quanto dessas lágrimas são sinceras, mas no fim, 
+                        seu trabalho é exatamente esse.
+
+                        """);
+
+                imprimirOpcoes();
+
+            }
+
+            else if (turno == 5) {
+
+                System.out.println("""
+                         O temperamento da viúva fica mais volátil, as informações menos confiáveis. 
+                         O cuidado é a chave essencial para lidar com Esmeralda. 
+                         O par de óculos agora descansam no canto da mesa, a maquiagem borrada escorre 
+                         pelo rosto jovem da mulher de cabelos ruivos.
+
+
+
+                        """);
+
+                imprimirOpcoes();
+
+            }
+
             
 
 
@@ -200,11 +230,11 @@ public class Escolhas {
                 opcoes[0] = "1. Finalizar interrogatório";
                 opcoes[1] = ("2. \"Qual era a sua relação com Esmeralda?\"");
                 opcoes[2] = "3. \"Você estava com Pedro, certo? Mais alguém sabia que estariam lá?\"";
-                opcoes[3] = "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda.";
+                opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda." + Cores.RESET);
             }
              else if (turno == 2) {
                 opcoes[0] = "1. \"Não se encare como um suspeito Pedro, você é uma testemunha e precisamos saber tudo que você viu e ouviu naquele dia.\"";
-                opcoes[1] = ("2. \"Não se preocupe, não iremos demorar muito. Vamos trabalhar rápido para que o Sr. chegue em casa a tempo.\"");
+                opcoes[1] = "2. \"Não se preocupe, não iremos demorar muito. Vamos trabalhar rápido para que o Sr. chegue em casa a tempo.\"";
                 opcoes[2] = "3. \"Vamos direto ao ponto, você me parece muito nervoso, está sendo cúmplice de alguém? Você está escondendo algo.\"";
                 opcoes[3] = "4. Colocar a luz na cara dele e dar uma de policial mal. ";
             }           
@@ -213,6 +243,18 @@ public class Escolhas {
                 opcoes[1] = ("2. \"Você viu Henrico por lá?\"");
                 opcoes[2] = "3. \"Qual a relação de Guilherme e Esmeralda?\"";
                 opcoes[3] = "4. \"Você escutou alguma discussão no dia do crime?\"";
+            }
+            else if (turno == 4) {
+                opcoes[0] = "1. \"Entendo o seu luto, mas preciso que você se concentre para pegarmos quem fez isso\"";
+                opcoes[1] = "2. Colocar a aliança na mesa - \"Isso é seu?\"";
+                opcoes[2] = "3. \"Seu nome tá em tudo, Esmeralda. E você sabe bem disso.\"";
+                opcoes[3] = "4. \"Discussão... aliança na mesa... caso com zelador... tudo aponta para você\"";
+            }
+            else if (turno == 5) {
+                opcoes[0] = "1. Finalizar interrogatório";
+                opcoes[1] = ("2. \"Qual era sua relação com Henrico?\"");
+                opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";
+                opcoes[3] = "4. \"Os relatos dizem que você discutiu com seu marido no dia. Qual seria o motivo dessa discussão?\"";
             }
         }
         if (capitulo == 4) {

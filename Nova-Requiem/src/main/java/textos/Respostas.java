@@ -2,6 +2,7 @@ package main.java.textos;
 
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
+import main.java.entities.npcs.EsmeraldaLobos;
 import main.java.entities.npcs.GuilhermeZelador;
 import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
@@ -579,6 +580,84 @@ public class Respostas {
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+            }
+             else if (turno == 4) {
+
+                if (resposta == 1) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+                } 
+                 else if (resposta == 2) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+                }
+                 else if (resposta == 3) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+                }
+                 else if (resposta == 4) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+                }
+
+            } else if (turno == 5) {
+                if (resposta == 1) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
+                } 
+
+                else if (resposta == 2) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 3) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 4) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof EsmeraldaLobos) {
+                            ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
