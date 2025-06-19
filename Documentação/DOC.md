@@ -4,7 +4,7 @@
 
 ### Conceito
 
-Nova Requiem é, em sua essência, um projeto de paixão. Ele une a busca pelo desafio, a paixão escrita e lógica com a vontade de criar algo "diferente" do padrão. 
+Nova Requiem é, em sua essência, um projeto de paixão. Ele une a busca pelo desafio, a paixão pela escrita e lógica com a vontade de criar algo "diferente" do padrão. 
 
 O jogo utiliza dos conceitos de POO para apresentar uma narrativa engajante que estimula o jogador a pensar na solução do caso por si só, analisando as informações entregues pelos personagens e decidir o melhor curso de ação. 
 
@@ -14,7 +14,7 @@ Esta documentação trás os detalhes do projeto, razão por trás das escolhas 
 
 **Visual-Novel:** Um gênero de jogos que combina narrativa textual com ilustrações pré-renderizadas (no nosso caso um pouco menos do *Visual* e mais do *Novel*) e variado grau de interatividade. Conhecidas também como romances visuais, são definidas pelo foco no enredo e pela jogabilidade simples, na qual, tipicamente, o jogador deverá avançar o texto e fazer escolhas que definirão como a narrativa se desenvolve.
 
-**RPG:** *Role-Playing-Game* ou no português "jogo de interpretações de papéis" é um gênero que coloca o jogador nos sapatos de um ou mais personagens, o fazendo tomar decisões pensando em como o personagem agiria e moldando sua personalidade com o decorrer da narrativa.
+**RPG:** *Role-Playing-Game* ou no português "jogo de interpretação de papéis" é um gênero que coloca o jogador nos sapatos de um ou mais personagens, o fazendo tomar decisões pensando em como o personagem agiria e moldando sua personalidade com o decorrer da narrativa.
 
 ### Narrativa
 
@@ -145,7 +145,7 @@ Os metodos principais da classe Turnos são o narrar(), responsavel por ambienta
 
 O metodo narrar() recebe na classe *Main* os valores de capitulo e turno atual e utiliza de uma verificação em If/Else para determinar qual bloco de texto será utilizado. 
 
-![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FinalCapitulos.png?raw=true)
+![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloCapitulo-Preenchido.png?raw=true)
 
 Como metodos auxiliares, temos o verificarArquetipo() e o verificarNome() que fazem o tratamento do Scanner, evitando que o programa pare devido a introdução de valores invalidos por parte do jogador. 
 
@@ -260,19 +260,21 @@ Todos os NPCs são instanciados pelo programa a partir da classa *Main*, com seu
 
 Individualmente, cada NPC possui os metodos *dialogar()* e *responder()* - ambos recebendo o valor de capitulo / turno e *responder()* recebendo adicionalmente resposta. 
 
-*dialogar()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Turnos*
-*respoder()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Resposta*
+*dialogar()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Turnos* <br>
+*responder()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Resposta*
 
 #### Modelo de Resposta (SOFIA) 
 ![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-NPC.png?raw=true)
 
 ### SUBCLASSES
 
-#### entities/npcs/SofiaVentura
-#### entities/npcs/GuilhermeZelador
-#### entities/npcs/PedroZelador
-#### entities/npcs/EmeraldaLobos
-#### entities/npcs/HenricoLobos
+- **entities/npcs/SofiaVentura**
+- **entities/npcs/GuilhermeZelador**
+- **entities/npcs/PedroZelador**
+- **entities/npcs/EmeraldaLobos**
+- **entities/npcs/HenricoLobos**
+
+<br>
 
 ---
 
@@ -286,10 +288,24 @@ Individualmente, cada NPC possui os metodos *dialogar()* e *responder()* - ambos
 
 ### Uso de IA no Projeto
 
-### Sites de Pesquisa
+Este projeto foi desenvolvido pelo esforço conjunto de pessoas. Logica de programação, textos de turnos, finais, textos alternativos, documentações - todos foram escritos manualmente pela nossa equipe. 
+
+O uso de IA se restringiu apenas para pesquisas pontuais de funções, funcionamento de metodos nativos da linguagem e revisões de ortografia. 
 
 ### Ferramentas Utilizadas
 
+**IDE:** IntelliJ e Visual Studio Code
+**Versionamento:** Git e Github
+**Teste:** Windos CMD / Terminal da IDE
+ 
 ### Repositório GitHub
 
+[NOVA-REQUIEM](https://github.com/cavalcante-dev/Nova-Requiem)
+
 ### A Equipe
+
+- [Leandro Cavalcante](https://github.com/cavalcante-dev)
+- [Miguel Alchaar](https://github.com/miguelalchaar)
+- Vinicius Henrique Diniz
+- Victor da Silva
+- Tulio Macedo
