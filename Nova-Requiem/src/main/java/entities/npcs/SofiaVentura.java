@@ -6,11 +6,14 @@ import main.java.util.Cores;
 
 public class SofiaVentura extends NPC {
 
+    public int finalSecreto;
+
     public SofiaVentura(String nome, int afinidade, Jogador jogador) {
         super(nome, afinidade, jogador);
+        this.finalSecreto = 0;
     }
 
-    public void diaglogar(int capitulo, int turno) {
+    public void dialogar(int capitulo, int turno) {
         if (capitulo == 1) {
 
             if (turno == 1) {
@@ -38,6 +41,7 @@ public class SofiaVentura extends NPC {
                             
                             """
                             );
+                    setFinalSecreto(getFinalSecreto() + 1);
 
                 } else if (getAfinidade() >= 3) {
 
@@ -63,16 +67,6 @@ public class SofiaVentura extends NPC {
                 System.out.println("""
                         - Os documentos estão no banco. Recomendo dar uma olhada antes de chegarmos.
                         """);
-            }
-
-        } else if (capitulo == 3) {
-
-            if (turno == 0) {
-
-                System.out.println(Cores.ROXO + "Sofia: Eu não sei o que pensar sobre.\n" + Cores.RESET);
-
-                System.out.print("\n> ");
-
             }
 
         }
@@ -148,6 +142,7 @@ public class SofiaVentura extends NPC {
                                 ----------------------------------------------------------------------------------------
                                 """);
 
+                        setFinalSecreto(getFinalSecreto() + 1);
                         setAfinidade(getAfinidade() + 1);
 
                     } else if (getAfinidade() < 3) {
@@ -183,7 +178,7 @@ public class SofiaVentura extends NPC {
                                     ----------------------------------------------------------------------------------------
                                     """);
 
-                } else if (resposta == 3) {
+               } else if (resposta == 3) {
 
                     System.out.println("""
                                    
@@ -195,7 +190,7 @@ public class SofiaVentura extends NPC {
                                     ----------------------------------------------------------------------------------------
                                     """);
 
-                }
+               }
             }
 
         }   else if (capitulo == 2) {
@@ -250,9 +245,6 @@ public class SofiaVentura extends NPC {
                                 ----------------------------------------------------------------------------------------
                                 """);
 
-                            setAfinidade(getAfinidade() + 1);
-
-
                 } else if (resposta == 2) {
 
                     System.out.println("""
@@ -300,60 +292,20 @@ public class SofiaVentura extends NPC {
                                 ----------------------------------------------------------------------------------------
                                 """);
 
-                    setAfinidade(getAfinidade()+1);
-
-                } else {
-                    System.out.println("> Opção Indisponivel");
-                }
-            }
-
-            else if (turno == 2) {
-
-                if (resposta == 1) {
-
-                            setAfinidade(getAfinidade() + 1);
-
-
-                } else if (resposta == 2) {
-
-                    System.out.println("""
-                                Ela aperta os olhos, respira fundo, como quem segura a vontade de não explodir. 
-                                E então diz, sem filtrar uma única palavra, a voz carregada de irritação: 
-
-                                - Se você continuar duvidando, a gente já perdeu. 
-                                Deixa de ser frouxo e tome uma decisão coerente.
-
-                                No segundo seguinte, vira de costas, jogando as
-                                mãos no bolso da jaqueta, frustrada.
-                                E, se depender dela, não vai ficar ali pra assistir ninguém se afoga
-                                na própria indecisão.
-                                
-
-                        ----------------------------------------------------------------------------------------
-
-            """);
-
-                        setAfinidade(getAfinidade() - 1);
-
-                } else if (resposta == 3) {
-
-                    System.out.println("""
-                               
-                               Por um instante, ela hesita. Um olhar desviado,
-                               os lábios que pressionam um no outro como quem calcula 
-                               riscos. Não é medo. É peso. Peso de quem sabe que, uma vez que assume,
-                               não tem mais volta.
-
-                               Sofia respira fundo, endireita os ombros, e então diz decidida:
-                               - “Eu... posso cuidar disso.”
-                               
-                               ----------------------------------------------------------------------------------------
-                               """);
-
+                    setFinalSecreto(getFinalSecreto() + 1);
                     setAfinidade(getAfinidade()+1);
 
                 }
             }
         }
     }
+
+    public int getFinalSecreto() {
+        return finalSecreto;
+    }
+
+    public void setFinalSecreto(int finalSecreto) {
+        this.finalSecreto = finalSecreto;
+    }
+
 }

@@ -91,6 +91,15 @@ public class Escolhas {
 
                 imprimirOpcoes();
 
+            } else if (turno == 1) {
+
+                System.out.println("""
+                        O ar tenso se intensifica a medida que o interrogatorio se prolonga, você sente que
+                        ele está chegando em seu limite... talvez se fazer as perguntas certas ele solte algo.
+                        """);
+
+                imprimirOpcoes();
+
             }
 
         }

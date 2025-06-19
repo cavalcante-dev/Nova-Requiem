@@ -4,7 +4,7 @@ public class NPC {
 
     private String nome;
     private int afinidade;
-    private Jogador jogadorUtilitarios;
+    private final Jogador jogadorUtilitarios;
 
     public NPC(String nome, int afinidade, Jogador jogadorUtilitarios) {
         this.nome = nome;
