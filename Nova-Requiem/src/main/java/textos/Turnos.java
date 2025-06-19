@@ -2,6 +2,7 @@ package main.java.textos;
 
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
+import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
@@ -181,6 +182,21 @@ public class Turnos {
                         """);
 
             }
+
+            else if (turno == 2) {
+                System.out.println("""
+                       Pedro é um homem mais velho, mais velho que Guilherme, ele entra segurando seu chapeuzinho
+                       e tem um porte humilde. Deve ter não mais que 1,70 de altura e dificilmente conseguiria 
+                       colocar um homem adulto em uma mala sem ajuda. 
+
+                        """);
+
+                        for (NPC npc : npcs) {
+                            if (npc instanceof PedroZelador) {
+                                ((PedroZelador) npc).dialogar(capitulo, turno);
+                            }
+                        }
+                }
 
         }
     }
