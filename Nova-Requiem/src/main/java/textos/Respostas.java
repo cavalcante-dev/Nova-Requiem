@@ -19,14 +19,12 @@ public class Respostas {
     private Jogador jogadorUtilitarios;
     private Escolhas escolhas;
     private boolean fimTurno;
-    private Finais finais;
     private List<NPC> npcs;
     private int contadorFimTurno;
 
-    public Respostas(Jogador jogadorUtilitarios, Escolhas escolhas, Finais finais, List<NPC> npcs) {
+    public Respostas(Jogador jogadorUtilitarios, Escolhas escolhas, List<NPC> npcs) {
         this.jogadorUtilitarios = jogadorUtilitarios;
         this.escolhas = escolhas;
-        this.finais = finais;
         this.resultado = false;
         this.fimTurno = false;
         this.npcs = npcs;
@@ -761,13 +759,16 @@ public class Respostas {
                     resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getCoracao(), 12);
 
                     if (!resultado) {
+
                         System.out.println("""
                              
                              Perdão? Nunca me ocorreu tal pensamento. - Ele permanece impassível.
                                 
                              ----------------------------------------------------------------------------------------
                              """);
+
                     } else if (resultado) {
+
                         System.out.println("""
                             
                             Ele te encara por alguns segundos em silêncio até cair na gargalhas. 
@@ -782,6 +783,7 @@ public class Respostas {
                             ----------------------------------------------------------------------------------------
                             """);
                         jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getCoracao()+1);
+
                     }
 
                     escolhas.removerOpcao(resposta);
@@ -789,7 +791,48 @@ public class Respostas {
                 }
             }
 
+        } else if (capitulo == 4) {
+
+            if (resposta == 1) {
+
+                for (NPC npc : npcs) {
+                    if (npc instanceof HenricoLobos) {
+                        npc.setCuplado(true);
+                    }
+                }
+                setFimTurno(true);
+
+            } else if (resposta == 2) {
+
+                for (NPC npc : npcs) {
+                    if (npc instanceof EsmeraldaLobos) {
+                        npc.setCuplado(true);
+                    }
+                }
+                setFimTurno(true);
+
+            } else if (resposta == 3) {
+
+                for (NPC npc : npcs) {
+                    if (npc instanceof GuilhermeZelador) {
+                        npc.setCuplado(true);
+                    }
+                }
+                setFimTurno(true);
+
+            } else if (resposta == 4) {
+
+                for (NPC npc : npcs) {
+                    if (npc instanceof PedroZelador) {
+                        npc.setCuplado(true);
+                    }
+                }
+                setFimTurno(true);
+
+            }
+
         }
+
     }
 
     // Metodo de verificação de responder no turno.

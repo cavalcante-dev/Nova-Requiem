@@ -17,8 +17,8 @@ public class Main {
         List<NPC> npcs = new ArrayList<>();
         Turnos turnos = new Turnos(jogador, npcs);
         Escolhas escolhas = new Escolhas(jogador, npcs);
-        Finais finais = new Finais();
-        Respostas resultados = new Respostas(jogador, escolhas, finais, npcs);
+        Respostas resultados = new Respostas(jogador, escolhas, npcs);
+        Finais finais;
 
         // Instancia todos os npcs (personagens não jogaveis)
 
@@ -32,7 +32,7 @@ public class Main {
 
         capitulos.add(new Capitulos(1, 3));
         capitulos.add(new Capitulos(2, 2));
-        capitulos.add(new Capitulos(3, 7));
+        capitulos.add(new Capitulos(3, 8));
         capitulos.add(new Capitulos(4, 1));
 
         turnos.introducao();
@@ -68,7 +68,18 @@ public class Main {
 
         }
 
+        // Inicia contador do final secreto
+
+        finais = new Finais(npcs);
+
+        for (NPC npc : npcs) {
+            if (npc instanceof SofiaVentura) {
+                finais.verficarFinalSecetro(((SofiaVentura) npc).getFinalSecreto(), npc.getAfinidade());
+            }
+        }
+
         finais.narrarFinal();
+
 
     }
 }
