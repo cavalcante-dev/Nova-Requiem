@@ -171,34 +171,108 @@ O *Gancho de Turno*, assim como os outros metodos de bloco de texto, recebe o ca
 #### ganchoTurno()
 ![gancho de texto](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/GanchoTurnos.png?raw=true)
 
-Como metodos de opções
+Como metodos relacionados a opções, a classe possui um para definir as opções do turno, um com o *loop* de impressão de cada opção e um para "remove-lá" quando for escolhida. Todos acessados em diferentes pontos do codigo para evitar repetições de estruturas.
 
 #### Metodos de Opções
-![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Op%C3%A7oes.png?raw=true)
+![metodos que manipulam as opções](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Op%C3%A7oes.png?raw=true)
 
 ---
 
 ### textos/Respostas 
 
+Similar aos demais metodos, para a classe *Resposta* recebe em seu contrutor os utilitarios de *Jogador*, a *Lista de NPCs* e, adicionamente, um objeto da classe *Escolhas* para acessar metodos. 
+
+#### *Resposta*
+![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorResposta.png?raw=true)
+
+É na classe *Resposta* que utilizamos os testes de atributo assim como definimos o bloco de texto para sucesso / falha e o definidos qual opção irá determinar o fim de um turno. 
+
+#### Modelo de Bloco de Respostas
+![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-Preenchido.png?raw=true)
+
+Como metodo auxiliar, temos o verificarResposta() que realizar o tratamento do Scanner, evitando que o programa pare devido a introdução de valores invalidos por parte do jogador. 
+
 #### verificarResposta()
 ![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/VerficarResposta.png?raw=true)
+
+A maneira que um turno deve terminar pode ser definido de 3 diferentes maneiras, com um contador que deve passar por todos as opções, um contador que deve passar por uma quantidade X de opções ou definindo a variavel fimTurno diretamente na opção. 
+
+#### Definidores de Fim de Turno
+![metodos que definem o fim de um turno](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ContadorDeFinalTurno.png?raw=true)
 
 ---
 
 ### textos/Finais
 
+Esta classe é a classe que determina se a escolha de suspeito foi realizada corretamente e mostra qual dos finais o jogador conseguir. Como atributos ela recebe a *Lista de NPCs* como *listaSuspeitos* e dois booleanos - finalSecreto e finalSofia - ambos determinam alterações nos dois finais principais.
+
+#### Construtor Final
+![metodos que definem o final secreto](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorFinais.png?raw=true)
+
+Este metodo faz uma verificação da *listaSuspeitos* e verifica qual dos quatro o jogador marcou como o culpado, assim decidindo no *If/Else* qual final o jogador conseguir. 
+
+#### narrarFinal()
+![textos para os finais](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/TextoFinais.png?raw=true)
+
+
+O metodo de verificação dos finais alternativos levam em consideração a afinidade da NPC-SofiaVentura e escolhas especificas durante a narrativa, assim tendo um total de quatro variações: duas para o final bom e duas para o final ruim.
+
+#### Verificação de Final Secreto
+![metodos que definem o final secreto](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Verfica%C3%A7%C3%A3oCenaSecreta.png?raw=true)
+
 ---
 
 ### entities/Jogador
-### entities/NPC
+
+A entidade principal do sistema. É no jogador que definimos o nome do *Detetetive* e seus atributos - baseado em arquetipos. 
+
+#### Construtor de Jogador 
+![construtor da jogador](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorJogador.png?raw=true)
+
+Como metodos da classe temos rolarTeste() que recebe o atributo a ser utilizado e a dificuldade do teste e o uparAtributo() que é verificada ao final de cada capitulo.
+
+#### rolarTeste()
+![abstração de 2 dados de 6](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/RolarTestes.png?raw=true)
+
+#### uparAtributo() 
+![barra de progresso](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/UparAtributo.png?raw=true)
 
 ---
 
-### entities/npcs/SofiaVentura
-### entities/npcs/GuilhermeZelador
-### entities/npcs/PedroZelador
-### entities/npcs/EmeraldaLobos
-### entities/npcs/HenricoLobos
+### entities/NPC
+
+A SuperClasse NPC foi criada para organização do codigo, uma vez que todas as instancias de NPCs possuem seus proprios metodos de dialogos e respostas mas compartilham atributos em comum (nome, afinidade, jogadorUtilitarios e culpa). Desta maneira é possivel evitar que o metodo getAfinidade, por exemplo, seja repetido em todos os diferentes NPCs do jogo. 
+
+#### Construtor de NPC
+![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorNPC.png?raw=true)
+
+O construtor de subclasse inicia os valores variaveis, porém todos começam inocentes - definido na classe pai.
+
+#### Construtor de NPC-SubClasses
+![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorNPC-Qualquer.png?raw=true)
+
+Todos os NPCs são instanciados pelo programa a partir da classa *Main*, com seus valores já pré-definidos. 
+
+#### NPCs
+![npsc](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/NPCs.png?raw=true)
+
+---
+
+Individualmente, cada NPC possui os metodos *dialogar()* e *responder()* - ambos recebendo o valor de capitulo / turno e *responder()* recebendo adicionalmente resposta. 
+
+*dialogar()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Turnos*
+*respoder()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Resposta*
+
+#### Modelo de Resposta (SOFIA) 
+![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-NPC.png?raw=true)
+
+### SUBCLASSES
+
+#### entities/npcs/SofiaVentura
+#### entities/npcs/GuilhermeZelador
+#### entities/npcs/PedroZelador
+#### entities/npcs/EmeraldaLobos
+#### entities/npcs/HenricoLobos
 
 ---
 
@@ -218,5 +292,4 @@ Como metodos de opções
 
 ### Repositório GitHub
 
-### O Grupo
-
+### A Equipe
