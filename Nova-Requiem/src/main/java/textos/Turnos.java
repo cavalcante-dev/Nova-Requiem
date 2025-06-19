@@ -2,6 +2,7 @@ package main.java.textos;
 
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
+import main.java.entities.npcs.EsmeraldaLobos;
 import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
@@ -194,6 +195,22 @@ public class Turnos {
                         for (NPC npc : npcs) {
                             if (npc instanceof PedroZelador) {
                                 ((PedroZelador) npc).dialogar(capitulo, turno);
+                            }
+                        }
+                }
+
+            else if (turno == 4) {
+                System.out.println("""
+                       O som de salto alto caro ecoa pela sala pequena, a mulher de cabelos ruivos e vestido preto 
+                       se senta desconfortavelmente na pequena cadeira a sua frente. Os olhos inchados de chorar se 
+                       escondem atrás de um óculos escuro chamativo. A voz dela é trêmula e o rosto esbelto está 
+                       estampado por uma aflição sincera. 
+
+                        """);
+
+                        for (NPC npc : npcs) {
+                            if (npc instanceof EsmeraldaLobos) {
+                                ((EsmeraldaLobos) npc).dialogar(capitulo, turno);
                             }
                         }
                 }
