@@ -13,7 +13,7 @@ public class SofiaVentura extends NPC {
         this.finalSecreto = 0;
     }
 
-    public void diaglogar(int capitulo, int turno) {
+    public void dialogar(int capitulo, int turno) {
         if (capitulo == 1) {
 
             if (turno == 1) {

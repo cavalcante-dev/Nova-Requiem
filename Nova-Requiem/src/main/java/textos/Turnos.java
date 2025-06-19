@@ -113,7 +113,7 @@ public class Turnos {
                         """);
                 for (NPC npc : npcs) {
                     if (npc instanceof SofiaVentura) {
-                        ((SofiaVentura) npc).diaglogar(capitulo, turno);
+                        ((SofiaVentura) npc).dialogar(capitulo, turno);
                     }
                 }
 
@@ -129,7 +129,7 @@ public class Turnos {
                         """);
                 for (NPC npc : npcs) {
                     if (npc instanceof SofiaVentura) {
-                        ((SofiaVentura) npc).diaglogar(capitulo, turno);
+                        ((SofiaVentura) npc).dialogar(capitulo, turno);
                     }
                 }
 
