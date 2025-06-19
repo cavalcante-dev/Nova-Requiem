@@ -42,7 +42,7 @@ A cada final de capítulo, se a barra de atributo estiver maior ou igual a 2 o a
 
 ### Testes de Atributo
 
-Durante o decorrer da narrativa, o jogador pode se deparar com a opção de fazer um teste de atributo com uma dificuldade pré-definida. O teste é a abstração do que seria duas rolagens de um dado de 6 lados e o resultado é a soma desses dados mais o atributo utilizado - *(1d6 + 1d6 + Atributo)*.
+Durante o decorrer da narrativa, o jogador pode se deparar com a opção de fazer um teste de atributo com uma dificuldade pré-definida. O teste é a abstração do que seria duas rolagens de um dado de 6 lados e o resultado é a soma desses dados mais o atributo utilizado - `(1d6 + 1d6 + Atributo)`.
 
 O resultado pode ser um **Sucesso** ou uma **Falha**, possuindo uma resposta diferente para cada.
 
@@ -87,9 +87,9 @@ As escolhas do jogador moldam a narrativa e o acesso às informações, culminan
 
 ### *Main*
 
-A classe *main*, sendo finalizada com um total de 85 linhas, possui em seu funcionamento um *loop for* que caminha por todos os capítulos, turnos e decisões do jogo, evitando repetição de código. 
+A classe *Main*, sendo finalizada com um total de 85 linhas, possui em seu funcionamento um *loop for* que caminha por todos os capítulos, turnos e decisões do jogo, evitando repetição de código. 
 
-O código também implementa um *loop do/while* que repete o gancho de turno até as condições de escolhas serem definidas, assim como já comentado na sessão ***Escolhas de Diálogo.***
+O código também implementa um *loop* `do/while` que repete o gancho de turno até as condições de escolhas serem definidas, assim como já comentado na sessão ***Escolhas de Diálogo.***
 
 #### LOOP PRINCIPAL
 ![classe *main*](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FuncionamentoPrincipal.png?raw=true)
@@ -115,10 +115,10 @@ A classe utiliza de Códigos de Escape ANSI.
 ### textos/capítulos
 
 Cada capítulo é definido por apenas dois atributos: 
-- *capítulo* - Representando o número do capítulo atual
-- *turnosPorcapítulo* - Representando o número total de turnos (loops) do capítulo
+- `capitulo` - Representando o número do capítulo atual
+- `turnosPorCapitulo` - Representando o número total de turnos (loops) do capítulo
 
-Possui dois métodos: `inicioCapitulo()` para o título e `finalCapitulo()` para texto de transição (disponível apenas nos **capítulos** 1–3). 
+Possui dois métodos: `inicioCapitulo()` para o título e `finalCapitulo()` para texto de transição (disponível apenas nos capítulos 1–3). 
 
 #### iniciocapítulo()
 ![Função de inicio de capítulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/InicioCapitulos.png?raw=true)
@@ -144,7 +144,7 @@ Os turnos são compostos por apenas um bloco de texto principal que serve como d
 
 #### narrar()
 
-O método narrar() recebe na classe *Main* os valores de capítulo e turno atual e utiliza de uma verificação em `if/else` para determinar qual bloco de texto será utilizado. 
+O método `narrar()` recebe na classe *Main* os valores de capítulo e turno atual e utiliza de uma verificação em `if/else` para determinar qual bloco de texto será utilizado. 
 
 ![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloCapitulo-Preenchido.png?raw=true)
 
@@ -192,7 +192,7 @@ Similar aos demais métodos, para a classe *Resposta* recebe em seu contrutor os
 #### Modelo de Bloco de Respostas
 ![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-Preenchido.png?raw=true)
 
-Como método auxiliar, temos o verificarResposta() que realizar o tratamento do Scanner, evitando que o programa pare devido a introdução de valores invalidos por parte do jogador. 
+Como método auxiliar, temos o `verificarResposta()` que realizar o tratamento do Scanner, evitando que o programa pare devido a introdução de valores invalidos por parte do jogador. 
 
 #### verificarResposta()
 ![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/VerficarResposta.png?raw=true)
@@ -219,7 +219,7 @@ Este método faz uma verificação da `listaSuspeitos` e verifica qual dos quatr
 #### narrarFinal()
 ![textos para os finais](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/TextoFinais.png?raw=true)
 
-O método de verificação dos finais alternativos levam em consideração a afinidade da NPC-SofiaVentura e escolhas especificas durante a narrativa, assim tendo um total de quatro variações: duas para o final bom e duas para o final ruim.
+Finais alternativos consideram afinidade com *NPC-SofiaVentura* e escolhas narrativas (4 variações: 2 finais bons e 2 ruins).
 
 #### Verificação de Final Secreto
 ![métodos que definem o final secreto](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Verfica%C3%A7%C3%A3oCenaSecreta.png?raw=true)
@@ -228,12 +228,12 @@ O método de verificação dos finais alternativos levam em consideração a afi
 
 ### entities/Jogador
 
-A entidade principal do sistema. É no jogador que definimos o nome do *Detetetive* e seus atributos - baseado em arquétipos. 
+A entidade principal do sistema. É no jogador que definimos o nome do *Detetive* e seus atributos - baseado em arquétipos. 
 
 #### Construtor de Jogador 
 ![construtor da jogador](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorJogador.png?raw=true)
 
-Como métodos da classe temos rolarTeste() que recebe o atributo a ser utilizado e a dificuldade do teste e o uparAtributo() que é verificada ao final de cada capítulo.
+Como métodos da classe temos `rolarTeste()` que recebe o atributo a ser utilizado e a dificuldade do teste e o `uparAtributo()` que é verificada ao final de cada capítulo.
 
 #### rolarTeste()
 ![abstração de 2 dados de 6](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/RolarTestes.png?raw=true)
@@ -245,7 +245,7 @@ Como métodos da classe temos rolarTeste() que recebe o atributo a ser utilizado
 
 ### entities/NPC
 
-A SuperClasse NPC foi criada para organização do codigo, uma vez que todas as instancias de NPCs possuem seus proprios métodos de dialogos e respostas mas compartilham atributos em comum (nome, afinidade, jogadorUtilitarios e culpa). Desta maneira é possivel evitar que o método getAfinidade, por exemplo, seja repetido em todos os diferentes NPCs do jogo. 
+A SuperClasse NPC foi criada para organização do codigo, uma vez que todas as instancias de NPCs possuem seus proprios métodos de dialogos e respostas mas compartilham atributos em comum (`nome`, `afinidade`, `jogadorUtilitarios` e `culpa`). Desta maneira é possivel evitar que o método getAfinidade, por exemplo, seja repetido em todos os diferentes NPCs do jogo. 
 
 #### Construtor de NPC
 ![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorNPC.png?raw=true)
@@ -262,10 +262,9 @@ Todos os NPCs são instanciados pelo programa a partir da classa *Main*, com seu
 
 ---
 
-Individualmente, cada NPC possui os métodos *dialogar()* e *responder()* - ambos recebendo o valor de capítulo / turno e *responder()* recebendo adicionalmente resposta. 
-
-*dialogar()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Turnos* <br>
-*responder()* - Utilizado quando o bloco de texto do NPC se encontra na classe *Resposta*
+Cada NPC possui:
+- `dialogar()`: Para textos em *Turnos*
+- `responder()`: Para textos em *Resposta* (recebe resposta adicional).
 
 #### Modelo de Resposta (SOFIA) 
 ![construtor da classe](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-NPC.png?raw=true)
