@@ -25,14 +25,14 @@ public class Main {
         npcs.add(new SofiaVentura("Sofia Ventura", 2, jogador));
         npcs.add(new EsmeraldaLobos("Emeralda Lobos", 0, jogador));
         npcs.add(new GuilhermeZelador("Guilherme Silva", 0, jogador));
-        npcs.add(new PedroZelador("Pedro Martinez", 0, jogador));
+        npcs.add(new PedroZelador("Pedro Martinez", 1, jogador));
         npcs.add(new HenricoLobos("Henrico Lobos", 0, jogador));
 
         // Instancia o capitulo e quantidade de turnos em cada.
 
         capitulos.add(new Capitulos(1, 3));
         capitulos.add(new Capitulos(2, 2));
-        capitulos.add(new Capitulos(3, 4));
+        capitulos.add(new Capitulos(3, 6));
         capitulos.add(new Capitulos(4, 1));
 
         turnos.introducao();

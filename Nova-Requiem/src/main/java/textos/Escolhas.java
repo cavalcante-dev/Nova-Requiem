@@ -101,6 +101,32 @@ public class Escolhas {
                 imprimirOpcoes();
 
             }
+             else if (turno == 2) {
+
+                System.out.println("""
+                        O homem franzino te olha com um olhar preocupado, de tempos em tempos ele 
+                        encara o relógio por alguns segundos e volta o olhar para você.
+                        """);
+
+                imprimirOpcoes();
+
+            } 
+
+            else if (turno == 3) {
+
+                System.out.println("""
+                        O tic tac do relógio se torna mais alto e a impaciência de Pedro mais notável, 
+                        suas próximas perguntas devem ser pensadas com cuidado. 
+
+                        """);
+
+                imprimirOpcoes();
+
+            }
+
+            
+
+
 
         }
 
@@ -175,6 +201,18 @@ public class Escolhas {
                 opcoes[1] = ("2. \"Qual era a sua relação com Esmeralda?\"");
                 opcoes[2] = "3. \"Você estava com Pedro, certo? Mais alguém sabia que estariam lá?\"";
                 opcoes[3] = "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda.";
+            }
+             else if (turno == 2) {
+                opcoes[0] = "1. \"Não se encare como um suspeito Pedro, você é uma testemunha e precisamos saber tudo que você viu e ouviu naquele dia.\"";
+                opcoes[1] = ("2. \"Não se preocupe, não iremos demorar muito. Vamos trabalhar rápido para que o Sr. chegue em casa a tempo.\"");
+                opcoes[2] = "3. \"Vamos direto ao ponto, você me parece muito nervoso, está sendo cúmplice de alguém? Você está escondendo algo.\"";
+                opcoes[3] = "4. Colocar a luz na cara dele e dar uma de policial mal. ";
+            }           
+             else if (turno == 3) {
+                opcoes[0] = "1. Finalizar interrogatório";
+                opcoes[1] = ("2. \"Você viu Henrico por lá?\"");
+                opcoes[2] = "3. \"Qual a relação de Guilherme e Esmeralda?\"";
+                opcoes[3] = "4. \"Você escutou alguma discussão no dia do crime?\"";
             }
         }
         if (capitulo == 4) {
