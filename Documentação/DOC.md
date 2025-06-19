@@ -297,8 +297,8 @@ O uso de IA se restringiu apenas para pesquisas pontuais de funções, funcionam
 
 ### Ferramentas Utilizadas
 
-**IDE:** IntelliJ e Visual Studio Code
-**Versionamento:** Git e Github
+**IDE:** IntelliJ e Visual Studio Code <br>
+**Versionamento:** Git e Github <br>
 **Teste:** Windos CMD / Terminal da IDE
  
 ### Repositório GitHub
