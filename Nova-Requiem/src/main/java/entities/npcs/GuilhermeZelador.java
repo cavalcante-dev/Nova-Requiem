@@ -195,9 +195,9 @@ public class GuilhermeZelador extends NPC {
                            
                            O jovem se levanta e vai até a porta, antes de sair ele se vira e diz:
                            
-                           - Olha cara, eu não queria acusar ninguém… mas a Esmel vivia reclamando que aquele 
+                           - Olha cara, eu não queria acusar ninguém… mas a Esmel vivia reclamando que aquele
                            Henrico era piradão nela. Completamente obcecado mesmo… - Ele te encara relutante e 
-                           olha para o vidro espelho atrás de você, após alguns segundos de silêncio ele se retira.\s
+                           olha para o vidro espelho atrás de você, após alguns segundos de silêncio ele se retira.
                            
                            ----------------------------------------------------------------------------------------
                            """);
@@ -207,7 +207,7 @@ public class GuilhermeZelador extends NPC {
                         System.out.println("""
    
                            - Tudo bem, Guilherme. Terminamos por aqui.
-                            
+                           
                            O jovem se levanta e sai da sala, sem mais muito rodeio.
                            
                            ----------------------------------------------------------------------------------------

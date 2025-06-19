@@ -13,11 +13,12 @@ public class Capitulos {
     }
 
     // Titulos dos capitulos, separado em 4 momentos - Introdução / Analise de pistas / Interrogatorio / Final
+
     public void inicioCapitulo() {
+
         if (capitulo == 1) {
 
             System.out.println(Cores.AMARELO     + """
-                
                 ----------------------------------------------------------------------------------
                 ================================ CAPÍTULO 1: ECOS ================================
                 ----------------------------------------------------------------------------------
@@ -26,7 +27,6 @@ public class Capitulos {
         } else if (capitulo == 2) {
 
             System.out.println(Cores.AMARELO     + """
-                
                 ----------------------------------------------------------------------------------
                 =============================== CAPÍTULO 2: MORTIS ===============================
                 ----------------------------------------------------------------------------------
@@ -35,15 +35,25 @@ public class Capitulos {
         } else if (capitulo == 3) {
 
             System.out.println(Cores.AMARELO     + """
-                
                 ----------------------------------------------------------------------------------
                 ============================== CAPÍTULO 3: VERITAS ===============================
                 ----------------------------------------------------------------------------------
                 """ + Cores.RESET);
+
+        } else if (capitulo == 4) {
+
+            System.out.println(Cores.AMARELO     + """
+                ----------------------------------------------------------------------------------
+                ============================== CAPÍTULO 4: REQUIEM ===============================
+                ----------------------------------------------------------------------------------
+                """ + Cores.RESET);
+
         }
+
     }
 
     public void finalCapitulo() {
+
         if (capitulo == 1) {
 
             System.out.println("""
@@ -74,18 +84,21 @@ public class Capitulos {
                     """);
 
         } else if (capitulo == 3) {
+
             System.out.println("""
-                    O último interrogado sai da sala e você tem um breve momento de silêncio para 
-                    refletir sobre o que escutou. 
+                    O último interrogado sai da sala e você tem um breve momento de silêncio para
+                    refletir sobre o que escutou.
                     
-                    O silêncio é interrompido pela entrada de Sofia, ela está inquieta e não diz nada, 
+                    O silêncio é interrompido pela entrada de Sofia, ela está inquieta e não diz nada,
                     apenas se senta na cadeira de interrogado. 
+                    
                     Ela coloca as mãos sobre a mesa com um olhar determinado. 
 
                     Chegou a hora de tomar uma decisão.
-
                     """);
+
         }
+
     }
 
     public int getCapitulo() {

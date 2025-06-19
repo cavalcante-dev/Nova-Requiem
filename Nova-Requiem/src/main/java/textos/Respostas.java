@@ -58,11 +58,13 @@ public class Respostas {
                             
                             ----------------------------------------------------------------------------------------
                             """);
+
                     for (NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
                             npc.setAfinidade((npc.getAfinidade() + 1));
                         }
                     }
+
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
 
@@ -81,11 +83,13 @@ public class Respostas {
                             
                             ----------------------------------------------------------------------------------------
                             """);
+
                     for (NPC npc : npcs) {
                         if (npc instanceof SofiaVentura) {
                             npc.setAfinidade((npc.getAfinidade() - 1));
                         }
                     }
+
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
 
@@ -299,7 +303,7 @@ public class Respostas {
                         System.out.println("""
                         
                             Você compara os documentos legais com a carta contando sobre o adulterio e nota que existe
-                            uma incrivel semelhança entre as letras de Henrico e as da carta. 
+                            uma incrivel semelhança entre as letras de Henrico e as da carta.
                             
                             Os traços de escrita forjada agora se tornam mais claros. As linhas são trêmulas demais em 
                             alguns pontos e rígidas demais em outros, como se quem escreveu lutasse contra a própria mão, 
@@ -318,7 +322,7 @@ public class Respostas {
 
                     System.out.println("""
 
-                            Você pega as anotações de Sofia, os rabiscos, as fotos e pistas e começar a puxar linhas 
+                            Você pega as anotações de Sofia, os rabiscos, as fotos e pistas e começar a puxar linhas
                             no quadro da investigação, fazendo conexões que antes não apareciam e traçando o caminho 
                             dos suspeitos. 
                             
@@ -480,7 +484,7 @@ public class Respostas {
                     if (!resultado) {
                         System.out.println("""
                              
-                             - Olha… Tudo bem eu admito… a gente tinha… algo! Mas eu juro que não fiz isso, nem ela! 
+                             - Olha… Tudo bem eu admito… a gente tinha… algo! Mas eu juro que não fiz isso, nem ela!
                              O Francisco era um marido distante e ela ficava muito tempo sozinha, mas isso não é 
                              motivo para matar ele cara!
                              
@@ -493,7 +497,7 @@ public class Respostas {
                     } else if (resultado) {
                         System.out.println("""
                             
-                            - Qual sua obsessão com ela? Já falei que a gente não tinha nada. Além do mais, o que 
+                            - Qual sua obsessão com ela? Já falei que a gente não tinha nada. Além do mais, o que
                             isso tem haver com o cara que morreu?
                             
                             Ele parece ainda mais irritado e faz menção de se levantar.
@@ -506,9 +510,8 @@ public class Respostas {
                     escolhas.removerOpcao(resposta);
 
                 }
-            }
 
-            else if (turno == 2) {
+            } else if (turno == 2) {
 
                 if (resposta == 1) {
 
@@ -519,8 +522,8 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
-                } 
-                 else if (resposta == 2) {
+                }  else if (resposta == 2) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
@@ -528,8 +531,9 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
-                }
-                 else if (resposta == 3) {
+
+                } else if (resposta == 3) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
@@ -537,8 +541,9 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
-                }
-                 else if (resposta == 4) {
+
+                } else if (resposta == 4) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
@@ -546,10 +551,13 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
+
                 }
 
             } else if (turno == 3) {
+
                 if (resposta == 1) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
@@ -557,36 +565,37 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
-                } 
 
-                else if (resposta == 2) {
+                } else if (resposta == 2) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 3) {
+                } else if (resposta == 3) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 4) {
+                } else if (resposta == 4) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof PedroZelador) {
                             ((PedroZelador) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
+
                 }
-            }
-             else if (turno == 4) {
+
+            } else if (turno == 4) {
 
                 if (resposta == 1) {
 
@@ -597,8 +606,10 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
+
                 } 
                  else if (resposta == 2) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
@@ -606,8 +617,10 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
+
                 }
                  else if (resposta == 3) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
@@ -615,8 +628,9 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
-                }
-                 else if (resposta == 4) {
+
+                } else if (resposta == 4) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
@@ -624,10 +638,13 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     finalDoTurno(2);
+
                 }
 
             } else if (turno == 5) {
+
                 if (resposta == 1) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
@@ -635,38 +652,84 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
-                } 
 
-                else if (resposta == 2) {
+                } else if (resposta == 2) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 3) {
+                } else if (resposta == 3) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 4) {
+                } else if (resposta == 4) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof EsmeraldaLobos) {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
-            } 
 
-            else if (turno == 6) {
+                }
+
+            } else if (turno == 6) {
+
                 if (resposta == 1) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                } else if (resposta == 2) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                } else if (resposta == 3) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                } else if (resposta == 4) {
+
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    finalDoTurno(2);
+
+                }
+
+            } else if (turno == 7) {
+
+                if (resposta == 1) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof HenricoLobos) {
                             ((HenricoLobos) npc).responder(capitulo, turno, resposta);
@@ -674,67 +737,29 @@ public class Respostas {
                     }
                     escolhas.removerOpcao(resposta);
                     setFimTurno(true);
-                } 
 
-                else if (resposta == 2) {
+                } else if (resposta == 2) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof HenricoLobos) {
                             ((HenricoLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 3) {
+                } else if (resposta == 3) {
+
                     for(NPC npc : npcs) {
                         if (npc instanceof HenricoLobos) {
                             ((HenricoLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
                     escolhas.removerOpcao(resposta);
-                }
 
-                else if (resposta == 4) {
-                    for(NPC npc : npcs) {
-                        if (npc instanceof HenricoLobos) {
-                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
-                        }
-                    }
-                    escolhas.removerOpcao(resposta);
-                }
-            }
+                } else if (resposta == 4) {
 
-            else if (turno == 7) {
-                if (resposta == 1) {
-                    for(NPC npc : npcs) {
-                        if (npc instanceof HenricoLobos) {
-                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
-                        }
-                    }
-                    escolhas.removerOpcao(resposta);
-                    setFimTurno(true);
-                } 
-
-                else if (resposta == 2) {
-                    for(NPC npc : npcs) {
-                        if (npc instanceof HenricoLobos) {
-                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
-                        }
-                    }
-                    escolhas.removerOpcao(resposta);
-                }
-
-                else if (resposta == 3) {
-                    for(NPC npc : npcs) {
-                        if (npc instanceof HenricoLobos) {
-                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
-                        }
-                    }
-                    escolhas.removerOpcao(resposta);
-                }
-
-                else if (resposta == 4) {
                     resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getCoracao(), 12);
+
                     if (!resultado) {
                         System.out.println("""
                              
@@ -760,6 +785,7 @@ public class Respostas {
                     }
 
                     escolhas.removerOpcao(resposta);
+
                 }
             }
 
@@ -787,14 +813,13 @@ public class Respostas {
                 }
 
                 if (resposta < 1 || resposta > 4) {
-                    System.out.println(Cores.VERMELHO + "> OPÇÃO INDISPONIVEL: Insira um valor entre 1 e 4 <" + Cores.RESET);
+                    System.out.println(Cores.VERMELHO + "\n> OPÇÃO INDISPONIVEL: Insira um valor entre 1 e 4 <" + Cores.RESET);
                 }
 
             } while (caiuNoCatch && resposta < 1 || resposta > 4);
         }
 
         return resposta;
-
     }
 
 
