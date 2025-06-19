@@ -295,6 +295,8 @@ Este projeto foi desenvolvido pelo esforço conjunto de pessoas. Logica de progr
 
 O uso de IA se restringiu apenas para pesquisas pontuais de funções, funcionamento de métodos nativos da linguagem e revisões de ortografia. 
 
+[Documento da narrativa](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Narrativa/Nova%20-%20Requiem.pdf) 
+
 ### Ferramentas Utilizadas
 
 **IDE:** IntelliJ e Visual Studio Code <br>
