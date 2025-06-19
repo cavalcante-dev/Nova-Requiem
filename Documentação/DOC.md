@@ -32,11 +32,11 @@ Assumindo o papel dele, o jogador deve escolher se manter colocar como um profis
 
 O personagem conta com dois atributos principais são definidos por dois arquetipos - Sensitivo e Intelectual - e são utilizados para realizar testes ao longo do jogo. 
 
-![Arquetipos de Personagem](Imagens\Terminal\Atributos.jpeg)
+![Arquetipos de Personagem](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Terminal/Atributos.jpeg?raw=true)
 
 A cada final de capitulo, se a barra de atributo estiver maior ou igual a 2 o atributo evolue, ganhando +1 no seu total e reiniciando a barra de evolução.
 
-![Codigo de Upar Atributo](Imagens\UparAtributo.png)
+![Codigo de Upar Atributo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/UparAtributo.png?raw=true)
 
 ---
 
@@ -47,10 +47,10 @@ Durante o decorrer da narrativa, o jogador pode se deparar com a opção de faze
 O resultado pode ser um **Sucesso** ou uma **Falha**, possuindo uma reposta diferente para cada.
 
 #### EXEMPLO FALHA
-![Exemplo no terminal de falha](Imagens\Terminal\TesteFalha.jpeg)
+![Exemplo no terminal de falha](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Terminal/TesteFalha.jpeg?raw=true)
 
 #### EXEMPLO SUCESSO
-![Exemplo no terminal de sucesso](Imagens\Terminal\TesteSucesso.jpeg)
+![Exemplo no terminal de sucesso](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Terminal/TesteSucesso.jpeg?raw=true)
 
 ---
 
@@ -76,7 +76,7 @@ Certas escolhas durante a narrativa podem alterar a percepção de certos person
 No capitulo de interrogatorio a afinidade define o quão disposto um *NPC* está a compartilhar informações com o *Detetive* e no caso especifico do *NPC-SofiaVentura* a afinidade desbloqueia o 
 final secreto do jogo. 
 
-![Exemplo no código de diferença de afinidade](Imagens\ModeloResposta-Afinidade.png)
+![Exemplo no código de diferença de afinidade](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ModeloResposta-Afinidade.png?raw=true)
 
 ---
 
@@ -93,12 +93,12 @@ A classe *main*, sendo finalizada com um total de 85 linhas, possui em seu funci
 O código também implementa um *loop do/while* que repete o gancho de turno até as condições de escolhas serem definidas, assim como já comentado na sessão ***Escolhas de Diálogo.***
 
 #### LOOP PRINCIPAL
-![classe *main*](Imagens\FuncionamentoPrincipal.png)
+![classe *main*](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FuncionamentoPrincipal.png?raw=true)
 
 A quantidade de capitulos, assim como a quantidade de turnos por capitulo, são definidos logo no incio do programa. Assim, o loop já se inicia com um ínicio e um final pré estabelecidos. 
 
 #### CAPITULOS
-![instanciação de capitulo](Imagens\Capitulos.png)
+![instanciação de capitulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Capitulos.png?raw=true)
 
 ---
 
@@ -109,7 +109,7 @@ Uma classe utilitaria que serve para definir as cores do texto do terminal e a f
 A classe utiliza de Códigos de Escape ANSI. 
 
 #### CÓDIGOS DE CORES
-![classe cores](Imagens\ClasseCoresANSI.png)
+![classe cores](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ClasseCoresANSI.png?raw=true)
 
 ---
 
@@ -122,10 +122,10 @@ Cada capitulo é definido por apenas dois atributos:
 Quanto a metodos, a classe possui apenas dois: uma para inciar o titulo do capitulo e outra para o texto de transição - este disponivel apenas para os capitulos do 1 ao 3. 
 
 #### inicioCapitulo()
-![Função de inicio de capitulo](Imagens\InicioCapitulos.png)
+![Função de inicio de capitulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/InicioCapitulos.png?raw=true)
 
 #### finalCapitulo()
-![Função de final de capitulo](Imagens\FinalCapitulos.png)
+![Função de final de capitulo](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FinalCapitulos.png?raw=true)
 
 ---
 
@@ -134,28 +134,54 @@ Quanto a metodos, a classe possui apenas dois: uma para inciar o titulo do capit
 Os turnos são compostos por apenas um bloco de texto principal que serve como descrição da situação onde o *Detetive* se encontra no momento e, como explicado anteriormente, a quantidade de turnos é definido pelo capitulo. A classe recebe em sua construção o objeto *Jogador* e *Lista de NPCs* criadas na *Main*. 
 
 #### Turnos
-![Construtor de Turnos](Imagens\ConstrutorTurnos.png)
+![Construtor de Turnos](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/ConstrutorTurnos.png?raw=true)
 
 Os metodos principais da classe Turnos são o narrar(), responsavel por ambientar a cena e o introducao(), utilizado apenas no inicio do codigo para definir o arquetipo e o nome do *Detetive*. 
 
 #### introducao()
-![Função de introdução](Imagens\Introdução.png)
+![Função de introdução](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Introdu%C3%A7%C3%A3o.png?raw=true)
 
 #### narrar()
-![Função de narrar](Imagens\FinalCapitulos.png)
-
 
 O metodo narrar() recebe na classe *Main* os valores de capitulo e turno atual e utiliza de uma verificação em If/Else para determinar qual bloco de texto será utilizado. 
 
+![Função de narrar](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/FinalCapitulos.png?raw=true)
+
 Como metodos auxiliares, temos o verificarArquetipo() e o verificarNome() que fazem o tratamento do Scanner, evitando que o programa pare devido a introdução de valores invalidos por parte do jogador. 
+
+#### verificarNome()
+![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/VerficarNome.png?raw=true)
+
+#### verificarArquetipo()
+![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/VerificarArquetipo.png?raw=true)
 
 ---
 
 ### textos/Escolhas
 
+A classe escolhas serve para definir as opções de ação disponiveis para o jogador. Ela possui dois metodos principais e metodos auxiliares que limpam e visualmente "bloqueiam" opções especificas.
+
+A classe recebe em sua construção o objeto *Jogador* e *Lista de NPCs* criadas na *Main*. Adicionalmente ela também possui um vetor de tamanho 4 que armazena as variaveis das opções.
+
+#### Construtor
+![construtor de turnos](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/CosntrutorEscolhas.png?raw=true)
+
+O *Gancho de Turno*, assim como os outros metodos de bloco de texto, recebe o capitulo e o turno do ponto que está no *loop*. Assim ele busca o blobo *If/Else* equivalente e o imprime a cada iteração do *Do/While*. 
+
+#### ganchoTurno()
+![gancho de texto](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/GanchoTurnos.png?raw=true)
+
+Como metodos de opções
+
+#### Metodos de Opções
+![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/Op%C3%A7oes.png?raw=true)
+
 ---
 
 ### textos/Respostas 
+
+#### verificarResposta()
+![verificação de input](https://github.com/cavalcante-dev/Nova-Requiem/blob/main/Documenta%C3%A7%C3%A3o/Imagens/VerficarResposta.png?raw=true)
 
 ---
 
@@ -181,7 +207,7 @@ Como metodos auxiliares, temos o verificarArquetipo() e o verificarNome() que fa
 ### Requisitos Técnicos
 
 **Versão: JAVA 24+** <br>
-**Plataformas:** CMD, Terminais de IDEs, BASH etc.
+**Plataformas:** CMD, Terminais de IDEs, BASH etc. <br>
 **RAM:** Durante o jogo, a utilização de RAM pode variar de 42mb a 43mb
 
 ### Uso de IA no Projeto
