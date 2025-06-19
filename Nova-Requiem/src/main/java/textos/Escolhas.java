@@ -250,38 +250,32 @@ public class Escolhas {
                 opcoes[1] = ("2. \"Qual era a sua relação com Esmeralda?\"");
                 opcoes[2] = "3. \"Você estava com Pedro, certo? Mais alguém sabia que estariam lá?\"";
                 opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda." + Cores.RESET);
-            }
-             else if (turno == 2) {
+            } else if (turno == 2) {
                 opcoes[0] = "1. \"Não se encare como um suspeito Pedro, você é uma testemunha e precisamos saber tudo que você viu e ouviu naquele dia.\"";
                 opcoes[1] = "2. \"Não se preocupe, não iremos demorar muito. Vamos trabalhar rápido para que o Sr. chegue em casa a tempo.\"";
                 opcoes[2] = "3. \"Vamos direto ao ponto, você me parece muito nervoso, está sendo cúmplice de alguém? Você está escondendo algo.\"";
                 opcoes[3] = "4. Colocar a luz na cara dele e dar uma de policial mal. ";
-            }           
-             else if (turno == 3) {
+            } else if (turno == 3) {
                 opcoes[0] = "1. Finalizar interrogatório";
                 opcoes[1] = ("2. \"Você viu Henrico por lá?\"");
                 opcoes[2] = "3. \"Qual a relação de Guilherme e Esmeralda?\"";
                 opcoes[3] = "4. \"Você escutou alguma discussão no dia do crime?\"";
-            }
-            else if (turno == 4) {
+            } else if (turno == 4) {
                 opcoes[0] = "1. \"Entendo o seu luto, mas preciso que você se concentre para pegarmos quem fez isso\"";
                 opcoes[1] = "2. Colocar a aliança na mesa - \"Isso é seu?\"";
                 opcoes[2] = "3. \"Seu nome tá em tudo, Esmeralda. E você sabe bem disso.\"";
                 opcoes[3] = "4. \"Discussão... aliança na mesa... caso com zelador... tudo aponta para você\"";
-            }
-            else if (turno == 5) {
+            } else if (turno == 5) {
                 opcoes[0] = "1. Finalizar interrogatório";
                 opcoes[1] = ("2. \"Qual era sua relação com Henrico?\"");
                 opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";
                 opcoes[3] = "4. \"Os relatos dizem que você discutiu com seu marido no dia. Qual seria o motivo dessa discussão?\"";
-            }
-            else if (turno == 6) {
+            } else if (turno == 6) {
                 opcoes[0] = "1. \"Henrico certo? As perguntas que iremos fazer serão breves, esperamos sua colaboração.\"";
                 opcoes[1] = ("2. \"Conhecia os zeladores? Você parecia ser frequente em conversas com Francisco.\"");
                 opcoes[2] = "3. \"Você o matou por inveja, não foi? Afinal ele tinha tudo o que você gostaria de ter\"";
                 opcoes[3] = "4. \"Esmeralda nunca pareceu te querer, a fortuna foi para seu irmão e que sobra para você? Absolutamente nada.\"";
-            }
-            else if (turno == 7) {
+            } else if (turno == 7) {
                 opcoes[0] = "1. Finalizar interrogatório";
                 opcoes[1] = ("2. \"Onde você estava no dia do crime, pela manhã?\"");
                 opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";

@@ -5,9 +5,10 @@
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-blue)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-24+-red?logo=java)](https://java.com)
 [![Terminal](https://img.shields.io/badge/Interface-Terminal-brightgreen)]()<br>
-[![Desenvolvimento](https://img.shields.io/badge/Status-Desenvolvimento-orange)]()
+[![Concluída](https://img.shields.io/badge/Status-Concluído-green)]()
 
-**Nova Requiem** é um jogo de RPG narrativo inspirado em Disco Elysium, desenvolvido completamente em Java para o terminal. Assuma o papel de um detetive em uma cidade estranha onde suas decisões moldam a história e definem o destino do caso e do seu personagem. 
+**Nova Requiem** é um jogo de RPG narrativo inspirado em Disco Elysium, desenvolvido completamente em Java para o terminal. <br>
+Assuma o papel de um detetive em uma cidade estranha onde suas decisões moldam a história e definem o destino do caso. 
 
 
 
@@ -21,26 +22,26 @@ Como detetive encarregado de investigar um misterioso assassinato, suas escolhas
 
 ## ✨ Recursos Principais
 
-- **Sistema de Habilidades Dinâmico**: 3 habilidades que evoluem com suas escolhas 
-- **NPCs Complexos**: Personagens com motivações e memórias próprias
-- **Múltiplos Finais**: 3 finais diferentes baseados em suas ações
-- **Diálogos Ramificados**: Mais de -- opções de diálogo únicas
+- **Sistema de Habilidades Dinâmico**: 2 habilidades que evoluem com o decorrer do jogo.
+- **NPCs Complexos**: Personagens com diferentes dialogos que interagem com suas escolhas.
+- **Múltiplos Finais**: 4 finais diferentes baseados em suas ações.
+- **Diálogos Ramificados**: Mais de 56 opções de diálogo únicas
 
 ## ⚙️ Tecnologias Utilizadas
 - **Java 24**: Linguagem principal
 - **IntelliJ**: IDE de desenvolvimento
 - **Visual Studio Code**: Editor de código com suporte a Java  
-- **Java Extension Pack**: Extensão para desenvolvimento Java no VS Code  
-
+- **Java Extension Pack**: Extensão para desenvolvimento Java no VS Code
 
 ## 🗺️ Estrutura do Projeto
 
     📁 Nova-Requiem/
-    ├── 📁 .idea/                        // Arquivos compilados
+    ├── 📁 .idea/                      // Arquivos compilados
     ├── 📁 src/
     │   ├── 📁 main/
-    │    ├── 📁 java/                   // Código fonte principal
+    │    ├── 📁 java/                  // Código fonte principal
     │       ├── 📁 entities/           // Entidades do jogo
+    │          ├── 📁 npcs/            // Personagens não jogaveis.
     │       ├── 📁 systems/            // Sistemas do jogo
     │       ├── 📁 utils/              // Utilitários
     │       └── Main.java              // Classe principal
@@ -72,22 +73,16 @@ Distribuído sob licença MIT. Veja LICENSE para mais informações.
 ---
 
 ### Desenvolvido por: 
-- [cavalcante-dev](https://github.com/cavalcante-dev)
-- [miguelalchaar](https://github.com/miguelalchaar)
-- 
-- 
-- 
+- [Leandro Cavalcante](https://github.com/cavalcante-dev)
+- [Miguel Alchaar](https://github.com/miguelalchaar)
+- Vinicius Henrique Diniz
+- Victor da Silva
+- Tulio Macedo
 
 ### 📧 Contato:
 - leandrocavalcante2504@gmail.com 
 - alchaarcs@gmail.com
-- 
-- 
-- 
 
 ### 🔗 LinkedIn: 
 - [Leandro Cavalcante](https://www.linkedin.com/in/leandro-cavalcante-lnkin/)
 - [Miguel Alchaar](https://www.linkedin.com/in/miguelalchaar)
-- 
-- 
-- 
