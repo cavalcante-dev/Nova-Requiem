@@ -13,11 +13,11 @@ public class EsmeraldaLobos extends NPC {
         if (capitulo == 3) {
             if (turno == 4) {
                 System.out.println("""
-                         - Me- meu Franciso… naquela m- ma- mala... eu n- não... - Ela desaba
-                         em soluços ao te encarar nos olhos. 
-                         Lágrimas de luto? Culpa? Nesse ponto é difícil dizer, 
-                         tudo o que você é uma viúva fragilizada e 
-                         uma possível culpada de assassinato. 
+                        - Me- meu Franciso… naquela m- ma- mala... eu n- não... - Ela desaba
+                        em soluços ao te encarar nos olhos. 
+                        Lágrimas de luto? Culpa? Nesse ponto é difícil dizer, 
+                        tudo o que você é uma viúva fragilizada e 
+                        uma possível culpada de assassinato. 
                        
                         """);
             }
@@ -44,7 +44,7 @@ public class EsmeraldaLobos extends NPC {
                         por muito mais tempo.
  
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()+1);
                 } 
 
@@ -57,7 +57,7 @@ public class EsmeraldaLobos extends NPC {
                         mas ela encontra somente a pressão que você coloca.  
  
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()-1);
                 } 
 
@@ -70,7 +70,7 @@ public class EsmeraldaLobos extends NPC {
                         tivesse sido mais eficaz.
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()-1);
                 } 
             }   
@@ -98,7 +98,7 @@ public class EsmeraldaLobos extends NPC {
                         a porta e os sons de salto alto deixam a sala juntamente com Esmeralda. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 } 
 
@@ -111,7 +111,7 @@ public class EsmeraldaLobos extends NPC {
 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -124,7 +124,7 @@ public class EsmeraldaLobos extends NPC {
                         é verdadeiro, assim como o conflito familiar. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 }
 
@@ -137,7 +137,7 @@ public class EsmeraldaLobos extends NPC {
                         se tornam menos intensas por um instante. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -148,7 +148,7 @@ public class EsmeraldaLobos extends NPC {
                         Existe remorso em suas palavras ao mesmo tempo que elas  
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 }
 
@@ -161,7 +161,7 @@ public class EsmeraldaLobos extends NPC {
 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -176,7 +176,7 @@ public class EsmeraldaLobos extends NPC {
                          Talvez por essa ter sido sua última conversa. Talvez pela suposta traição. 
  
                          ----------------------------------------------------------------------------------------
-                          """);
+                         """);
                     }
                 }
             }   

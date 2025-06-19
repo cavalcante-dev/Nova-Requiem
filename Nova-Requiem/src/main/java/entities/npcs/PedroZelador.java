@@ -48,7 +48,7 @@ public class PedroZelador extends NPC {
                         Você já soube como é.
  
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()+1);
                 } 
 
@@ -61,7 +61,7 @@ public class PedroZelador extends NPC {
                         - Ele se fecha e parece estar mais fechado a perguntas posteriores.
  
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()-1);
                 } 
 
@@ -76,7 +76,7 @@ public class PedroZelador extends NPC {
                         Talvez você esteja levando isso longe demais.
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                          setAfinidade(getAfinidade()-1);
                 } 
             } 
@@ -86,12 +86,12 @@ public class PedroZelador extends NPC {
                     if (getAfinidade() < 1) {
                         System.out.println("""
 
-                        – Eu falei tudo que eu sabia, viu Sr. Policial, agora se me der 
+                        - Eu falei tudo que eu sabia, viu Sr. Policial, agora se me der 
                         licença eu vou ir  pra casa. – Os passos rápidos atravessam
                         a sala de interrogatório e a porta se fecha com pressa. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -103,7 +103,7 @@ public class PedroZelador extends NPC {
                         atravessam a sala de interrogatório e a porta se fecha com pressa. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 } 
 
@@ -117,7 +117,7 @@ public class PedroZelador extends NPC {
 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -131,7 +131,7 @@ public class PedroZelador extends NPC {
 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 }
 
@@ -139,24 +139,24 @@ public class PedroZelador extends NPC {
                     if (getAfinidade() < 1) {
                         System.out.println("""
 
-                        – E eu sei lá, não sou pai de ninguém pra ficar me metendo na vida privada deles. 
+                        - E eu sei lá, não sou pai de ninguém pra ficar me metendo na vida privada deles. 
                         Eu sei de mim e da minha casa. - A impaciência dele é clara, o tic tac do relógio 
                         o deixa ainda relutante e a vontade de deixar a sala aumenta. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
                         System.out.println("""
 
-                        – Uai, os dois com certeza alguma coisa tinha... Eu só não sei dizer o que, 
+                        - Uai, os dois com certeza alguma coisa tinha... Eu só não sei dizer o que, 
                         o rapaz sempre foi meio quieto e a Esmeralda então nem se fala. 
-                        A relação dela e do Sr. Lobos nunca foi muito boa sabe... – Ele evita tocar muito no assunto,
+                        A relação dela e do Sr. Lobos nunca foi muito boa sabe... - Ele evita tocar muito no assunto,
                         percebendo que talvez isso coloque o amigo em maus lençois. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
                 }
 
@@ -168,7 +168,7 @@ public class PedroZelador extends NPC {
                         bicando nas conversa dos outros. - Ele diz evitando contato visual. 
 
                         ----------------------------------------------------------------------------------------
-                         """);
+                        """);
                     }
 
                     else if (getAfinidade() >= 2) {
@@ -181,7 +181,7 @@ public class PedroZelador extends NPC {
                          saiu chorando e eu não a vi ela mais. - Ele diz olhando meio desconfiado para os lados.
  
                          ----------------------------------------------------------------------------------------
-                          """);
+                         """);
                     }
                 }
             }

@@ -4,6 +4,7 @@ import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
 import main.java.entities.npcs.GuilhermeZelador;
+import main.java.entities.npcs.HenricoLobos;
 import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
@@ -660,6 +661,104 @@ public class Respostas {
                             ((EsmeraldaLobos) npc).responder(capitulo, turno, resposta);
                         }
                     }
+                    escolhas.removerOpcao(resposta);
+                }
+            } 
+
+            else if (turno == 6) {
+                if (resposta == 1) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
+                } 
+
+                else if (resposta == 2) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 3) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 4) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+            }
+
+            else if (turno == 7) {
+                if (resposta == 1) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                    setFimTurno(true);
+                } 
+
+                else if (resposta == 2) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 3) {
+                    for(NPC npc : npcs) {
+                        if (npc instanceof HenricoLobos) {
+                            ((HenricoLobos) npc).responder(capitulo, turno, resposta);
+                        }
+                    }
+                    escolhas.removerOpcao(resposta);
+                }
+
+                else if (resposta == 4) {
+                    resultado = jogadorUtilitarios.rolarTeste(jogadorUtilitarios.getCoracao(), 12);
+                    if (!resultado) {
+                        System.out.println("""
+                             
+                             Perdão? Nunca me ocorreu tal pensamento. - Ele permanece impassível.
+                                
+                             ----------------------------------------------------------------------------------------
+                             """);
+                    } else if (resultado) {
+                        System.out.println("""
+                            
+                            Ele te encara por alguns segundos em silêncio até cair na gargalhas. 
+
+                             - Aquele idiota? Seria possível matá-lo até mesmo se ele estivesse 
+                             com 15 seguranças em um palanque. Esmeralda mentia para ele diariamente e 
+                             mais um pouco tiraria minha parte da herança, mas felizmente essa não 
+                             é mais uma de minhas preocupações. 
+                             Não precisaria do mínimo esforço para tal ato... - Ele se recompõe, ajeita o cabelo 
+                             e o terno retornando a postura impecável.
+                            
+                            ----------------------------------------------------------------------------------------
+                            """);
+                        jogadorUtilitarios.setIntelectoBarra(jogadorUtilitarios.getCoracao()+1);
+                    }
+
                     escolhas.removerOpcao(resposta);
                 }
             }
