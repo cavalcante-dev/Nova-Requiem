@@ -1,8 +1,7 @@
 package main.java.entities;
 
-import main.java.util.Cores;
-
 import java.util.Random;
+import main.java.util.Cores;
 
 public class Jogador {
 
@@ -61,6 +60,7 @@ public class Jogador {
 
     }
 
+    // Aumenta o atributo do personagem ao final do capitulo.
     public void uparAtributo() {
         if (this.coracaoBarra >= 2) {
             this.coracao++;

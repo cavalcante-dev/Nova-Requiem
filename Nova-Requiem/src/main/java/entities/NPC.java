@@ -2,24 +2,26 @@ package main.java.entities;
 
 public class NPC {
 
+    
+    private final Jogador jogadorUtilitarios;
+    
     private String nome;
     private int afinidade;
-    private final Jogador jogadorUtilitarios;
-    private boolean cuplado;
+    private boolean culpado;
 
     public NPC(String nome, int afinidade, Jogador jogadorUtilitarios) {
         this.nome = nome;
         this.afinidade = afinidade;
         this.jogadorUtilitarios = jogadorUtilitarios;
-        this.cuplado = false;
+        this.culpado = false;
     }
 
-    public boolean isCuplado() {
-        return cuplado;
+    public boolean isCulpado() {
+        return culpado;
     }
 
-    public void setCuplado(boolean cuplado) {
-        this.cuplado = cuplado;
+    public void setCulpado(boolean culpado) {
+        this.culpado = culpado;
     }
 
     public Jogador getJogadorUtilitarios() {

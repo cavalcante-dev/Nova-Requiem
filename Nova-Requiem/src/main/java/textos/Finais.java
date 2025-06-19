@@ -1,21 +1,21 @@
 package main.java.textos;
 
+import java.util.List;
 import main.java.entities.NPC;
 import main.java.entities.npcs.HenricoLobos;
-import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
-
-import java.awt.*;
-import java.util.List;
 
 public class Finais {
 
+    private final List<NPC> listaSuspeitos;
+
     private boolean finalSecreto;
-    private List<NPC> listaSuspeitos;
     private boolean finalSofia;
 
     public Finais(List<NPC> listaSuspeitos){
         this.listaSuspeitos = listaSuspeitos;
+        this.finalSecreto = false;
+        this.finalSofia = false;
     }
 
     public void narrarFinal() {
@@ -23,7 +23,7 @@ public class Finais {
         for (NPC npc : listaSuspeitos) {
 
             if (npc instanceof HenricoLobos) {
-                if (npc.isCuplado()) { // Final Bom
+                if (npc.isCulpado()) { // Final Bom
 
                     System.out.println(Cores.VERDE + "\nDuas semanas passaram.\n" + Cores.RESET +
                             """
@@ -98,7 +98,7 @@ public class Finais {
                                     
                                     """);
 
-                    if (finalSofia) {
+                    if (finalSofia) { // Se afinidade com Sofia > 5
 
                         System.out.println("""
                                 Sofia confiou em você, ela *confia* em você.
@@ -111,7 +111,7 @@ public class Finais {
                                 
                                 """);
 
-                    } else {
+                    } else { // Se afinidade com Sofia < 5
 
                         System.out.println("""
                                 Sofia se pergunta o porquê de ter ido até seu apartamento, o porquê de ter te 
@@ -176,7 +176,4 @@ public class Finais {
         return listaSuspeitos;
     }
 
-    public void setListaSuspeitos(List<NPC> listaSuspeitos) {
-        this.listaSuspeitos = listaSuspeitos;
-    }
 }

@@ -1,19 +1,17 @@
 package main.java.textos;
 
-import main.java.entities.Jogador;
-import main.java.entities.NPC;
-import main.java.entities.npcs.SofiaVentura;
-import main.java.util.Cores;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import main.java.entities.Jogador;
+import main.java.entities.NPC;
+import main.java.util.Cores;
 
 public class Escolhas {
 
-    private Jogador jogador;
+    private final Jogador jogador;
+    private final List<NPC> npcs;
+
     private String[] opcoes = new String[4];
-    private List<NPC> npcs;
 
     public Escolhas(Jogador jogador, List<NPC> npcs) {
         this.jogador = jogador;
@@ -196,18 +194,14 @@ public class Escolhas {
     public void removerOpcao(int resposta) { 
         for (int i = 0; i < opcoes.length; i++) {
             if ((resposta - 1) == i) {
-                opcoes[i] = " ";
+                opcoes[i] = (Cores.VERDE + "----------------------" + Cores.RESET);
             }
         }
     }
 
     public void imprimirOpcoes() {
         for (String opcao : opcoes) {
-            if (opcao.equals(" ")) {
-                System.out.println(Cores.VERDE + "----------------------" + Cores.RESET);
-            } else {
-                System.out.println(opcao);
-            }
+            System.out.println(opcao);
         }
     }
 

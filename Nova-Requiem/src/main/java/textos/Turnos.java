@@ -1,5 +1,9 @@
+
 package main.java.textos;
 
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
@@ -8,14 +12,10 @@ import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
-
 public class Turnos {
 
-    private Jogador jogador;
-    private List<NPC> npcs;
+    private final Jogador jogador;
+    private final List<NPC> npcs;
 
     public Turnos(Jogador jogador, List<NPC> npcs) {
         this.jogador = jogador;

@@ -1,5 +1,8 @@
 package main.java.textos;
 
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 import main.java.entities.Jogador;
 import main.java.entities.NPC;
 import main.java.entities.npcs.EsmeraldaLobos;
@@ -9,25 +12,22 @@ import main.java.entities.npcs.PedroZelador;
 import main.java.entities.npcs.SofiaVentura;
 import main.java.util.Cores;
 
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
-
 public class Respostas {
 
+    private final Jogador jogadorUtilitarios;
+    private final Escolhas escolhas;
+    private final List<NPC> npcs;
+    
     private boolean resultado;
-    private Jogador jogadorUtilitarios;
-    private Escolhas escolhas;
     private boolean fimTurno;
-    private List<NPC> npcs;
     private int contadorFimTurno;
 
     public Respostas(Jogador jogadorUtilitarios, Escolhas escolhas, List<NPC> npcs) {
         this.jogadorUtilitarios = jogadorUtilitarios;
         this.escolhas = escolhas;
+        this.npcs = npcs;
         this.resultado = false;
         this.fimTurno = false;
-        this.npcs = npcs;
         this.contadorFimTurno = 0;
     }
 
@@ -797,7 +797,7 @@ public class Respostas {
 
                 for (NPC npc : npcs) {
                     if (npc instanceof HenricoLobos) {
-                        npc.setCuplado(true);
+                        npc.setCulpado(true);
                     }
                 }
                 setFimTurno(true);
@@ -806,7 +806,7 @@ public class Respostas {
 
                 for (NPC npc : npcs) {
                     if (npc instanceof EsmeraldaLobos) {
-                        npc.setCuplado(true);
+                        npc.setCulpado(true);
                     }
                 }
                 setFimTurno(true);
@@ -815,7 +815,7 @@ public class Respostas {
 
                 for (NPC npc : npcs) {
                     if (npc instanceof GuilhermeZelador) {
-                        npc.setCuplado(true);
+                        npc.setCulpado(true);
                     }
                 }
                 setFimTurno(true);
@@ -824,7 +824,7 @@ public class Respostas {
 
                 for (NPC npc : npcs) {
                     if (npc instanceof PedroZelador) {
-                        npc.setCuplado(true);
+                        npc.setCulpado(true);
                     }
                 }
                 setFimTurno(true);
@@ -835,7 +835,7 @@ public class Respostas {
 
     }
 
-    // Metodo de verificação de responder no turno.
+    // Metodo de verificação de resposta no turno.
 
     public int validadeResposta(int resposta) {
 
