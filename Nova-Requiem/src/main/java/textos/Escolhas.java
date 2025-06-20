@@ -279,7 +279,7 @@ public class Escolhas {
                 opcoes[0] = "1. Finalizar interrogatório";
                 opcoes[1] = ("2. \"Onde você estava no dia do crime, pela manhã?\"");
                 opcoes[2] = "3. \"Qual é sua relação com Guilherme?\"";
-                opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE: Fácil (4)] - Pressionar sobre Esmeralda." + Cores.RESET);;
+                opcoes[3] = (Cores.AMARELO + "4. [TESTE (CORAÇÃO) - DIFICULDADE: IMPOSSIVEL (12)] - Pressionar sobre Esmeralda." + Cores.RESET);;
             }
         }
         if (capitulo == 4) {
